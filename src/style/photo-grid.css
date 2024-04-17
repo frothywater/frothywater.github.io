@@ -1,0 +1,22 @@
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2lh 2em;
+    margin-block-start: 3lh;
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5lh;
+        margin: auto;
+
+        figcaption {
+            p {
+                font-size: 0.9rem;
+                line-height: 1.35;
+                margin-block: 0;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,4 @@
+- resize: [800, 800, { fit: "outside", withoutEnlargement: true }]
+  suffix: .small
+  format: jpg
+- {}

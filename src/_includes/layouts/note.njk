@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+---
+
+<article>
+  <div class="note-header">
+    <a href="{{ note.url }}" class="bare-link"><h1>{{ title }}</h1></a>
+
+    <nav class="post-info">
+      <time datetime="{{ date | date('DATETIME') }}">
+        {{ date | date('yyyy-MM-dd') }}
+      </time>
+
+      {% if note.category %}
+        <a href="/category/{{ note.category }}" class="category">{{ note.category }}</a>
+      {% endif %}
+
+      {% for tag in tags %}
+        <a href="/tag/{{ tag }}/" class="tag">{{ tag }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+
+  <div>
+    {{ content | safe }}
+  </div>
+</article>

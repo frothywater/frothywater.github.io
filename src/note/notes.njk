@@ -1,0 +1,6 @@
+---
+url: /note/
+---
+
+{% set notes = search.pages("type=note", "date=desc") %}
+{% include "pages/note-list.njk" %}

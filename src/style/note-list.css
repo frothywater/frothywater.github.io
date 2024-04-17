@@ -1,0 +1,21 @@
+.note-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    gap: 3em 2em;
+    margin-block-start: 3lh;
+
+    article {
+        list-style: none;
+
+        >a {
+            font-size: 1.2em;
+            color: var(--primary);
+        }
+
+        p {
+            max-block-size: 4lh;
+            font-size: 0.9em;
+            margin-block: 0.3lh 0;
+        }
+    }
+}

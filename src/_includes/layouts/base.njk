@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or site.title }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/note.css">
+    <link rel="stylesheet" href="/style/note-list.css">
+    <link rel="stylesheet" href="/style/log-list.css">
+    <link rel="stylesheet" href="/style/photo-grid.css">
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ site.title }}">
+    <link rel="alternate" href="/feed.json" type="application/json" title="{{ site.title }}">
+  </head>
+  <body>
+    <header>
+      <a class="bare-link" href="/"><h1>Nostalgic Future Catalog</h1></a>
+      <small>{{ site.description }}</small>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="/" class="bare-link">家</a></li>
+        <li><a href="/note" class="bare-link">笔记本</a></li>
+        <li><a href="/log" class="bare-link">手帐</a></li>
+        <li><a href="/album" class="bare-link">唱片盒</a></li>
+        <li><a href="/photo" class="bare-link">相册</a></li>
+        <li><a href="/clip" class="bare-link">剪报</a></li>
+        <li><a href="/track" class="bare-link">八音盒</a></li>
+      </ul>
+    </nav>
+
+    <main class="{{ bodyClass }}">
+      {{ content | safe }}
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: {{ url }} -->
+  </body>
+</html>

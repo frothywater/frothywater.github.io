@@ -1,0 +1,6 @@
+---
+url: /log/
+---
+
+{% set logs = search.pages("type=log", "date=desc") %}
+{% include "pages/log-list.njk" %}

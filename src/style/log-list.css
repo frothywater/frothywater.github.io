@@ -1,0 +1,21 @@
+.log-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    gap: 1em;
+    margin-block-start: 3lh;
+
+    article {
+        list-style: none;
+        border: 1px solid lightgray;
+        border-radius: 0.8em;
+        margin-block-end: auto;
+        padding: 1em;
+
+        p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-block-start: 0;
+            margin-block-end: 0.2lh;
+        }
+    }
+}
