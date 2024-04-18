@@ -9,10 +9,15 @@ section.quotes {
 
 .clip-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-    gap: 2lh 4em;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    gap: 2em;
 
     article {
+        border: 1px solid lightgray;
+        border-radius: 0.8em;
+        padding-block: 0.6em;
+        padding-inline: 1em;
+        margin-block-end: auto;
 
         /* favicon */
         img {
@@ -21,6 +26,13 @@ section.quotes {
             margin-inline-end: 0.2em;
             width: 1.2em;
             height: 1.2em;
+        }
+
+        /* note */
+        >p {
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-block: 0;
         }
     }
 }

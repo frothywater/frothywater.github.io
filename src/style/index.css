@@ -73,12 +73,12 @@ body {
 
   /* footer */
   >footer {
-    display: flex;
     margin-block: 2lh 4lh;
 
     /* copyright */
     >* {
-      margin-inline-start: auto;
+      display: block;
+      text-align: end;
       color: gray;
     }
   }

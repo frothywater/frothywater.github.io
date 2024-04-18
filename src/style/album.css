@@ -1,0 +1,87 @@
+.album-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
+    gap: 2em;
+
+    article {
+        display: flex;
+        border: 1px solid lightgray;
+        border-radius: 0.8em;
+        padding: 1em;
+
+        /* cover */
+        img {
+            width: 10em;
+            height: 10em;
+            margin-inline-end: 1em;
+        }
+
+        .album-info {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 0.2lh;
+
+            .album-title {
+                display: flex;
+                align-items: baseline;
+                gap: 0.6em;
+
+                h2 {
+                    font-size: 1.2em;
+                    color: var(--black);
+                    margin-block: 0;
+                }
+
+                .album-country {
+                    font-size: 0.8em;
+                    color: gray;
+                }
+            }
+
+            .album-artists {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 1em;
+
+                span {
+                    font-size: 0.9em;
+                    text-wrap: nowrap;
+                }
+            }
+
+            .album-detail {
+                display: grid;
+                grid-template-columns: min-content 1fr;
+                grid-auto-rows: max-content;
+                gap: 0 0.5em;
+
+                font-size: 0.8em;
+
+                .info-key {
+                    font-weight: 600;
+                }
+
+                .info-value {
+                    font-style: italic;
+
+                    *+* {
+                        margin-inline-start: 0.3em;
+                    }
+                }
+            }
+
+            summary {
+                font-size: 0.9em;
+            }
+
+            .album-note {
+                font-size: 0.9em;
+            }
+
+            >* {
+                margin-block: 0;
+            }
+        }
+    }
+}

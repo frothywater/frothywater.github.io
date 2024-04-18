@@ -1,3 +1,7 @@
 ---
 url: /album/
 ---
+
+{# Releases #}
+{% set albums = search.pages("type=music-album", "date=desc") %}
+{% include "pages/album-list.njk" %}
