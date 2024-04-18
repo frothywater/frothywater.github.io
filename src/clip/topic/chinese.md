@@ -1,4 +1,6 @@
-## 汉字
+---
+title: 汉字
+---
 
 - [中日韓統一表意文字](https://zh.wikipedia.org/wiki/中日韓統一表意文字)
 - [常用汉字](https://zh.wikipedia.org/wiki/常用漢字)

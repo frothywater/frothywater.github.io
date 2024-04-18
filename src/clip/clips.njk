@@ -1,3 +1,29 @@
 ---
 url: /clip/
 ---
+
+{# Genreal clips #}
+<section>
+  <h2>书签</h2>
+  {% include "pages/clip-list.njk" %}
+</section>
+
+{# Quotes #}
+{% set quotes = search.pages("type=quote") %}
+<section class="quotes">
+  <h2>引文</h2>
+  {% for quote in quotes %}
+    {{ quote.content | md | safe }}
+  {% endfor %}
+</section>
+
+{# Special clip lists #}
+<section>
+  <h2>专题</h2>
+  <div class="clip-list">
+    {% set topics = search.pages("type=clip-topic") %}
+    {% for topic in topics %}
+      <a href="{{ topic.url }}">{{ topic.title }}</a>
+    {% endfor %}
+  </div>
+</section>

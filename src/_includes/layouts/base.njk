@@ -1,3 +1,14 @@
+---
+navlinks:
+  - ["/", "家"]
+  - ["/note/", "笔记本"]
+  - ["/log/", "手帐"]
+  - ["/album/", "唱片盒"]
+  - ["/photo/", "相册"]
+  - ["/clip/", "剪报"]
+  - ["/track/", "八音盒"]
+---
+
 <!doctype html>
 
 <html lang="en">
@@ -12,6 +23,7 @@
     <link rel="stylesheet" href="/style/note-list.css">
     <link rel="stylesheet" href="/style/log-list.css">
     <link rel="stylesheet" href="/style/photo-grid.css">
+    <link rel="stylesheet" href="/style/clip.css">
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ site.title }}">
     <link rel="alternate" href="/feed.json" type="application/json" title="{{ site.title }}">
   </head>
@@ -23,13 +35,9 @@
 
     <nav>
       <ul>
-        <li><a href="/" class="bare-link">家</a></li>
-        <li><a href="/note" class="bare-link">笔记本</a></li>
-        <li><a href="/log" class="bare-link">手帐</a></li>
-        <li><a href="/album" class="bare-link">唱片盒</a></li>
-        <li><a href="/photo" class="bare-link">相册</a></li>
-        <li><a href="/clip" class="bare-link">剪报</a></li>
-        <li><a href="/track" class="bare-link">八音盒</a></li>
+        {% for url_, name in navlinks %}
+          <li><a href="{{ url_ }}" class="bare-link" {% if url == url_ %}aria-current="page"{% endif %}>{{ name }}</a></li>
+        {% endfor %}
       </ul>
     </nav>
 
@@ -37,7 +45,9 @@
       {{ content | safe }}
     </main>
 
-    <footer></footer>
+    <footer>
+      <small>&copy; cobalt {{ date | date('yyyy') }}</small>
+    </footer>
 
     <!-- Current page: {{ url }} -->
   </body>

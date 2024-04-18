@@ -3,8 +3,8 @@ layout: layouts/base.njk
 ---
 
 <article>
-  <div class="note-header">
-    <a href="{{ note.url }}" class="bare-link"><h1>{{ title }}</h1></a>
+  <header class="note-header">
+    <a href="{{ url }}" class="bare-link"><h1>{{ title }}</h1></a>
 
     <nav class="post-info">
       <time datetime="{{ date | date('DATETIME') }}">
@@ -19,9 +19,9 @@ layout: layouts/base.njk
         <a href="/tag/{{ tag }}/" class="tag">{{ tag }}</a>
       {% endfor %}
     </nav>
-  </div>
+  </header>
 
-  <div>
+  <main>
     {{ content | safe }}
-  </div>
+  </main>
 </article>

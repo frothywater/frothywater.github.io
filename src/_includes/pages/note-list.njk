@@ -1,7 +1,7 @@
 <div class="note-list">
   {% for note in notes %}
     <article>
-      <a href="{{ note.url }}" class="bare-link" {% if entry.url == url %}aria-current="page"{% endif %}>
+      <a href="{{ note.url }}" class="bare-link">
         {% if note.title %}
           <strong>{{ note.title }}</strong>
         {% else %}

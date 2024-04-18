@@ -2,11 +2,12 @@ article {
     max-inline-size: 42em;
     line-height: 1.5;
 
-    a {
+    /* title */
+    header a {
         color: var(--primary);
 
         h1 {
-            margin-block: 1lh 0.2lh;
+            margin-block-end: 0.2lh;
         }
     }
 }

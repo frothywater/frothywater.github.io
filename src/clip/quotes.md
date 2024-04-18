@@ -1,3 +1,7 @@
+---
+type: quote
+---
+
 《且听风吟》（林少华译本），村上春树，一九七九：
 > 关于好的文章，哈特费尔德这样写道：
 > 
@@ -13,7 +17,7 @@
 > 我非常懷念未來；如此懷念，我已經在為它寫作。
 
 [*Modern boys and mobile girls*](https://www.theguardian.com/books/2001/apr/01/sciencefictionfantasyandhorror.features), William Gibson, 2001:
-> The otaku, the passionate obsessive, the information age's embodiment of the connoisseur, more concerned with the accumulation of data than of objects (...) Understanding otaku -hood, I think, is one of the keys to understanding the culture of the web. There is something profoundly post-national about it, extra-geographic. We are all curators, in the post-modern world, whether we want to be or not.
+> The otaku, the passionate obsessive, the information age's embodiment of the connoisseur, more concerned with the accumulation of data than of objects \[…\] Understanding otaku -hood, I think, is one of the keys to understanding the culture of the web. There is something profoundly post-national about it, extra-geographic. We are all curators, in the post-modern world, whether we want to be or not.
 
 *VA-11 Hall-A: Cyberpunk Bartender Action*, Sukeban Games, 2016:
 > A city that shouldn’t exist. A tax haven where corporations and criminal empires reign supreme.

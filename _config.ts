@@ -1,6 +1,7 @@
 import lume from "lume/mod.ts";
 import nunjucks from "lume/plugins/nunjucks.ts";
 import date from "lume/plugins/date.ts";
+import relativeUrls from "lume/plugins/relative_urls.ts";
 import transformImages from "lume/plugins/transform_images.ts";
 
 import markdownDigest from "./_extra/digest.ts";
@@ -13,6 +14,7 @@ site
   .copy("style")
   .use(nunjucks())
   .use(date())
+  .use(relativeUrls())
   .use(transformImages());
 
 // Generate digest for markdown files with type of post

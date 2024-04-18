@@ -1,0 +1,26 @@
+section+section {
+    margin-block-start: 3lh;
+}
+
+section.quotes {
+    max-inline-size: 42em;
+    line-height: 1.5;
+}
+
+.clip-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 2lh 4em;
+
+    article {
+
+        /* favicon */
+        img {
+            display: inline;
+            vertical-align: middle;
+            margin-inline-end: 0.2em;
+            width: 1.2em;
+            height: 1.2em;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<div class="clip-list">
+  {% for clip in clips %}
+    <article>
+      {% if clip.favicon %}
+        <img src="{{ clip.favicon }}">
+      {% endif %}
+      <a href="{{ clip.url }}">{{ clip.title }}</a>
+
+      <div class="post-info">
+        {% if clip.category %}
+          <span class="category">{{ clip.category }}</span>
+        {% endif %}
+        {% for tag in clip.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+
+    </article>
+  {% endfor %}
+</div>

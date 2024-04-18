@@ -1,4 +1,6 @@
-# vaporwave
+---
+title: vaporwave
+---
 
 ## materials
 
@@ -28,11 +30,11 @@
 - [sunsetcorp - angel](https://youtu.be/dN0czUMRMU8)
 - [James Ferraro - Far Side Virtual](https://www.youtube.com/watch?v=d9ndKlm-G3s)
 - [ATMOSPHERES 第 1 | Eco Virtual](https://ecovirtual.bandcamp.com/album/atmospheres-1)
-- [VIRTUAL UTOPIA EXPERIENCE | death's dynamic shroud](https://deathsdynamicshroud.bandcamp.com/album/- virtual-utopia-experience)
-- [ｉｎｔｅｒｓｔｅｌｌａｒ ｌｏｖｅ | t e l e p a t h テレパシー能力者 and Vincent Remember | Dream Graveyard](https://- dream-catalogue.bandcamp.com/album/-)
+- [VIRTUAL UTOPIA EXPERIENCE | death's dynamic shroud](https://deathsdynamicshroud.bandcamp.com/album/virtual-utopia-experience)
+- [ｉｎｔｅｒｓｔｅｌｌａｒ ｌｏｖｅ | t e l e p a t h テレパシー能力者 and Vincent Remember | Dream Graveyard](https://dream-catalogue.bandcamp.com/album/-)
 - [仮想夢プラザ](https://virtualdreamplaza.bandcamp.com/)
-- [油尖旺 DISTRICT | Future City Love Stories | Dream Catalogue](https://dreamcatalogue.bandcamp.com/album/- district)
-- [Fragmented Memories | 断片化された友人 | NO PROBLEMA TAPES](https://noproblematapes.bandcamp.com/album/- fragmented-memories)
+- [油尖旺 DISTRICT | Future City Love Stories | Dream Catalogue](https://dreamcatalogue.bandcamp.com/album/district)
+- [Fragmented Memories | 断片化された友人 | NO PROBLEMA TAPES](https://noproblematapes.bandcamp.com/album/fragmented-memories)
 - [Vaporwave Is Dead | Sandtimer | Dream Catalogue](https://dreamcatalogue.bandcamp.com/album/vaporwave-is-dead)
 
 ## subgenres
