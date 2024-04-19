@@ -1,0 +1,13 @@
+<div class="track-list">
+  {% for track in tracks %}
+    <article>
+      <audio src="/track/audio/{{ track.file }}" controls></audio>
+
+      <p>{{ track.text }}</p>
+
+      <time datetime="{{ track.date | date('DATETIME') }}">
+          {{ track.date | date('yyyy-MM-dd') }}
+      </time>
+    </article>
+  {% endfor %}
+</div>

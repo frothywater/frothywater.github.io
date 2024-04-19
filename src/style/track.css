@@ -1,7 +1,7 @@
-.log-list {
+.track-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-    gap: 2em;
+    gap: 3em 2em;
 
     article {
         border: 1px solid lightgray;
@@ -9,10 +9,15 @@
         margin-block-end: auto;
         padding: 1em;
 
-        /* content */
+        audio {
+            width: 100%;
+            margin-block-end: 1lh;
+        }
+
+        /* note */
         p {
             font-size: 0.9rem;
-            line-height: 1.5;
+            line-height: 1.35;
             margin-block: 0 0.2lh;
         }
     }
