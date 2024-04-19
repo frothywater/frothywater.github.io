@@ -6,14 +6,14 @@ category: Essay
 ---
 
 <div class="photo-grid">
-    <img src="/images/230913-1.jpg" style="grid-column: span 2;"/>
-    <img src="/images/230913-3.jpg"/>
-    <img src="/images/230913-5.jpg"/>
+    <img src="/note/image/230913-1.jpg" style="grid-column: span 2;"/>
+    <img src="/note/image/230913-3.jpg"/>
+    <img src="/note/image/230913-5.jpg"/>
 </div>
 
 暑假试着做了我的一本书，取名叫《等到夏天结束，我们就搬家》。虽然并不是什么高级的出版物，但印刷出来拿在手里果然很有成就感！拜托朋友写的序和我自己写的后记里，已经很好地描述了做书的初衷、文字和排版展现出的结构以及它与我的关系。这本书是非常私人化的物品，制作时预设的读者就是我自己，因此大概不适宜用公共的方法去阅读它。如果能够把它当作低声呢喃的自言自语来翻看，并从中获得灵感或乐趣的话，我会很高兴的！
 
-在[此处](/files/等到夏天結束，我們就搬家.pdf)下载电子版。
+在[此处](/note/file/等到夏天結束，我們就搬家.pdf)下载电子版。
 
 ## 序：细心的树
 
@@ -71,15 +71,15 @@ category: Essay
 
 最後，感謝我的朋友們對本書排版的建議和幫助。感謝 van 為這本書作序，她讓這本書變得完整了。
 
-![](/images/230913-2.jpg)
-![](/images/230913-4.jpg)
+![](/note/image/230913-2.jpg)
+
+![](/note/image/230913-4.jpg)
 
 <style>
 .photo-grid { 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 14px;
-    grid-row-gap: 14px;
-    margin-bottom: 1lh;
+    gap: 1em;
+    margin-block: 2lh;
 }
 </style>

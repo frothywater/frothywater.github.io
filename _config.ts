@@ -11,7 +11,7 @@ const site = lume({
 });
 
 site
-  .copy("style")
+  .copyRemainingFiles()
   .use(nunjucks())
   .use(date())
   .use(relativeUrls())
