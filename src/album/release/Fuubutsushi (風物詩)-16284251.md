@@ -1,6 +1,5 @@
 ---
 discogs_id: 16284251
-discogs_master_id: None
 title: Fuubutsushi (風物詩)
 artists: ['Fuubutsushi']
 date: 2020-09-29

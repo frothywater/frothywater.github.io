@@ -1,6 +1,5 @@
 ---
 discogs_id: 2896286
-discogs_master_id: None
 title: Late Piano Sonatas D850 • D958 • D959 • D960
 artists: ['Leif Ove Andsnes']
 date: 2008

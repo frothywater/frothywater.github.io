@@ -9,6 +9,7 @@ image: Kind Of Blue-6276183.jpg
 label: Columbia
 country: US
 styles: ['Modal']
+video: https://www.youtube.com/watch?v=vDqULFUg6CY
 category: Jazz
 ---
 

@@ -9,5 +9,6 @@ image: Being Waves-21240643.jpg
 label: Running Circle
 country: UK
 styles: ['Contemporary Jazz']
+video: https://www.youtube.com/watch?v=baSsJLyiBqk
 category: Ambient Jazz
 ---

@@ -1,6 +1,5 @@
 ---
 discogs_id: 5266634
-discogs_master_id: None
 title: ロンググッドバイ (Long Goodbye)
 artists: ['きのこ帝国']
 date: 2013-12-04

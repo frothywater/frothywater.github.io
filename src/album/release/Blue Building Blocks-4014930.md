@@ -1,6 +1,5 @@
 ---
 discogs_id: 4014930
-discogs_master_id: None
 title: Blue Building Blocks
 artists: ['How To Count One To Ten']
 date: 2012

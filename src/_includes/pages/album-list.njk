@@ -10,7 +10,21 @@
 
         <div class="album-info">
           <div class="album-title">
-            <a href="" class="bare-link"><h2>{{ album.title }}</h2></a>
+
+            {# title link #}
+            {% if album.link %}
+              {% set link = album.link %}
+            {% elif album.discogs_master_id %}
+              {% set link = "https://www.discogs.com/master/" ~ album.discogs_master_id %}
+            {% elif album.discogs_id %}
+              {% set link = "https://www.discogs.com/release/" ~ album.discogs_id %}
+            {% endif %}
+            {% if link %}
+              <a href="{{ link }}" class="bare-link"><h2>{{ album.title }}</h2></a>
+            {% else %}
+              <h2>{{ album.title }}</h2>
+            {% endif %}
+
             <time datetime="{{ album.date | date('DATETIME') }}">{{ album.date | date('yyyy') }}</time>
             {% if album.country %}
               <span class="album-country">{{ album.country }}</span>
@@ -46,7 +60,12 @@
                 {% endfor %}
               </div>
             {% endif %}
+
           </div>
+
+          {% if album.video %}
+            <a href="{{ album.video }}" class="album-video-link">Youtube</a>
+          {% endif %}
 
         </div>
       </div>
