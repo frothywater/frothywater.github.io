@@ -20,10 +20,8 @@ url: /clip/
 {# Special clip lists #}
 <section>
   <h2>专题</h2>
-  <div class="clip-list">
-    {% set topics = search.pages("type=clip-topic") %}
-    {% for topic in topics %}
-      <a href="{{ topic.url }}">{{ topic.title }}</a>
-    {% endfor %}
-  </div>
+  {% set topics = search.pages("type=clip-topic") %}
+  {% for topic in topics %}
+    <a href="{{ topic.url }}"><p>{{ topic.title }}</p></a>
+  {% endfor %}
 </section>

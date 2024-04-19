@@ -73,7 +73,7 @@ body {
 
   /* footer */
   >footer {
-    margin-block: 2lh 4lh;
+    margin-block: 2lh;
 
     /* copyright */
     >* {
@@ -82,6 +82,10 @@ body {
       color: gray;
     }
   }
+}
+
+section+section {
+  margin-block-start: 3lh;
 }
 
 .bare-link {

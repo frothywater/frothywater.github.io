@@ -3,5 +3,15 @@ url: /album/
 ---
 
 {# Releases #}
-{% set albums = search.pages("type=music-album", "date=desc") %}
-{% include "pages/album-list.njk" %}
+<section>
+  <h2>唱片</h2>
+  {% set albums = search.pages("type=music-album", "date=desc") %}
+  {% include "pages/album-list.njk" %}
+</section>
+
+{# Log #}
+<section>
+  <h2>日志</h2>
+  {% set logs = search.pages("type=music-log", "date=desc") %}
+  {% include "pages/log-list.njk" %}
+</section>

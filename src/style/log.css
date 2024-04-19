@@ -1,7 +1,7 @@
 .log-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-    gap: 1em;
+    gap: 2em;
 
     article {
         border: 1px solid lightgray;
@@ -10,7 +10,7 @@
         padding: 1em;
 
         /* content */
-        >p {
+        p {
             font-size: 0.9rem;
             line-height: 1.5;
             margin-block-start: 0;

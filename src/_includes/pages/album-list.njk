@@ -1,7 +1,12 @@
 <div class="album-list">
   {% for album in albums %}
     <article>
-      <img src="/album/image/{{ album.image }}" alt="{{ album.title }}" loading="lazy">
+      <div class="album-cover">
+        <a href="/album/image/{{ album.image }}">
+          <img src="/album/image/{{ album.image }}" alt="{{ album.title }}" loading="lazy">
+        </a>
+      </div>
+
       <div class="album-info">
         <div class="album-title">
           <a href="" class="bare-link"><h2>{{ album.title }}</h2></a>
@@ -45,7 +50,7 @@
         {% if album.content %}
           <details open>
             <summary>笔记</summary>
-            <div class="album-note">{{ album.content | safe }}</div>
+            <div class="album-note">{{ album.content | md | safe }}</div>
           </details>
         {% endif %}
       </div>

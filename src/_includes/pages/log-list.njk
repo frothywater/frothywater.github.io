@@ -1,7 +1,7 @@
 <div class="log-list">
   {% for log in logs %}
     <article>
-      <p>{{ log.content | safe }}</p>
+      <p>{{ log.content | md | safe }}</p>
 
       <time datetime="{{ log.date | date('DATETIME') }}">
           {{ log.date | date('yyyy-MM-dd') }}
