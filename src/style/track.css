@@ -11,14 +11,21 @@
 
         audio {
             width: 100%;
-            margin-block-end: 1lh;
+        }
+
+        /* title */
+        p.track-title {
+            margin-block-start: 1lh;
         }
 
         /* note */
-        p {
+        p.track-note {
             font-size: 0.9rem;
+        }
+
+        p {
             line-height: 1.35;
-            margin-block: 0 0.2lh;
+            margin-block: 0.3lh;
         }
     }
 }

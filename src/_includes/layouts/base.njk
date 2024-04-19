@@ -1,14 +1,3 @@
----
-navlinks:
-  - ["/", "家"]
-  - ["/note/", "笔记本"]
-  - ["/log/", "手帐"]
-  - ["/album/", "唱片盒"]
-  - ["/photo/", "相册"]
-  - ["/clip/", "剪报"]
-  - ["/track/", "八音盒"]
----
-
 <!doctype html>
 
 <html lang="en">
@@ -37,7 +26,7 @@ navlinks:
 
     <nav class="nav-links">
       <ul>
-        {% for url_, name in navlinks %}
+        {% for url_, name in site.navlinks %}
           <li><a href="{{ url_ }}" class="bare-link" {% if url == url_ %}aria-current="page"{% endif %}>{{ name }}</a></li>
         {% endfor %}
       </ul>
