@@ -1,59 +1,59 @@
 <div class="album-list">
   {% for album in albums %}
     <article>
-      <div class="album-cover">
-        <a href="/album/image/{{ album.image }}">
-          <img src="/album/image/{{ album.image }}" alt="{{ album.title }}" loading="lazy">
-        </a>
+      <div class="album-main">
+        <div class="album-cover">
+          <a href="/album/image/{{ album.image }}">
+            <img src="/album/image/{{ album.image }}" alt="{{ album.title }}" loading="lazy">
+          </a>
+        </div>
+
+        <div class="album-info">
+          <div class="album-title">
+            <a href="" class="bare-link"><h2>{{ album.title }}</h2></a>
+            <time datetime="{{ album.date | date('DATETIME') }}">{{ album.date | date('yyyy') }}</time>
+            {% if album.country %}
+              <span class="album-country">{{ album.country }}</span>
+            {% endif %}
+          </div>
+
+          <div class="album-artists">
+            {% for artist in album.artists %}
+              <span class="artist">{{ artist }}</span>
+            {% endfor %}
+          </div>
+
+          <div class="album-detail">
+            {% if album.label %}
+              <span class="info-key">Label</span>
+              <span class="info-value album-label">{{ album.label }}</span>
+            {% endif %}
+
+            {% if album.genre %}
+              <span class="info-key">Genre</span>
+              <div class="info-value">
+                {% for genre in album.genre %}
+                  <span class="album-genre">{{ genre }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            {% if album.styles %}
+              <span class="info-key">Style</span>
+              <div class="info-value">
+                {% for style in album.styles %}
+                  <span class="album-style">{{ style }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+
+        </div>
       </div>
 
-      <div class="album-info">
-        <div class="album-title">
-          <a href="" class="bare-link"><h2>{{ album.title }}</h2></a>
-          <time datetime="{{ album.date | date('DATETIME') }}">{{ album.date | date('yyyy') }}</time>
-          {% if album.country %}
-            <span class="album-country">{{ album.country }}</span>
-          {% endif %}
-        </div>
-
-        <div class="album-artists">
-          {% for artist in album.artists %}
-            <span class="artist">{{ artist }}</span>
-          {% endfor %}
-        </div>
-
-        <div class="album-detail">
-          {% if album.label %}
-            <span class="info-key">Label</span>
-            <span class="info-value album-label">{{ album.label }}</span>
-          {% endif %}
-
-          {% if album.genre %}
-            <span class="info-key">Genre</span>
-            <div class="info-value">
-              {% for genre in album.genre %}
-                <span class="album-genre">{{ genre }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
-
-          {% if album.styles %}
-            <span class="info-key">Style</span>
-            <div class="info-value">
-              {% for style in album.styles %}
-                <span class="album-style">{{ style }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
-        </div>
-
-        {% if album.content %}
-          <details open>
-            <summary>笔记</summary>
-            <div class="album-note">{{ album.content | md | safe }}</div>
-          </details>
-        {% endif %}
-      </div>
+      {% if album.content %}
+        <div class="album-note">{{ album.content | md | safe }}</div>
+      {% endif %}
     </article>
   {% endfor %}
 </div>

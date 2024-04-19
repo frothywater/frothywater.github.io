@@ -9,4 +9,5 @@ image: The Melody At Night, With You-373626.jpg
 label: ECM Records
 country: Europe
 video: https://www.youtube.com/watch?v=Uhq8FModc8Q
+category: Keith Jarrett
 ---

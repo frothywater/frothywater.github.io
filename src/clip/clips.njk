@@ -2,16 +2,40 @@
 url: /clip/
 ---
 
+<nav class="nav-links section-links">
+  <ul>
+    <span>&gt;</span>
+    <li><a href="#general">书签</a></li>
+    <li><a href="#quotes">引文</a></li>
+    <li><a href="#topics">专题</a></li>
+  </ul>
+</nav>
+
 {# Genreal clips #}
 <section>
-  <h2>书签</h2>
-  {% include "pages/clip-list.njk" %}
+  <h2 id="general">书签</h2>
+
+  <nav class="nav-links section-links">
+    <ul>
+      <span>&gt;&gt;</span>
+      {% for category in categories %}
+        <li><a href="#clip-{{ category }}">{{ categoryName[category] }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  {% for category in categories %}
+    <section>
+      <h3 id="clip-{{ category }}">{{ categoryName[category] }}</h3>
+      {% include "pages/clip-list.njk" %}
+    </section>
+  {% endfor %}
 </section>
 
 {# Quotes #}
 {% set quotes = search.pages("type=quote") %}
 <section class="quotes">
-  <h2>引文</h2>
+  <h2 id="quotes">引文</h2>
   {% for quote in quotes %}
     {{ quote.content | md | safe }}
   {% endfor %}
@@ -19,7 +43,7 @@ url: /clip/
 
 {# Special clip lists #}
 <section>
-  <h2>专题</h2>
+  <h2 id="topics">专题</h2>
   {% set topics = search.pages("type=clip-topic") %}
   {% for topic in topics %}
     <a href="{{ topic.url }}"><p>{{ topic.title }}</p></a>

@@ -10,4 +10,5 @@ label: CBS
 country: US
 styles: ['Contemporary Classical']
 video: https://www.youtube.com/watch?v=6Stu7h7Qup8
+category: Minimalism
 ---

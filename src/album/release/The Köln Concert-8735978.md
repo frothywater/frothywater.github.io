@@ -10,4 +10,5 @@ label: ECM Records
 country: Germany
 styles: ['Free Improvisation']
 video: https://www.youtube.com/watch?v=u-RZliAAe1I
+category: Keith Jarrett
 ---

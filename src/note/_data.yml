@@ -1,0 +1,16 @@
+categories:
+- Essay
+- Fiction
+- Murmur
+- Link
+- Review
+- Translation
+- Poem
+categoryName:
+  Essay: 随笔
+  Fiction: 梦境
+  Link: 链接
+  Murmur: 碎碎念
+  Poem: 诗歌
+  Review: 评论
+  Translation: 翻译

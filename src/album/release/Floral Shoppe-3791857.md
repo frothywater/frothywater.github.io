@@ -10,4 +10,5 @@ label: Beer On The Rug
 country: US
 styles: ['Vaporwave', 'Faux-utopian']
 video: https://www.youtube.com/watch?v=cCq0P509UL4
+category: Vaporwave
 ---

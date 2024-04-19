@@ -8,4 +8,5 @@ genre: ['Classical']
 image: Impromptus Op. 90 & Op. 142-2575703.jpg
 label: Philips
 country: US
+category: Classical
 ---

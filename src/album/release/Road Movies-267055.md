@@ -10,6 +10,7 @@ label: Nonesuch
 country: Europe
 styles: ['Contemporary Classical']
 video: https://www.youtube.com/watch?v=lGqTTeOdzOk
+category: Minimalism
 ---
 
 John Adams，极简主义的Piano solo。

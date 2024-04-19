@@ -2,7 +2,7 @@
 title: 意义
 date: 2022-03-01 20:16:41
 tags: Night
-categories: Poem
+category: Poem
 ---
 
 当生活中没有什么比吉他轰鸣声更真实，

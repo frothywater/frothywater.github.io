@@ -5,8 +5,8 @@ section.quotes {
 
 .clip-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-    gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+    gap: 1em;
 
     article {
         border: 1px solid lightgray;

@@ -9,4 +9,5 @@ image: Chiaroscuro-3238332.jpg
 label: ECM Records
 country: Germany
 styles: ['ECM Jazz']
+category: ECM
 ---

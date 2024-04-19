@@ -1,11 +1,11 @@
 .note-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-    gap: 3em 2em;
+    gap: 2em 2em;
 
     article {
         border: 1px solid lightgray;
-        padding-block: 2lh;
+        padding-block: 1.5lh;
         padding-inline: 1.5em;
 
         /* title */

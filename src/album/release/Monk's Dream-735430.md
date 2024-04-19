@@ -10,4 +10,5 @@ label: Columbia
 country: US
 styles: ['Hard Bop']
 video: https://www.youtube.com/watch?v=mgqYJa5hMQY
+category: Jazz
 ---

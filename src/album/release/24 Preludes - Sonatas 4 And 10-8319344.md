@@ -8,4 +8,5 @@ genre: ['Classical']
 image: 24 Preludes - Sonatas 4 And 10-8319344.jpg
 label: Virgin Classics
 country: UK & Europe
+category: Classical
 ---

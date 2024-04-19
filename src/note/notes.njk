@@ -2,5 +2,25 @@
 url: /note/
 ---
 
-{% set notes = search.pages("type=note", "date=desc") %}
-{% include "pages/note-list.njk" %}
+{# {% set categories = search.values("category", "type=note") | sort %} #}
+
+<nav class="nav-links section-links">
+  <ul>
+    <span>&gt;</span>
+    {% for category in categories %}
+      <li>
+        <a href="#{{ category }}">{{ categoryName[category] }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+{% for category in categories %}
+  <section>
+    <h2 id="{{ category }}">{{ categoryName[category] }}</h2>
+
+    {% set query = "type=note category='" + category + "'" %}
+    {% set notes = search.pages(query, "date=desc") %}
+    {% include "pages/note-list.njk" %}
+  </section>
+{% endfor %}

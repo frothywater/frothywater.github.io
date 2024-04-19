@@ -10,4 +10,5 @@ label: Text Records
 country: Europe
 styles: ['Techno', 'House']
 video: https://www.youtube.com/watch?v=kRs4NPTYfDc
+category: Electronic
 ---

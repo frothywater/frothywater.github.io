@@ -10,4 +10,5 @@ label: Nonesuch
 country: US
 styles: ['Contemporary Jazz']
 video: https://www.youtube.com/watch?v=s0QY3A4jFfs
+category: Ambient Jazz
 ---

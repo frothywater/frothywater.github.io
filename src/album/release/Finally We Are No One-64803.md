@@ -10,4 +10,5 @@ label: FatCat Records
 country: UK
 styles: ['Ambient', 'Post Rock']
 video: https://www.youtube.com/watch?v=1vN2c9OIVVY
+category: Post-rock
 ---

@@ -10,4 +10,5 @@ label: bié Records
 country: China
 styles: ['IDM']
 video: https://www.youtube.com/watch?v=stF8L5lF2IY
+category: Electronic
 ---

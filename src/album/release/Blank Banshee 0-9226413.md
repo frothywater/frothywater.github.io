@@ -10,4 +10,5 @@ label: Hologram Bay
 country: Canada
 styles: ['Vaporwave', 'Vaportrap']
 video: https://www.youtube.com/watch?v=8oBbJg_PqbU
+category: Vaporwave
 ---

@@ -10,4 +10,5 @@ label: Text Records
 country: UK
 styles: ['Ambient', 'House', 'Techno']
 video: https://www.youtube.com/watch?v=lWInZ4N6C2g
+category: Electronic
 ---

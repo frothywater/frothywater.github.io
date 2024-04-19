@@ -9,4 +9,5 @@ image: I Have The Room Above Her-622479.jpg
 label: ECM Records
 country: Germany
 styles: ['ECM Jazz']
+category: ECM
 ---

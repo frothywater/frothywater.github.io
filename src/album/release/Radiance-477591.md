@@ -9,4 +9,5 @@ image: Radiance-477591.jpg
 label: ECM Records
 country: Germany
 styles: ['Free Improvisation']
+category: Keith Jarrett
 ---

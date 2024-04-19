@@ -9,4 +9,5 @@ image: The Words And The Days-2854927.jpg
 label: ECM Records
 country: Germany
 styles: ['ECM Jazz']
+category: ECM
 ---

@@ -8,6 +8,8 @@ genre: ['Classical']
 image: Complete Trios-5237593.jpg
 label: Philips Classics
 country: Europe
+category: Classical
 ---
 
-Melody that warmly embraces me, opening a vast space for self-connection and self-reflection.2020-06-20
+Melody that warmly embraces me, opening a vast space for self-connection and self-reflection.
+<time>2020-06-20</time>

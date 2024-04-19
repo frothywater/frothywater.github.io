@@ -8,4 +8,5 @@ genre: ['Classical']
 image: Suites For Solo Cello-4885539.jpg
 label: RCA Victor Red Seal
 country: Europe
+category: Classical
 ---

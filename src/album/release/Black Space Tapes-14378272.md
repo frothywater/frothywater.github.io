@@ -10,4 +10,5 @@ label: Stones Throw Records
 country: US
 styles: ['Contemporary Jazz']
 video: https://www.youtube.com/watch?v=ivsrL8EzKGA
+category: Ambient Jazz
 ---

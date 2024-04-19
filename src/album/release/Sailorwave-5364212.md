@@ -10,4 +10,5 @@ label: Fortune 500
 country: US
 styles: ['Vaporwave', 'Future Funk']
 video: https://www.youtube.com/watch?v=iKWHv3MEfIo
+category: Vaporwave
 ---

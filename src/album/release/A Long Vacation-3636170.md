@@ -10,4 +10,5 @@ label: Niagara Records
 country: Japan
 styles: ['City Pop']
 video: https://www.youtube.com/watch?v=ApoPYhfFQFk
+category: Citypop
 ---

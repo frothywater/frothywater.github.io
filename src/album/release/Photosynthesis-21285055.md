@@ -9,6 +9,8 @@ image: Photosynthesis-21285055.jpg
 country: US
 styles: ['Fusion', 'Prog Rock']
 video: https://www.youtube.com/watch?v=gtZoQnO4BDM
+category: Nu Jazz
 ---
 
-爵士跨界电子。《Shapes That Change Shape》前段合成器一响起来就好像坠入云层…… 2020-05-08
+爵士跨界电子。《Shapes That Change Shape》前段合成器一响起来就好像坠入云层……
+<time>2020-05-08</time>

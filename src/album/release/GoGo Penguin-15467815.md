@@ -10,4 +10,5 @@ label: Blue Note
 country: USA & Europe
 styles: ['Contemporary Jazz']
 video: https://www.youtube.com/watch?v=j5yObaxOedU
+category: Nu Jazz
 ---

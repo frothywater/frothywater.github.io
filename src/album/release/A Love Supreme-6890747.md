@@ -10,4 +10,5 @@ label: Impulse!
 country: US
 styles: ['Post Bop']
 video: https://www.youtube.com/watch?v=vMCHDC2Lurk
+category: Jazz
 ---

@@ -8,4 +8,5 @@ genre: ['Classical']
 image: '"Archduke" Trio & Trio No. 7 In B Flat (1812)-3382878.jpg'
 label: Angel Records
 country: US
+category: Classical
 ---

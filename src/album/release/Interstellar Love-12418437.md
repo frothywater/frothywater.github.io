@@ -10,4 +10,5 @@ label: Dream Catalogue
 country: UK
 styles: ['Vaporwave', 'Slushwave']
 video: https://www.youtube.com/watch?v=WtsMzZgju9I
+category: Vaporwave
 ---

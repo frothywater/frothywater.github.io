@@ -8,4 +8,5 @@ genre: ['Electronic']
 image: Japanese Disco Edits-8585851.jpg
 styles: ['Vaporwave', 'Future Funk']
 video: https://www.youtube.com/watch?v=lF6QsIBsTG4
+category: Vaporwave
 ---

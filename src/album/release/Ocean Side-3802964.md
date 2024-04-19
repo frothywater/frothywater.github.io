@@ -10,4 +10,5 @@ label: Vap
 country: Japan
 styles: ['Kayōkyoku']
 video: https://www.youtube.com/watch?v=C1XnLj9690Y
+category: Citypop
 ---

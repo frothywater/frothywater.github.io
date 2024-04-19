@@ -10,6 +10,8 @@ label: 299 Japan Records
 country: Japan
 styles: ['Shoegaze']
 video: https://www.youtube.com/watch?v=dw_lsHjH6X8
+category: J-Rock
 ---
 
-《Back To My Place》后半段的鼓速度降下来的时候尤其扣人心弦。2019-12-28
+《Back To My Place》后半段的鼓速度降下来的时候尤其扣人心弦。
+<time>2019-12-28</time>

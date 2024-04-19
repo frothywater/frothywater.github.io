@@ -8,6 +8,7 @@ country: Japan
 styles: ['Indie Rock', 'Shoegaze']
 video: https://www.youtube.com/watch?v=y51M4-F03kM
 link: https://rateyourmusic.com/release/album/lowbell/nanairo/
+category: J-Rock
 ---
 
 第二次发这首歌，初音盯。会对噪音墙有特别的迷恋。不说混响，混响只是技术层面的东西。

@@ -8,4 +8,5 @@ genre: ['Classical']
 image: The Goldberg Variations-4579917.jpg
 label: CBS Masterworks Digital
 country: US
+category: Classical
 ---

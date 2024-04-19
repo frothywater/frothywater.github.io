@@ -10,4 +10,5 @@ label: Domino
 country: Europe
 styles: ['House', 'Techno']
 video: https://www.youtube.com/watch?v=zbhafEipo6c
+category: Electronic
 ---

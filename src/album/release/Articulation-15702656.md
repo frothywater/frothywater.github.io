@@ -10,4 +10,5 @@ label: Erased Tapes Records
 country: UK
 styles: ['IDM']
 video: https://www.youtube.com/watch?v=YFeQ_ksk4fY
+category: Electronic
 ---

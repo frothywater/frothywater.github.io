@@ -2,16 +2,43 @@
 url: /album/
 ---
 
+<nav class="nav-links section-links">
+  <ul>
+    <span>&gt;</span>
+    <li><a href="#releases">唱片</a></li>
+    <li><a href="#logs">日志</a></li>
+  </ul>
+</nav>
+
 {# Releases #}
 <section>
-  <h2>唱片</h2>
-  {% set albums = search.pages("type=music-album", "date=desc") %}
-  {% include "pages/album-list.njk" %}
+  <h2 id="releases">唱片</h2>  
+
+  {# {% set categories = search.values("category", "type=music-album") | sort %} #}
+
+  <nav class="nav-links section-links">
+    <ul>
+      <span>&gt;&gt;</span>
+      {% for category in categories %}
+        <li><a href="#{{ category }}">{{ categoryName[category] }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  {% for category in categories %}
+    <section>
+      <h3 id="{{ category }}">{{ categoryName[category] }}</h3>
+
+      {% set query = "type=music-album category='" + category + "'" %}
+      {% set albums = search.pages(query, "date=desc") %}
+      {% include "pages/album-list.njk" %}
+    </section>
+  {% endfor %}
 </section>
 
 {# Log #}
 <section>
-  <h2>日志</h2>
+  <h2 id="logs">日志</h2>
   {% set logs = search.pages("type=music-log", "date=desc") %}
   {% include "pages/log-list.njk" %}
 </section>

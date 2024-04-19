@@ -8,4 +8,5 @@ genre: ['Classical']
 image: 4 Balladen · Barcarolle · Fantasie-4042741.jpg
 label: Deutsche Grammophon
 country: Germany
+category: Classical
 ---

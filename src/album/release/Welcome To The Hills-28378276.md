@@ -9,4 +9,5 @@ image: Welcome To The Hills-28378276.jpg
 label: Cashmere Thoughts Recordings
 styles: ['Contemporary Jazz']
 video: https://www.youtube.com/watch?v=TLWygV_OGc0
+category: Nu Jazz
 ---

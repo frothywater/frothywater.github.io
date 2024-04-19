@@ -10,4 +10,5 @@ label: Columbia
 country: US
 styles: ['Fusion']
 video: https://www.youtube.com/watch?v=50fB5L1vmn8
+category: Jazz
 ---

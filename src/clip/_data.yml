@@ -1,0 +1,30 @@
+categories:
+  - blog
+  - catalog
+  - portal
+  - wiki
+  - project
+  - article
+  - series
+  - tool
+  - interactive
+  - documentation
+  - game
+  - test
+  - video
+  - misc
+categoryName:
+  blog: 博客
+  catalog: 目录
+  portal: 门户
+  wiki: 维基
+  project: 项目
+  article: 文章
+  series: 系列
+  tool: 工具
+  interactive: 互动式
+  documentation: 文档
+  game: 游戏
+  test: 测试
+  video: 视频
+  misc: 其他

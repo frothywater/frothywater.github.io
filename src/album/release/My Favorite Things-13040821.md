@@ -10,4 +10,5 @@ label: Atlantic
 country: US
 styles: ['Hard Bop']
 video: https://www.youtube.com/watch?v=JQvc-Gkwhow
+category: Jazz
 ---

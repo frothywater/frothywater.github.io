@@ -35,7 +35,7 @@ navlinks:
       <small>{{ site.description }}</small>
     </header>
 
-    <nav>
+    <nav class="nav-links">
       <ul>
         {% for url_, name in navlinks %}
           <li><a href="{{ url_ }}" class="bare-link" {% if url == url_ %}aria-current="page"{% endif %}>{{ name }}</a></li>

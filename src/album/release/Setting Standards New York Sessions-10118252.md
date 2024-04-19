@@ -9,4 +9,5 @@ image: Setting Standards New York Sessions-10118252.jpg
 label: ECM Records
 country: Japan
 video: https://www.youtube.com/watch?v=6jkq4pNRAY0
+category: Keith Jarrett
 ---

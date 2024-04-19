@@ -9,4 +9,5 @@ image: Sun Bear Concerts-879287.jpg
 label: ECM Records
 country: Germany
 styles: ['Free Improvisation']
+category: Keith Jarrett
 ---

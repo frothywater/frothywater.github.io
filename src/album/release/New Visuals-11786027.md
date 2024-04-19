@@ -9,4 +9,5 @@ image: New Visuals-11786027.jpg
 country: Italy
 styles: ['Vaporwave', 'Future Funk']
 video: https://www.youtube.com/watch?v=Z8aUPJrduxw
+category: Vaporwave
 ---

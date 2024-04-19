@@ -10,4 +10,5 @@ label: Kiwiport
 country: Japan
 styles: ['Math Rock']
 video: https://www.youtube.com/watch?v=POgXK5nM8BQ
+category: J-Rock
 ---

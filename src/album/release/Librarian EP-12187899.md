@@ -9,4 +9,5 @@ image: Librarian EP-12187899.jpg
 label: Midwest Collective
 country: US
 styles: ['Contemporary Jazz']
+category: Nu Jazz
 ---

@@ -8,4 +8,5 @@ genre: ['Classical']
 image: The Late Piano Sonatas (D 958 • 959 • 960) - 3 Klavierstücke D 946 - Allegretto D 915-12578558.jpg
 label: Deutsche Grammophon
 country: Europe
+category: Classical
 ---

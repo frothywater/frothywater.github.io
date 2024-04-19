@@ -10,4 +10,5 @@ label: Blue Note
 country: US
 styles: ['Post Bop']
 video: https://www.youtube.com/watch?v=EWC5x9G45yo
+category: Jazz
 ---

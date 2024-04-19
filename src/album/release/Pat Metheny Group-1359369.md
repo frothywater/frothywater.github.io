@@ -10,4 +10,5 @@ label: ECM Records
 country: Germany
 styles: ['ECM Jazz']
 video: https://www.youtube.com/watch?v=Qfm_fI7zVcc
+category: ECM
 ---

@@ -10,6 +10,7 @@ label: ECM Records
 country: Germany
 styles: ['ECM Jazz']
 video: https://www.youtube.com/watch?v=i_q5JuleA4E
+category: ECM
 ---
 
 在初冬雨天想要听的歌。

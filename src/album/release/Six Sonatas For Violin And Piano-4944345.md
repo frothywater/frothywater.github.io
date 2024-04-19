@@ -8,4 +8,5 @@ genre: ['Classical']
 image: Six Sonatas For Violin And Piano-4944345.jpg
 label: ECM Records
 country: Germany
+category: Classical
 ---

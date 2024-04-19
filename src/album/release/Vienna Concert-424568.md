@@ -9,4 +9,5 @@ image: Vienna Concert-424568.jpg
 label: ECM Records
 country: Germany
 styles: ['Free Improvisation']
+category: Keith Jarrett
 ---

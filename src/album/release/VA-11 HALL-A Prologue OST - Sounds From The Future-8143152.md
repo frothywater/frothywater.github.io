@@ -8,4 +8,5 @@ genre: ['Electronic', 'Jazz']
 image: VA-11 HALL-A Prologue OST - Sounds From The Future-8143152.jpg
 country: US
 styles: ['Synthwave']
+category: Electronic
 ---

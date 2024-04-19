@@ -10,4 +10,5 @@ label: Blue Note
 country: US
 styles: ['Hard Bop']
 video: https://www.youtube.com/watch?v=HT_Zs5FKDZE
+category: Jazz
 ---

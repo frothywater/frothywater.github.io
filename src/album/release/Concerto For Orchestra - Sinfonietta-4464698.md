@@ -8,4 +8,5 @@ genre: ['Classical']
 image: Concerto For Orchestra - Sinfonietta-4464698.jpg
 label: Columbia Masterworks
 country: US
+category: Classical
 ---

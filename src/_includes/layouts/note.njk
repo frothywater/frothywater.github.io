@@ -11,8 +11,8 @@ layout: layouts/base.njk
         {{ date | date('yyyy-MM-dd') }}
       </time>
 
-      {% if note.category %}
-        <a href="/category/{{ note.category }}" class="category">{{ note.category }}</a>
+      {% if category %}
+        <a href="/note/#{{ category }}" class="category">{{ category }}</a>
       {% endif %}
 
       {% for tag in tags %}

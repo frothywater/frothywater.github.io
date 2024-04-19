@@ -10,4 +10,5 @@ label: Mote
 country: UK
 styles: ['Contemporary Classical']
 video: https://www.youtube.com/watch?v=MRMqBLCC1pE
+category: Modern Classical
 ---

@@ -10,4 +10,5 @@ label: Alfa
 country: Japan
 styles: ['Fusion']
 video: https://www.youtube.com/watch?v=_VwilvWi8U8
+category: Jazz Fusion
 ---

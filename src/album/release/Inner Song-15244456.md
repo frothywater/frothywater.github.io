@@ -10,4 +10,5 @@ label: Smalltown Supersound
 country: Norway
 styles: ['Techno']
 video: https://www.youtube.com/watch?v=YXZyqrJP84U
+category: Electronic
 ---

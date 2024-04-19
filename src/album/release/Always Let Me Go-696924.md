@@ -9,4 +9,5 @@ image: Always Let Me Go-696924.jpg
 label: ECM Records
 country: Europe
 styles: ['ECM Jazz']
+category: Keith Jarrett
 ---

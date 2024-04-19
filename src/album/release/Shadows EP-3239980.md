@@ -10,4 +10,5 @@ label: Eglo Records
 country: UK
 styles: ['Bass Music', 'House']
 video: https://www.youtube.com/watch?v=Zpp4NoT_QlU
+category: Electronic
 ---

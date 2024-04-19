@@ -8,4 +8,5 @@ genre: ['Classical']
 image: Sonata For Arpeggione • Fantasiestücke Op. 73-7857687.jpg
 label: Philips
 country: Europe
+category: Classical
 ---

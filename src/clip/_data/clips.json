@@ -414,7 +414,7 @@
       "culture",
       "design"
     ],
-    "category": "catalog",
+    "category": "wiki",
     "favicon": "https://static.wikia.nocookie.net/aesthetics/images/4/4a/Site-favicon.ico"
   },
   {
@@ -537,9 +537,7 @@
   {
     "title": "自白",
     "url": "https://telegra.ph/自白-07-31",
-    "tags": [
-      "misc"
-    ],
+    "category": "misc",
     "favicon": "https://telegra.ph/favicon.ico"
   }
 ]

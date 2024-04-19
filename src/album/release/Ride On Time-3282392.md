@@ -10,4 +10,5 @@ label: Air Records
 country: Japan
 styles: ['City Pop', 'Funk', 'Soul', 'Rock']
 video: https://www.youtube.com/watch?v=5F_FrbZWApE
+category: Citypop
 ---

@@ -10,4 +10,5 @@ label: Creation Records
 country: UK
 styles: ['Shoegaze']
 video: https://www.youtube.com/watch?v=FyYMzEplnfU
+category: Post-rock
 ---

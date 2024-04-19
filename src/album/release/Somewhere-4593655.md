@@ -9,4 +9,5 @@ image: Somewhere-4593655.jpg
 label: ECM Records
 country: Germany
 video: https://www.youtube.com/watch?v=yQc4Z0QK4Hc
+category: Keith Jarrett
 ---

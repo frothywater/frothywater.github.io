@@ -10,4 +10,5 @@ label: Universal Music Classics & Jazz
 country: Germany
 styles: ['Contemporary Classical']
 video: https://www.youtube.com/watch?v=DLDvbnK_Sqk
+category: Modern Classical
 ---

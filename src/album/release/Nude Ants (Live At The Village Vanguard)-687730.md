@@ -10,6 +10,7 @@ label: ECM Records
 country: Germany
 styles: ['ECM Jazz']
 video: https://www.youtube.com/watch?v=TDyVAZNnXvc
+category: Jazz
 ---
 
 经常想听那种压倒性的流动性max的音乐。

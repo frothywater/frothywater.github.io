@@ -10,4 +10,5 @@ label: Moon Records
 country: Japan
 styles: ['City Pop', 'Funk', 'Soul', 'Rock']
 video: https://www.youtube.com/watch?v=X0nl3LY71Dk
+category: Citypop
 ---

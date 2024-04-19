@@ -10,4 +10,5 @@ label: Kompakt
 country: Germany
 styles: ['House', 'Minimal']
 video: https://www.youtube.com/watch?v=ytV_OhxGfTk
+category: Electronic
 ---

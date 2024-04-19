@@ -10,6 +10,7 @@ label: Daizawa Records
 country: Japan
 styles: ['Indie Rock', 'Shoegaze']
 video: https://www.youtube.com/watch?v=Qygdy6Hc0yA
+category: J-Rock
 ---
 
 風が吹いたら夏が始まる。风一吹夏天就开始了。
