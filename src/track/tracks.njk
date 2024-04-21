@@ -2,4 +2,8 @@
 url: /track/
 ---
 
-{% include "pages/track-list.njk" %}
+<div class="track-grid">
+  {% for track in tracks %}
+    {% include "components/track.njk" %}
+  {% endfor %}
+</div>

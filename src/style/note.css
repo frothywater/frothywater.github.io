@@ -1,3 +1,45 @@
+.note-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    gap: 2em;
+}
+
+.note-list {
+    display: flex;
+    gap: 1em;
+    overflow-x: scroll;
+    inline-size: 100%;
+    
+    article.note-card {
+        flex: 0 0 18em;
+        padding: 1em;
+    }
+}
+
+article.note-card {
+    border: 1px solid lightgray;
+    padding-block: 1.5lh;
+    padding-inline: 1.5em;
+
+    /* title */
+    >a {
+        font-size: 1.2em;
+        color: var(--primary);
+    }
+
+    &[data-featured]>a {
+        color: var(--primary-dark);
+    }
+
+    /* digest */
+    p {
+        max-block-size: calc(var(--line-clamp) * 1lh);
+        font-size: 0.9em;
+        line-height: 1.5;
+        margin-block: 0.5lh 0;
+    }
+}
+
 article.note {
     max-inline-size: 42em;
     line-height: 1.5;

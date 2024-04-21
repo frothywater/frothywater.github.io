@@ -1,31 +1,38 @@
-.track-list {
+.track-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
     gap: 3em 2em;
+}
 
-    article {
-        border: 1px solid lightgray;
-        border-radius: 0.8em;
-        margin-block-end: auto;
-        padding: 1em;
+.track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    overflow-y: scroll;
+}
 
-        audio {
-            width: 100%;
-        }
+article.track {
+    border: 1px solid lightgray;
+    border-radius: 0.8em;
+    margin-block-end: auto;
+    padding: 1em;
 
-        /* title */
-        p.track-title {
-            margin-block-start: 1lh;
-        }
+    audio {
+        width: 100%;
+    }
 
-        /* note */
-        p.track-note {
-            font-size: 0.9rem;
-        }
+    /* title */
+    p.track-title {
+        margin-block-start: 1lh;
+    }
 
-        p {
-            line-height: 1.35;
-            margin-block: 0.3lh;
-        }
+    /* note */
+    p.track-note {
+        font-size: 0.9em;
+    }
+
+    p {
+        line-height: 1.35;
+        margin-block: 0.3lh;
     }
 }

@@ -1,0 +1,150 @@
+<div class="home-grid">
+  {# 1. notes #}
+  <section id="note">
+    <a href="/note/"><h2>笔记本</h2></a>
+
+    {# featured notes #}
+    {% set featuredNotes = [] %}
+    {% for name in site.featuredNotes %}
+      {% set query = "type=note basename='" + name + "'" %}
+      {% set page = search.page(query) %}
+      {% if page %}
+        {% set featuredNotes = featuredNotes.concat(page) %}
+      {% endif %}
+    {% endfor %}
+
+    {# recent notes #}
+    {% set allNotes = search.pages("type=note", "date=desc") %}
+    {% set recentNotes = [] %}
+    {% for note in allNotes %}
+      {% if recentNotes.length < 5 and not featuredNotes.includes(note) %}
+        {% set recentNotes = recentNotes.concat(note) %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="note-section home-list">
+      <div class="note-list">
+        {% for note in featuredNotes %}
+        {% include "components/note-card.njk" %}
+        {% endfor %}
+      </div>
+
+      <h3>最近在写</h3>
+      <div class="note-list">
+        {% for note in recentNotes %}
+        {% include "components/note-card.njk" %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {# 2. logs #}
+  <section id="log">
+    <a href="/log/"><h2>手帐</h2></a>
+
+    {% set logs = search.pages("type=log", "date=desc", 10) %}
+    <div class="log-list home-list">
+      {% for log in logs %}
+      {% include "components/log.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+
+  {# 3. music #}
+  <section id="music">
+    <a href="/music/"><h2>唱片柜</h2></a>
+
+    {# featured albums #}
+    {% set featuredAlbums = [] %}
+    {% for name in site.featuredAlbums %}
+      {% set query = "type=music-album title='" + name + "'" %}
+      {% set page = search.page(query) %}
+      {% if page %}
+        {% set featuredAlbums = featuredAlbums.concat(page) %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="music-album-list home-list">
+      {% for album in featuredAlbums %}
+      {% include "components/music-album.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+
+  {# 4. photos #}
+  <section id="photo">
+    <a href="/photo/"><h2>相册</h2></a>
+
+    {# featured photos #}
+    {% set featuredPhotos = [] %}
+    {% set photos = search.data("/photo/").photos %}
+    {% for name in site.featuredPhotos %}
+      {% for photo in photos %}
+        {% if photo.file == name  %}
+          {% set featuredPhotos = featuredPhotos.concat(photo) %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+
+    <div class="photo-list home-list">
+      {% for photo in featuredPhotos %}
+        {% include "components/photo.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+
+  {# 5. clips #}
+  <section id="clip">
+    <a href="/clip/"><h2>剪报</h2></a>
+
+    {# featured clips #}
+    {% set featuredClips = [] %}
+    {% set clips = search.data("/clip/").clips %}
+    {% for name in site.featuredClips %}
+      {% for clip in clips %}
+        {% if clip.title == name  %}
+          {% set featuredClips = featuredClips.concat(clip) %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+
+    <div class="clip-list home-list">
+      {% for clip in featuredClips %}
+        {% include "components/clip.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+
+  {# 6. tracks #}
+  <section id="track">
+    <a href="/track/"><h2>八音盒</h2></a>
+
+    {% set tracks = search.data("/track/").tracks %}
+    <div class="track-list home-list">
+      {% for track in tracks %}
+        {% include "components/track.njk" %}
+      {% endfor %}
+    </div>
+</div>
+
+<style>
+@media (max-width: 50em) {
+  body {
+    block-size: 100vh;
+    padding-inline: 0;
+    
+    >header, >nav {
+      padding-inline-start: 5vw;
+    }
+
+    >main {
+      margin-block: 1lh;
+      block-size: 100%;
+    }
+
+    >footer {
+      display: none;
+    }
+  }
+}
+</style>

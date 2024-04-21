@@ -1,7 +1,8 @@
 :root {
-  --white: #fcfcfc;
-  --black: #1c1c1c;
-  --primary: cadetblue;
+  --white: #fffdf8;
+  --black: #242424;
+  --primary: #a1c390;
+  --primary-dark: #2a6c45;
 
   --sans: -apple-system, system-ui, sans-serif;
   --serif: serif;
@@ -25,9 +26,9 @@ body {
     /* home link */
     >a {
       h1 {
-        display: inline-block;
+        display: inline;
         margin-block: 0;
-        margin-inline-end: 0.5rem;
+        margin-inline-end: 0.5em;
       }
 
       color: var(--black);
@@ -103,13 +104,13 @@ section+section {
 
 .tag,
 .category {
-  font-size: 0.8rem;
+  font-size: 0.8em;
   text-transform: lowercase;
   color: gray;
 }
 
 time {
-  font-size: 0.8rem;
+  font-size: 0.8em;
   color: gray;
 }
 
@@ -123,5 +124,177 @@ time {
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: block-axis;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: var(--line-clamp, 4);
+}
+
+.home-grid {
+  display: grid;
+  column-gap: 2em;
+}
+
+/* phone: parallel scrolling */
+@media (max-width: 50em) {
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5lh;
+    
+    padding-block-start: 1lh;
+    padding-inline: 5vw;
+
+    >header,
+    >nav {
+      margin-block: 0lh;
+    }
+
+    >main {
+      margin-block: 1lh;
+    }
+  }
+
+  .home-grid {
+    grid-template-columns: repeat(6, 85%);
+    grid-template-rows: 100%;
+    grid-template-areas: "note log music photo clip track";
+    column-gap: 1em;
+
+    block-size: 100%;
+    padding-inline: 5vw;
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    >section {
+      scroll-snap-align: center; 
+    }
+  }
+
+  section+section {
+    margin-block-start: 0;
+  }
+
+  section#note {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .note-section {
+    overflow-y: scroll;
+  }
+
+  /* turn notes to vertical scroll view */
+  div.note-list {
+    display: flex;
+    justify-self: stretch;
+    flex-direction: column;
+    gap: 1em;
+
+    article.note-card {
+      flex: unset;
+    }
+  }
+
+  section#photo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* turn photos to vertical scroll view */
+  div.photo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    overflow-y: scroll;
+
+    figure.photo {
+      img {
+        max-inline-size: 100%;
+        max-block-size: unset;
+      }
+
+      p {
+        display: none;
+      }
+    }
+  }
+
+  .home-list {
+    padding-block-end: 2lh;
+  }
+}
+
+/* medium: 2 columns */
+@media (min-width: 50em) {
+  .home-grid {
+    grid-template:
+      "note note" auto
+      "log music" 35lh
+      "photo photo" auto
+      "clip track" 25lh
+      / 1fr 1fr;
+  }
+}
+
+/* wide: 3 columns */
+@media (min-width: 75em) {
+  .home-grid {
+    grid-template:
+      "note note note" auto
+      "log music track" 35lh
+      "photo photo photo" auto
+      "clip clip clip" auto
+      / 1fr 1fr 1fr;
+  }
+
+  /* turn clips to grid view */
+  div.clip-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+    gap: 1em;
+  }
+}
+
+/* extra wide: 4 columns */
+@media (min-width: 100em) {
+  .home-grid {
+    grid-template:
+      "note note note note" auto
+      "log music track clip" 35lh
+      "photo photo photo photo" auto
+      / 1fr 1fr 1fr 1fr;
+  }
+}
+
+section#note {
+  grid-area: note;
+}
+
+section#log {
+  grid-area: log;
+  display: flex;
+  flex-direction: column;
+}
+
+section#music {
+  grid-area: music;
+  display: flex;
+  flex-direction: column;
+}
+
+section#photo {
+  grid-area: photo;
+  display: flex;
+  flex-direction: column;
+}
+
+section#clip {
+  grid-area: clip;
+  display: flex;
+  flex-direction: column;
+}
+
+section#track {
+  grid-area: track;
+  display: flex;
+  flex-direction: column;
 }

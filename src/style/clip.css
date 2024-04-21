@@ -1,34 +1,41 @@
-section.quotes {
-    max-inline-size: 42em;
-    line-height: 1.5;
-}
-
-.clip-list {
+.clip-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
     gap: 1.5em;
+}
 
-    article {
-        border: 1px solid lightgray;
-        border-radius: 0.8em;
-        margin-block-end: auto;
-        padding-block: 0.6em;
-        padding-inline: 1em;
+.clip-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    overflow-y: scroll;
+}
 
-        /* favicon */
-        img {
-            display: inline;
-            vertical-align: middle;
-            margin-inline-end: 0.2em;
-            width: 1.2em;
-            height: 1.2em;
-        }
+article.clip {
+    border: 1px solid lightgray;
+    border-radius: 0.8em;
+    margin-block-end: auto;
+    padding-block: 0.6em;
+    padding-inline: 1em;
 
-        /* note */
-        >p {
-            font-size: 0.9em;
-            line-height: 1.35;
-            margin-block: 0.5lh 0;
-        }
+    /* favicon */
+    img {
+        display: inline;
+        vertical-align: middle;
+        margin-inline-end: 0.2em;
+        width: 1.2em;
+        height: 1.2em;
     }
+
+    /* note */
+    >p {
+        font-size: 0.9em;
+        line-height: 1.35;
+        margin-block: 0.5lh 0;
+    }
+}
+
+section.quotes {
+    max-inline-size: 42em;
+    line-height: 1.5;
 }

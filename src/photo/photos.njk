@@ -2,4 +2,8 @@
 url: /photo/
 ---
 
-{% include "pages/photo-grid.njk" %}
+<div class="photo-grid">
+  {% for photo in photos %}
+    {% include "components/photo.njk" %}
+  {% endfor %}
+</div>

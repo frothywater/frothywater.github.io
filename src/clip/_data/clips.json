@@ -1,21 +1,22 @@
 [
   {
-    "title": "一天世界博客",
+    "title": "一天世界",
     "url": "https://blog.yitianshijie.net/",
-    "tags": [
-      "digital",
-      "culture",
-      "japan"
-    ],
+    "tags": ["digital", "culture", "japan"],
     "category": "blog",
     "favicon": "https://blog.yitianshijie.net/favicon.ico"
   },
   {
+    "title": "滅茶苦茶",
+    "url": "https://miechakucha.com",
+    "tags": ["digital", "culture", "japan"],
+    "category": "blog",
+    "favicon": "https://i.typlog.com/miechakucha/8404585230_630287.png"
+  },
+  {
     "title": "Apple4us",
     "url": "https://apple4us.com/",
-    "tags": [
-      "digital"
-    ],
+    "tags": ["digital"],
     "category": "blog",
     "note": "李如一早期的文章存档。",
     "favicon": "https://apple4us.com/favicon.ico"
@@ -23,9 +24,7 @@
   {
     "title": "一個被刪除的知乎問題 - Apple4us",
     "url": "https://apple4us.com/2014/the-real-sin-of-online-censorship",
-    "tags": [
-      "digital"
-    ],
+    "tags": ["digital"],
     "category": "article",
     "note": "李如一早期论GFW。",
     "favicon": "https://apple4us.com/favicon.ico"
@@ -33,11 +32,7 @@
   {
     "title": "The Complete Chunghwan Toto",
     "url": "https://chunghwa.asia/",
-    "tags": [
-      "digital",
-      "culture",
-      "japan"
-    ],
+    "tags": ["digital", "culture", "japan"],
     "category": "blog",
     "note": "托托的个人网站。「一切关于〇〇一代的折衷主义」。",
     "favicon": "https://chunghwa.asia/favicon.png"
@@ -45,493 +40,350 @@
   {
     "title": "Bret Victor",
     "url": "https://worrydream.com/",
-    "tags": [
-      "digital",
-      "tech"
-    ],
+    "tags": ["digital", "tech"],
     "category": "blog",
     "favicon": "https://worrydream.com/favicon.ico"
   },
   {
     "title": "Gwern Branwen",
     "url": "https://gwern.net/",
-    "tags": [
-      "tech"
-    ],
+    "tags": ["tech"],
     "category": "blog"
   },
   {
     "title": "Maggie Appleton",
     "url": "https://maggieappleton.com/",
-    "tags": [
-      "digital",
-      "tech"
-    ],
+    "tags": ["digital", "tech"],
     "category": "blog",
     "favicon": "https://maggieappleton.com/images/favicon/favicon.ico"
   },
   {
     "title": "一鸠样",
     "url": "https://onedogface.glitch.me",
-    "tags": [
-      "culture"
-    ],
+    "tags": ["culture"],
     "category": "blog",
     "note": "朋友van的博客：揉杂中西糟粕，玩弄虚实意境，寻章摘句，昆乱不挡。"
   },
   {
     "title": "Ishkur's Guide to Electronic Music",
     "url": "https://music.ishkur.com/",
-    "tags": [
-      "music",
-      "electronic"
-    ],
+    "tags": ["music", "electronic"],
     "category": "interactive",
     "favicon": "https://music.ishkur.com/favicon.ico"
   },
   {
     "title": "Album of The Year",
     "url": "https://www.albumoftheyear.org/",
-    "tags": [
-      "music"
-    ],
+    "tags": ["music"],
     "category": "catalog"
   },
   {
     "title": "Jazz Piano Lessons",
     "url": "https://www.thejazzpianosite.com/jazz-piano-lessons/",
-    "tags": [
-      "music",
-      "jazz"
-    ],
+    "tags": ["music", "jazz"],
     "category": "wiki",
     "favicon": "https://www.thejazzpianosite.com/favicon.ico"
   },
   {
     "title": "JazzTokyo",
     "url": "https://jazztokyo.org/",
-    "tags": [
-      "music",
-      "jazz",
-      "japan"
-    ],
+    "tags": ["music", "jazz", "japan"],
     "category": "portal",
     "favicon": "https://jazztokyo.org/wp-content/uploads/2016/03/JazzTokyo-Logo-1.png"
   },
   {
     "title": "Jpop80ss2",
     "url": "https://jpop80ss2.blogspot.com/",
-    "tags": [
-      "music",
-      "pop",
-      "japan"
-    ],
+    "tags": ["music", "pop", "japan"],
     "category": "catalog",
     "favicon": "https://jpop80ss2.blogspot.com/favicon.ico"
   },
   {
     "title": "Learning Synth by Ableton",
     "url": "https://learningsynths.ableton.com/",
-    "tags": [
-      "music",
-      "electronic"
-    ],
+    "tags": ["music", "electronic"],
     "category": "interactive",
     "favicon": "https://learningsynths.ableton.com/meta/favicon/favicon.ico"
   },
   {
     "title": "Ambient Jazz’s Quiet, Forceful Return - Pitchfork",
     "url": "https://pitchfork.com/features/article/ambient-jazz-pharoah-sanders-floating-points-nala-sinephro/",
-    "tags": [
-      "music",
-      "jazz",
-      "electronic"
-    ],
+    "tags": ["music", "jazz", "electronic"],
     "category": "article",
     "favicon": "https://pitchfork.com/favicon.ico"
   },
   {
     "title": "李如一《日本爵士乐专栏》",
     "url": "https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1806334053726388227",
-    "tags": [
-      "music",
-      "jazz",
-      "japan"
-    ],
+    "tags": ["music", "jazz", "japan"],
     "category": "series",
     "favicon": "https://mp.weixin.qq.com/favicon.ico"
   },
   {
     "title": "Dynamicland",
     "url": "https://dynamicland.org/",
-    "tags": [
-      "digital",
-      "tech"
-    ],
+    "tags": ["digital", "tech"],
     "category": "project",
     "favicon": "https://dynamicland.org/favicon.ico"
   },
   {
     "title": "Marginalia",
     "url": "https://www.marginalia.nu/",
-    "tags": [
-      "web"
-    ],
+    "tags": ["web"],
     "category": "tool"
   },
   {
     "title": "Wiby",
     "url": "https://wiby.me/",
-    "tags": [
-      "web"
-    ],
+    "tags": ["web"],
     "category": "tool",
     "favicon": "https://wiby.me/favicon.ico"
   },
   {
     "title": "Hundred Rabbits",
     "url": "https://100r.co/site/home.html",
-    "tags": [
-      "digital",
-      "tech"
-    ],
+    "tags": ["digital", "tech"],
     "category": "blog",
     "favicon": "https://100r.co/media/services/shortcut.png"
   },
   {
     "title": "IndieWeb",
     "url": "https://indieweb.org/",
-    "tags": [
-      "digital",
-      "web"
-    ],
+    "tags": ["digital", "web"],
     "category": "portal",
     "favicon": "https://indieweb.org/favicon.ico"
   },
   {
     "title": "Whole Earth Index",
     "url": "https://wholeearth.info/",
-    "tags": [
-      "culture"
-    ],
+    "tags": ["culture"],
     "category": "catalog",
     "favicon": "https://wholeearth.info/favicon.png"
   },
   {
     "title": "Internet Artifacts",
     "url": "https://neal.fun/internet-artifacts/",
-    "tags": [
-      "web"
-    ],
+    "tags": ["web"],
     "category": "interactive",
     "favicon": "https://neal.fun/favicons/internet-artifacts.png"
   },
   {
     "title": "Map of GitHub",
     "url": "https://anvaka.github.io/map-of-github/#2/0/0",
-    "tags": [
-      "tech"
-    ],
+    "tags": ["tech"],
     "category": "interactive",
     "favicon": "https://anvaka.github.io/map-of-github/favicon-32x32.png"
   },
   {
     "title": "The Map of Mathematics",
     "url": "https://mathmap.quantamagazine.org",
-    "tags": [
-      "science"
-    ],
+    "tags": ["science"],
     "category": "interactive"
   },
   {
     "title": "The Recurse Center",
     "url": "https://www.recurse.com",
-    "tags": [
-      "tech"
-    ],
+    "tags": ["tech"],
     "category": "portal",
     "favicon": "https://d29xw0ra2h4o4u.cloudfront.net/assets/favicon-fbfd4d3b58909892b7caada24c507292a4f96f5ab03fda9a7ae3050ce4618f78.ico"
   },
   {
-    "title": "日本个人网站搜索引擎「駄文同盟」",
+    "title": "駄文同盟",
     "url": "http://www.dabun-doumei.com/",
-    "tags": [
-      "web",
-      "japan"
-    ],
-    "category": "catalog"
+    "tags": ["web", "japan"],
+    "category": "catalog",
+    "note": "日本个人网站搜索引擎"
   },
   {
-    "title": "日本同人系网站搜索引擎「よろずりんく」",
+    "title": "よろずりんく",
     "url": "http://kn1.x0.to/",
-    "tags": [
-      "web",
-      "japan"
-    ],
-    "category": "catalog"
+    "tags": ["web", "japan"],
+    "category": "catalog",
+    "note": "日本同人系网站搜索引擎"
   },
   {
     "title": "In Memory Of Tweetbot",
     "url": "https://tapbots.com/tweetbot/",
-    "tags": [
-      "digital"
-    ],
+    "tags": ["digital"],
     "category": "article",
     "favicon": "https://tapbots.com/favicon_96.png"
   },
   {
     "title": "Communicating with Interactive Articles - Distill",
     "url": "https://distill.pub/2020/communicating-with-interactive-articles/",
-    "tags": [
-      "digital",
-      "tech"
-    ],
+    "tags": ["digital", "tech"],
     "category": "article",
     "favicon": "https://distill.pub/favicon.ico"
   },
   {
     "title": "Rediscovering the Small Web",
     "url": "https://neustadt.fr/essays/the-small-web/",
-    "tags": [
-      "digital",
-      "web"
-    ],
+    "tags": ["digital", "web"],
     "category": "article",
     "favicon": "https://neustadt.fr/favicon.ico"
   },
   {
     "title": "令和も個人サイト楽しみ隊",
     "url": "https://flanet.web.fc2.com/union/site_enjoy/",
-    "tags": [
-      "web",
-      "japan"
-    ],
+    "tags": ["web", "japan"],
     "category": "project"
   },
   {
     "title": "Wenson《無聊死了》",
     "url": "https://wensonyeh.blogspot.com/2014/10/blog-post_13.html",
-    "tags": [
-      "digital",
-      "culture"
-    ],
+    "tags": ["digital", "culture"],
     "category": "article",
     "favicon": "https://wensonyeh.blogspot.com/favicon.ico"
   },
   {
     "title": "Neocities",
     "url": "https://neocities.org/browse",
-    "tags": [
-      "web"
-    ],
+    "tags": ["web"],
     "category": "catalog",
     "favicon": "https://neocities.org/img/favicon.png"
   },
   {
     "title": "Use RSS for privacy and efficiency",
     "url": "https://rsapkf.org/weblog/rss",
-    "tags": [
-      "web",
-      "tech"
-    ],
+    "tags": ["web", "tech"],
     "category": "article",
     "favicon": "https://rsapkf.org/favicon.ico"
   },
   {
     "title": "The Type",
     "url": "https://www.thetype.com/",
-    "tags": [
-      "design",
-      "typography"
-    ],
+    "tags": ["design", "typography"],
     "category": "portal",
     "favicon": "https://www.thetype.com/favicon.ico"
   },
   {
     "title": "孔雀计划：中文字体排印的思路",
     "url": "https://www.thetype.com/kongque/",
-    "tags": [
-      "design",
-      "typography"
-    ],
+    "tags": ["design", "typography"],
     "category": "series",
     "favicon": "https://www.thetype.com/favicon.ico"
   },
   {
-    "title": "今田欣一《活字字体的基础讲座》中文版",
+    "title": "今田欣一《活字字体的基础讲座》",
     "url": "https://www.thetype.com/kinkido/",
-    "tags": [
-      "design",
-      "typography"
-    ],
+    "tags": ["design", "typography"],
     "category": "series",
     "favicon": "https://www.thetype.com/favicon.ico"
   },
   {
     "title": "欣喜堂",
     "url": "https://www.kinkido.net/",
-    "tags": [
-      "design",
-      "typography"
-    ],
+    "tags": ["design", "typography"],
     "category": "portal"
   },
   {
     "title": "W3C《中文排版需求》",
     "url": "https://www.w3.org/International/clreq/",
-    "tags": [
-      "design",
-      "typography",
-      "tech",
-      "web"
-    ],
+    "tags": ["design", "typography", "tech", "web"],
     "category": "documentation",
     "favicon": "https://www.w3.org/favicon.ico"
   },
   {
     "title": "Visual trends in graphic design",
     "url": "https://trendlist.org",
-    "tags": [
-      "design"
-    ],
+    "tags": ["design"],
     "category": "catalog",
     "favicon": "https://trendlist.org/img/favicon/favicon.ico"
   },
   {
     "title": "Index of Aesthetics",
     "url": "https://cari.institute/aesthetics",
-    "tags": [
-      "design"
-    ],
+    "tags": ["design"],
     "category": "catalog",
     "favicon": "https://cari.institute/favicon.ico"
   },
   {
     "title": "Aesthetics Wiki",
     "url": "https://aesthetics.fandom.com",
-    "tags": [
-      "digital",
-      "culture",
-      "design"
-    ],
+    "tags": ["digital", "culture", "design"],
     "category": "wiki",
     "favicon": "https://static.wikia.nocookie.net/aesthetics/images/4/4a/Site-favicon.ico"
   },
   {
     "title": "梁啟智《香港第一課》",
     "url": "https://matters.town/@leungkaichihk/香港第一課-簡介及目錄-zdpuB2J818r8yUSDeZ4vDARrnQ4ut3S2UYjALXHJ16jp25w4P",
-    "tags": [
-      "society"
-    ],
+    "tags": ["society"],
     "category": "series",
     "favicon": "https://assets-next.mattersprotocol.io/_next/static/media/favicon-128x128.b6234df2.png"
   },
   {
     "title": "瘟疫、语言和具体的人：与历史学家罗新的聊天",
     "url": "https://telegra.ph/瘟疫语言和具体的人与历史学家罗新的聊天-02-26-2",
-    "tags": [
-      "society"
-    ],
+    "tags": ["society"],
     "category": "article",
     "favicon": "https://telegra.ph/favicon.ico"
   },
   {
     "title": "蓝江《病毒、例外状态与幼年：当代西方学者关于新冠肺炎疫情的哲学思考》",
     "url": "https://ptext.nju.edu.cn/37/61/c13164a604001/page.htm",
-    "tags": [
-      "society"
-    ],
+    "tags": ["society"],
     "category": "article"
   },
   {
     "title": "Interactive Media Bias Chart",
     "url": "https://adfontesmedia.com/interactive-media-bias-chart",
-    "tags": [
-      "society"
-    ],
+    "tags": ["society"],
     "category": "interactive",
     "favicon": "https://adfontesmedia.com/wp-content/uploads/2022/08/favicon-1.ico"
   },
   {
     "title": "Gender Wiki",
     "url": "https://gender.fandom.com/wiki/Gender_Wiki",
-    "tags": [
-      "society"
-    ],
+    "tags": ["society"],
     "category": "wiki",
     "favicon": "https://static.wikia.nocookie.net/gender/images/4/4a/Site-favicon.ico"
   },
   {
     "title": "An Introduction to Japanese",
     "url": "https://pomax.github.io/nrGrammar",
-    "tags": [
-      "japan",
-      "culture"
-    ],
+    "tags": ["japan", "culture"],
     "category": "wiki"
   },
   {
     "title": "Yume Nikki",
     "url": "https://ynoproject.net/",
-    "tags": [
-      "dream"
-    ],
+    "tags": ["dream"],
     "category": "game",
     "favicon": "https://ynoproject.net/favicon.ico"
   },
   {
     "title": "政治价值倾向测试",
     "url": "https://8values.github.io/results.html?e=78.8&d=93.3&g=85.2&s=86.8",
-    "tags": [
-      "society"
-    ],
-    "category": [
-      "test"
-    ],
+    "tags": ["society"],
+    "category": ["test"],
     "favicon": "https://8values.github.io/icon.png"
   },
   {
     "title": "左翼价值倾向测试",
     "url": "https://leftvalues.github.io/results.html?a=51.5&b=43.8&c=8.3&d=58.9&e=48.1&f=29.2&g=26.5",
-    "tags": [
-      "society"
-    ],
-    "category": [
-      "test"
-    ],
+    "tags": ["society"],
+    "category": ["test"],
     "favicon": "https://leftvalues.github.io/icon.png"
   },
   {
     "title": "BDSM 测试",
     "url": "https://bdsmtest.org/r/q7rBqqbC",
-    "tags": [
-      "society"
-    ],
-    "category": [
-      "test"
-    ],
+    "tags": ["society"],
+    "category": ["test"],
     "favicon": "https://bdsmtest.org/css/favicon.png"
   },
   {
     "title": "MASA's Cooking ABC",
     "url": "https://youtu.be/09hfKAHs2Qw",
-    "tags": [
-      "daily"
-    ],
-    "category": [
-      "video"
-    ],
+    "tags": ["daily"],
+    "category": ["video"],
     "favicon": "https://youtu.be/favicon.ico"
   },
   {
     "title": "chyoma",
     "url": "https://youtu.be/f2cEpat6OoI",
-    "tags": [
-      "daily"
-    ],
-    "category": [
-      "video"
-    ],
+    "tags": ["daily"],
+    "category": ["video"],
     "favicon": "https://youtu.be/favicon.ico"
   },
   {

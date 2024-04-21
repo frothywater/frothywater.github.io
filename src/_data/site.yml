@@ -2,11 +2,75 @@ title: Nostalgic Future Catalog
 description: 怀旧未来档案册
 author:
   name: cobalt
-navlinks:
+
+navLinks:
   /: 家
   /note/: 笔记本
   /log/: 手帐
-  /album/: 唱片柜
+  /music/: 唱片柜
   /photo/: 相册
   /clip/: 剪报
   /track/: 八音盒
+
+featuredNotes:
+  - my-book
+  - nostalgia
+  - healing-me
+  - kakuu
+  - watermelon
+  - summer-sky
+  - nostalgic-future
+  - long-goodbye
+  - sun-bear-concerts
+
+featuredPhotos:
+  - 004-20170711.jpg
+  - 094-20210529.jpg
+  - 086-20210529.jpg
+  - 102-20210529.jpg
+  - 032-20210823.jpg
+  - 044-20210713.jpg
+  - 045-20210829.jpg
+  - 064-20230127.jpg
+  - 072-20230622.jpg
+  - 075-20210713.jpg
+  - 108-20160327.jpg
+  - 112-20230813.jpg
+  - 116-20221211.jpg
+  - acnh11.jpg
+
+featuredAlbums:
+  - Space 1.8
+  - Promises
+  - Not Tight
+  - Photosynthesis
+  - My Favorite Things
+  - Bright Size Life
+  - Sun Bear Concerts
+  - Big Wave
+  - A Long Vacation
+  - eureka
+  - nanairo
+  - New Energy
+  - async
+  - 潸何吊
+  - Interstellar Love
+  - Late Piano Sonatas D850 • D958 • D959 • D960
+  - Road Movies
+  - Sleep
+
+featuredClips:
+  - 一天世界
+  - 滅茶苦茶
+  - The Complete Chunghwan Toto
+  - Bret Victor
+  - Hundred Rabbits
+  - Maggie Appleton
+  - Marginalia
+  - Whole Earth Index
+  - Internet Artifacts
+  - Rediscovering the Small Web
+  - Ishkur's Guide to Electronic Music
+  - Aesthetics Wiki
+  - 孔雀计划：中文字体排印的思路
+  - 瘟疫、语言和具体的人：与历史学家罗新的聊天

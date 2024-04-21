@@ -2,14 +2,13 @@
 url: /note/
 ---
 
-{# {% set categories = search.values("category", "type=note") | sort %} #}
-
+{# category nav #}
 <nav class="nav-links section-links">
   <ul>
     <span>&gt;</span>
     {% for category in categories %}
       <li>
-        <a href="#{{ category }}">{{ categoryName[category] }}</a>
+        <a href="#{{ category | slug }}">{{ categoryName[category] }}</a>
       </li>
     {% endfor %}
   </ul>
@@ -17,10 +16,14 @@ url: /note/
 
 {% for category in categories %}
   <section>
-    <h2 id="{{ category }}">{{ categoryName[category] }}</h2>
+    <h2 id="{{ category | slug }}">{{ categoryName[category] }}</h2>
 
     {% set query = "type=note category='" + category + "'" %}
     {% set notes = search.pages(query, "date=desc") %}
-    {% include "pages/note-list.njk" %}
+    <div class="note-grid">
+      {% for note in notes %}
+      {% include "components/note-card.njk" %}
+      {% endfor %}
+    </div>
   </section>
 {% endfor %}

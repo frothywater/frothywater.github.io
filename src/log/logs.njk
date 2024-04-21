@@ -3,4 +3,8 @@ url: /log/
 ---
 
 {% set logs = search.pages("type=log", "date=desc") %}
-{% include "pages/log-list.njk" %}
+<div class="log-grid">
+  {% for log in logs %}
+  {% include "components/log.njk" %}
+  {% endfor %}
+</div>
