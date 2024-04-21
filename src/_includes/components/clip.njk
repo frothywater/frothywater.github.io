@@ -1,0 +1,16 @@
+<article class="clip">
+  {% if clip.favicon %}
+    <img src="{{ clip.favicon }}">
+  {% endif %}
+  <a href="{{ clip.url }}">{{ clip.title }}</a>
+
+  <div class="post-info">
+    {% for tag in clip.tags %}
+      <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+
+  {% if clip.note %}
+    <p>{{ clip.note }}</p>
+  {% endif %}
+</article>

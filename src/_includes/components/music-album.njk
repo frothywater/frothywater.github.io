@@ -1,0 +1,81 @@
+<article class="music-album">
+  <div class="album-main">
+      
+    {# cover #}
+    <div class="album-cover">
+      <a href="/music/image/{{ album.image }}">
+        <img src="/music/image/{{ album.image }}" alt="{{ album.title }}">
+      </a>
+    </div>
+
+    <div class="album-info">
+      <div class="album-title">
+
+        {# title-link, date, country #}
+        {% if album.link %}
+          {% set link = album.link %}
+        {% elif album.discogs_master_id %}
+          {% set link = "https://www.discogs.com/master/" ~ album.discogs_master_id %}
+        {% elif album.discogs_id %}
+          {% set link = "https://www.discogs.com/release/" ~ album.discogs_id %}
+        {% endif %}
+        {% if link %}
+          <a href="{{ link }}" class="bare-link"><h2>{{ album.title }}</h2></a>
+        {% else %}
+          <h2>{{ album.title }}</h2>
+        {% endif %}
+
+        <time datetime="{{ album.date | date('DATETIME') }}">{{ album.date | date('yyyy') }}</time>
+        {% if album.country %}
+          <span class="album-country">{{ album.country }}</span>
+        {% endif %}
+      </div>
+
+      {# artists #}
+      <div class="album-artists">
+        {% for artist in album.artists %}
+          <span class="artist">{{ artist }}</span>
+        {% endfor %}
+      </div>
+
+      {# details #}
+      <div class="album-detail">
+
+        {% if album.label %}
+          <span class="info-key">Label</span>
+          <span class="info-value album-label">{{ album.label }}</span>
+        {% endif %}
+
+        {% if album.genre %}
+          <span class="info-key">Genre</span>
+          <div class="info-value">
+            {% for genre in album.genre %}
+              <span class="album-genre">{{ genre }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if album.styles %}
+          <span class="info-key">Style</span>
+          <div class="info-value">
+            {% for style in album.styles %}
+              <span class="album-style">{{ style }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+      </div>
+
+      {# video #}
+      {% if album.video %}
+        <a href="{{ album.video }}" class="album-video-link">Youtube</a>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {# note #}
+  {% if album.content %}
+    <div class="album-note">{{ album.content | md | safe }}</div>
+  {% endif %}
+</article>

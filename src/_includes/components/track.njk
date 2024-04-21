@@ -1,0 +1,12 @@
+<article class="track">
+  <audio src="/track/audio/{{ track.file }}" controls></audio>
+
+  <p class="track-title"><em>{{ track.file | replace(".mp3", "") }}</em></p>
+  {% if track.text %}
+    <p class="track-note">{{ track.text }}</p>
+  {% endif %}
+
+  <time datetime="{{ track.date | date('DATETIME') }}">
+      {{ track.date | date('yyyy-MM-dd') }}
+  </time>
+</article>

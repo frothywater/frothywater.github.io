@@ -1,0 +1,24 @@
+<article class="note-card" {% if note.basename in site.featuredNotes %}data-featured{% endif %}>
+  <a href="{{ note.url }}" class="bare-link">
+    {% if note.title %}
+      <strong>{{ note.title }}</strong>
+    {% else %}
+      <span>💭</span>
+    {% endif %}
+  </a>
+
+  <div class="post-info">
+    <time datetime="{{ note.date | date('DATETIME') }}">
+      {{ note.date | date('yyyy-MM-dd') }}
+    </time>
+
+    {% for tag in note.tags %}
+      {% set page = search.page("type=tag tag='" + tag + "'") %}
+      {% if page %}
+        <a href="{{ page.url }}" class="tag">{{ tag }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <p class="multiline-ellipsis">{{ note.digest }}</p>
+</article>

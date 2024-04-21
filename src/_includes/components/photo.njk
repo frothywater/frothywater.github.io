@@ -1,0 +1,13 @@
+<figure class="photo">
+  <a href="/photo/image/{{ photo.file }}">
+    <img src="/photo/image/{{ photo.file | with_ext('small.jpg') }}">
+  </a>
+  <figcaption>
+    {% if photo.note %}
+      <p>{{ photo.note }}</p>
+    {% endif %}
+    <time datetime="{{ photo.date | date('DATETIME') }}">
+      {{ photo.date | date('yyyy-MM-dd') }}
+    </time>
+  </figcaption>
+</figure>
