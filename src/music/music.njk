@@ -1,44 +1,52 @@
 ---
-url: /album/
+url: /music/
 ---
 
+{# 1st nav #}
 <nav class="nav-links section-links">
   <ul>
     <span>&gt;</span>
-    <li><a href="#releases">唱片</a></li>
+    <li><a href="#albums">收藏</a></li>
     <li><a href="#logs">日志</a></li>
   </ul>
 </nav>
 
-{# Releases #}
+{# 1. albums #}
 <section>
-  <h2 id="releases">唱片</h2>  
+  <h2 id="albums">收藏</h2>  
 
-  {# {% set categories = search.values("category", "type=music-album") | sort %} #}
-
+  {# 2nd album nav #}
   <nav class="nav-links section-links">
     <ul>
       <span>&gt;&gt;</span>
       {% for category in categories %}
-        <li><a href="#{{ category }}">{{ categoryName[category] }}</a></li>
+        <li><a href="#{{ category | slug }}">{{ categoryName[category] }}</a></li>
       {% endfor %}
     </ul>
   </nav>
 
   {% for category in categories %}
     <section>
-      <h3 id="{{ category }}">{{ categoryName[category] }}</h3>
+      <h3 id="{{ category | slug }}">{{ categoryName[category] }}</h3>
 
       {% set query = "type=music-album category='" + category + "'" %}
       {% set albums = search.pages(query, "date=desc") %}
-      {% include "pages/album-list.njk" %}
+      <div class="music-album-grid">
+        {% for album in albums %}
+        {% include "components/music-album.njk" %}
+        {% endfor %}
+      </div>
     </section>
   {% endfor %}
 </section>
 
-{# Log #}
+{# 2. log #}
 <section>
   <h2 id="logs">日志</h2>
   {% set logs = search.pages("type=music-log", "date=desc") %}
-  {% include "pages/log-list.njk" %}
+  <div class="log-grid">
+    {% for log in logs %}
+    {% include "components/log.njk" %}
+    {% endfor %}
+  </div>
 </section>
