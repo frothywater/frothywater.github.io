@@ -5,7 +5,7 @@ renderOrder: 2
 ---
 
 {% set logs = search.pages("type=log", "date=desc") %}
-<div class="log-grid">
+<div class="grid log-grid">
   {% for log in logs %}
   {% include "components/log.njk" %}
   {% endfor %}

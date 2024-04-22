@@ -1,4 +1,4 @@
-<article class="music-album">
+<article class="music-album card">
   <div class="album-main">
       
     {# cover #}
@@ -9,7 +9,7 @@
     </div>
 
     <div class="album-info">
-      <div class="album-title">
+      <div class="album-title info-list">
 
         {# title-link, date, country #}
         {% if album.link %}
@@ -27,7 +27,7 @@
 
         <time datetime="{{ album.date | date('DATETIME') }}">{{ album.date | date('yyyy') }}</time>
         {% if album.country %}
-          <span class="album-country">{{ album.country }}</span>
+          <span class="album-country small">{{ album.country }}</span>
         {% endif %}
       </div>
 
@@ -43,12 +43,12 @@
 
         {% if album.label %}
           <span class="info-key">Label</span>
-          <span class="info-value album-label">{{ album.label }}</span>
+          <span class="info-list album-label">{{ album.label }}</span>
         {% endif %}
 
         {% if album.genre %}
           <span class="info-key">Genre</span>
-          <div class="info-value">
+          <div class="info-list">
             {% for genre in album.genre %}
               <a href="/music/tag/#genre-{{ genre | slug }}" class="album-genre">{{ genre }}</a>
             {% endfor %}
@@ -57,7 +57,7 @@
 
         {% if album.styles %}
           <span class="info-key">Style</span>
-          <div class="info-value">
+          <div class="info-list">
             {% for style in album.styles %}
               <a href="/music/tag/#style-{{ style | slug }}" class="album-style">{{ style }}</a>
             {% endfor %}
@@ -68,7 +68,7 @@
 
       {# video #}
       {% if album.video %}
-        <a href="{{ album.video }}" class="album-video-link">Youtube</a>
+        <a href="{{ album.video }}" class="album-video-link small">Youtube</a>
       {% endif %}
 
     </div>
@@ -76,6 +76,6 @@
 
   {# note #}
   {% if album.content %}
-    <div class="album-note">{{ album.content | md | safe }}</div>
+    <div class="album-note card-note">{{ album.content | md | safe }}</div>
   {% endif %}
 </article>

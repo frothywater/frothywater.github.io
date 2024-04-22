@@ -32,7 +32,7 @@ renderOrder: 2
   {% for category in categories %}
     <section>
       <h3 id="clip-{{ category | slug }}">{{ categoryName[category] }}</h3>
-      <div class="clip-grid">
+      <div class="grid clip-grid">
         {% for clip in clips %}
           {% if clip.category == category %}
           {% include "components/clip.njk" %}

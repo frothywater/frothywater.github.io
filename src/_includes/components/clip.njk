@@ -1,16 +1,16 @@
-<article class="clip">
+<article class="clip card">
   {% if clip.favicon %}
     <img src="{{ clip.favicon }}">
   {% endif %}
   <a href="{{ clip.url }}">{{ clip.title }}</a>
 
-  <div class="post-info">
+  <div class="info-list">
     {% for tag in clip.tags %}
       <a href="/clip/tag/#{{ tag | slug }}" class="tag">{{ tag }}</a>
     {% endfor %}
   </div>
 
   {% if clip.note %}
-    <p>{{ clip.note }}</p>
+    <p class="card-note">{{ clip.note }}</p>
   {% endif %}
 </article>

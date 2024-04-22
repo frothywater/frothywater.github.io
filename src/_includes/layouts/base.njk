@@ -37,9 +37,9 @@
       {{ content | safe }}
     </main>
 
-    <footer>
+    <footer class="small">
       <span>&copy; cobalt</span>
-      <nav class="footer-links">
+      <nav class="nav-links footer-links">
         <ul>
           {% for url_, name in site.footerLinks %}
             <li><a href="{{ url_ }}" class="bare-link">{{ name }}</a></li>

@@ -3,12 +3,12 @@
     {% set path = "/photo/image/" + photo.file %}
     <img src="/photo/image/{{ photo.file | with_ext('small.jpg') }}">
   </a>
-  <figcaption>
+  <figcaption class="card-note">
     {% if photo.note %}
       <p>{{ photo.note }}</p>
     {% endif %}
     <time datetime="{{ photo.date | date('DATETIME') }}">
-      <a href="/photo/#{{ photo.file | slug }}">{{ photo.date | date('yyyy-MM-dd') }}</a>
+      <a href="/photo/#{{ photo.file | slug }}" class="bare-link">{{ photo.date | date('yyyy-MM-dd') }}</a>
     </time>
   </figcaption>
 </figure>

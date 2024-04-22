@@ -1,4 +1,4 @@
-<article class="note-card" {% if note.basename in site.featuredNotes %}data-featured{% endif %}>
+<article class="note-card card" {% if note.basename in site.featuredNotes %}data-featured{% endif %}>
   <a href="{{ note.url }}" class="bare-link">
     {% if note.title %}
       <h1>{{ note.title }}</h1>
@@ -7,7 +7,7 @@
     {% endif %}
   </a>
 
-  <div class="post-info">
+  <div class="info-list">
     <time datetime="{{ note.date | date('DATETIME') }}">
       {{ note.date | date('yyyy-MM-dd') }}
     </time>
@@ -20,5 +20,5 @@
     {% endfor %}
   </div>
 
-  <p class="multiline-ellipsis">{{ note.digest }}</p>
+  <p class="card-note multiline-ellipsis">{{ note.digest }}</p>
 </article>

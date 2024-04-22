@@ -27,14 +27,14 @@ renderOrder: 2
     {% endfor %}
 
     <div class="note-section home-list">
-      <div class="note-list">
+      <div class="note-list home-inline-list">
         {% for note in featuredNotes %}
         {% include "components/note-card.njk" %}
         {% endfor %}
       </div>
 
       <h3>最近在写</h3>
-      <div class="note-list">
+      <div class="note-list home-inline-list">
         {% for note in recentNotes %}
         {% include "components/note-card.njk" %}
         {% endfor %}
@@ -47,7 +47,7 @@ renderOrder: 2
     <a href="/log/"><h2>手帐</h2></a>
 
     {% set logs = search.pages("type=log", "date=desc", 10) %}
-    <div class="log-list home-list">
+    <div class="grid log-grid home-list">
       {% for log in logs %}
       {% include "components/log.njk" %}
       {% endfor %}
@@ -68,7 +68,7 @@ renderOrder: 2
       {% endif %}
     {% endfor %}
 
-    <div class="music-album-list home-list">
+    <div class="grid music-album-grid home-list">
       {% for album in featuredAlbums %}
       {% include "components/music-album.njk" %}
       {% endfor %}
@@ -90,7 +90,7 @@ renderOrder: 2
       {% endfor %}
     {% endfor %}
 
-    <div class="photo-list home-list">
+    <div class="home-inline-list photo-list">
       {% for photo in featuredPhotos %}
         {% include "components/photo.njk" %}
       {% endfor %}
@@ -98,7 +98,7 @@ renderOrder: 2
   </section>
 
   {# 5. clips #}
-  <section id="clip">
+  <section id="clip" >
     <a href="/clip/"><h2>剪报</h2></a>
 
     {# featured clips #}
@@ -112,7 +112,7 @@ renderOrder: 2
       {% endfor %}
     {% endfor %}
 
-    <div class="clip-list home-list">
+    <div class="grid clip-grid home-list">
       {% for clip in featuredClips %}
         {% include "components/clip.njk" %}
       {% endfor %}
@@ -124,7 +124,7 @@ renderOrder: 2
     <a href="/track/"><h2>八音盒</h2></a>
 
     {% set tracks = search.data("/track/").tracks %}
-    <div class="track-list home-list">
+    <div class="grid track-grid home-list">
       {% for track in tracks %}
         {% include "components/track.njk" %}
       {% endfor %}
@@ -135,7 +135,6 @@ renderOrder: 2
 @media (max-width: 50em) {
   body {
     block-size: 100dvh;
-    padding-block: 0.5lh;
     padding-inline: 0;
     
     >header, >footer {

@@ -28,6 +28,21 @@ body {
   background-color: var(--white);
 }
 
+/* MARK: Reset */
+
+a {
+  color: var(--black);
+}
+
+time {
+  font-size: 0.8rem;
+
+  &,
+  >* {
+    color: var(--gray);
+  }
+}
+
 /* MARK: Base layout */
 body {
   padding-inline: 7vi;
@@ -39,6 +54,7 @@ body {
     gap: 0.5em;
     margin-block: 2lh;
 
+    /* icon */
     img {
       min-inline-size: 4lh;
       max-block-size: 4lh;
@@ -48,14 +64,10 @@ body {
 
       /* home link */
       .main-title {
-        a {
-          h1 {
-            display: inline;
-            margin-block: 0;
-            margin-inline-end: 0.5em;
-          }
-
-          color: var(--black);
+        a h1 {
+          display: inline;
+          margin-block: 0;
+          margin-inline-end: 0.5em;
         }
 
         /* description */
@@ -68,14 +80,14 @@ body {
 
       /* navigation links */
       nav {
-        margin-block-start: 0.6lh;
+        margin-block-start: 0.5lh;
       }
     }
   }
 
   /* main content area */
   >main {
-    margin-block: 3lh;
+    margin-block: 2lh;
   }
 
   /* footer */
@@ -84,9 +96,6 @@ body {
     justify-content: end;
     gap: 1em;
     margin-block: 2lh;
-
-    font-size: 0.8rem;
-    color: var(--gray);
 
     a {
       color: var(--gray);
@@ -107,7 +116,6 @@ body {
 
     li {
       a {
-        color: var(--black);
         text-wrap: nowrap;
       }
 
@@ -116,18 +124,6 @@ body {
       }
     }
   }
-}
-
-.footer-links {
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-}
-
-section+section {
-  margin-block-start: 2lh;
 }
 
 .section-links {
@@ -141,6 +137,48 @@ section+section {
   }
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  gap: 2em;
+}
+
+.card {
+  border: 1px solid var(--lightgray);
+  border-radius: 0.8em;
+  margin-block-end: auto;
+  padding: 1em;
+}
+
+.small {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+p.card-note {
+  margin-block: 0;
+  font-size: 0.9rem;
+  line-height: 1.35;
+
+  &:not(:first-child) {
+    margin-block-start: 0.5lh;
+  }
+
+  &:not(:last-child) {
+    margin-block-end: 0.5lh;
+  }
+}
+
+.card-note>p {
+  font-size: 0.9rem;
+  line-height: 1.35;
+  margin-block: 0.5lh 0;
+
+  &:not(:last-child) {
+    margin-block-end: 0.5lh;
+  }
+}
+
 .tag,
 .category {
   font-size: 0.8rem;
@@ -148,21 +186,10 @@ section+section {
   color: var(--gray);
 }
 
-time {
-  font-size: 0.8rem;
-  color: var(--gray);
-
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+.info-list {
+  *:not(:last-child) {
+    margin-inline-end: 0.3em;
   }
-}
-
-.post-info>* {
-  margin-inline-end: 0.3em;
 }
 
 /* not working on vertical writing mode */
@@ -181,7 +208,7 @@ time {
     flex-direction: column;
     gap: 0.5lh;
 
-    padding-block: 1lh;
+    padding-block: 0.5lh;
     padding-inline: 5vi;
 
     >header,
@@ -201,43 +228,77 @@ time {
 
 /* MARK: Home page */
 
+section a>h2 {
+  margin-block: 0 0.8lh;
+}
+
+section+section {
+  margin-block-start: 2lh;
+}
+
 .home-grid {
   display: grid;
   column-gap: 2em;
-}
 
-section#note {
-  grid-area: note;
-}
+  >section {
+    display: flex;
+    flex-direction: column;
 
-section#log {
-  grid-area: log;
-  display: flex;
-  flex-direction: column;
-}
+    .home-list {
+      gap: 1em;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
 
-section#music {
-  grid-area: music;
-  display: flex;
-  flex-direction: column;
-}
+    .home-inline-list {
+      display: flex;
+      gap: 1em;
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+  }
 
-section#photo {
-  grid-area: photo;
-  display: flex;
-  flex-direction: column;
-}
+  section#note {
+    grid-area: note;
+  }
 
-section#clip {
-  grid-area: clip;
-  display: flex;
-  flex-direction: column;
-}
+  section#log {
+    grid-area: log;
+  }
 
-section#track {
-  grid-area: track;
-  display: flex;
-  flex-direction: column;
+  section#music {
+    grid-area: music;
+  }
+
+  section#photo {
+    grid-area: photo;
+  }
+
+  section#clip {
+    grid-area: clip;
+  }
+
+  section#track {
+    grid-area: track;
+  }
+
+  article.note-card {
+    flex: 0 0 18em;
+    padding: 1em;
+  }
+
+  .photo-list {
+    figure.photo {
+      img {
+        max-block-size: 300px;
+        max-inline-size: unset;
+      }
+
+      p {
+        display: none;
+      }
+    }
+  }
 }
 
 /* phone: parallel scrolling */
@@ -251,6 +312,7 @@ section#track {
     block-size: 100%;
     padding-inline: 5vi;
 
+    /* page-like horizontal view */
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 
@@ -259,57 +321,43 @@ section#track {
     }
   }
 
+  /* cancel section spacing */
   section+section {
     margin-block-start: 0;
   }
 
-  section#note {
+  .home-list {
     display: flex;
     flex-direction: column;
-  }
-
-  .note-section {
-    overflow-y: scroll;
+    padding-block-end: 2lh;
   }
 
   /* turn notes to vertical scroll view */
-  div.note-list {
+  section#note div.note-list {
     display: flex;
-    justify-self: stretch;
     flex-direction: column;
-    gap: 1em;
+    overflow-y: unset;
+    overflow-x: unset;
 
     article.note-card {
       flex: unset;
     }
   }
 
-  section#photo {
-    display: flex;
-    flex-direction: column;
-  }
-
   /* turn photos to vertical scroll view */
-  div.photo-list {
+  section#photo div.photo-list {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1.5lh;
     overflow-y: scroll;
+    overflow-x: unset;
 
     figure.photo {
       img {
-        max-inline-size: 100%;
         max-block-size: unset;
-      }
-
-      p {
-        display: none;
+        max-inline-size: 100%;
       }
     }
-  }
-
-  .home-list {
-    padding-block-end: 2lh;
   }
 }
 
@@ -335,13 +383,6 @@ section#track {
       "clip clip clip" auto
       / 1fr 1fr 1fr;
   }
-
-  /* turn clips to grid view */
-  div.clip-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
-    gap: 1em;
-  }
 }
 
 /* extra wide: 4 columns */
@@ -356,26 +397,11 @@ section#track {
 }
 
 /* MARK: Note */
-.note-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-  gap: 2em;
-}
-
-.note-list {
-  display: flex;
-  gap: 1em;
-  overflow-x: scroll;
-  inline-size: 100%;
-
-  article.note-card {
-    flex: 0 0 18em;
-    padding: 1em;
-  }
-}
+/* .note-grid {} */
 
 article.note-card {
-  border: 1px solid var(--lightgray);
+  border-radius: 0;
+  margin-block: 0;
   padding-block: 1.5lh;
   padding-inline: 1.5em;
 
@@ -396,9 +422,6 @@ article.note-card {
   /* digest */
   p {
     max-block-size: calc(var(--line-clamp) * 1lh);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-block: 0.5lh 0;
   }
 }
 
@@ -417,24 +440,9 @@ article.note {
 }
 
 /* MARK: Log */
-.log-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-  gap: 2em;
-}
-
-.log-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  overflow-y: scroll;
-}
+/* .log-grid {} */
 
 article.log {
-  border: 1px solid var(--lightgray);
-  border-radius: 0.8em;
-  margin-block-end: auto;
-  padding: 1em;
 
   /* content */
   p {
@@ -445,25 +453,9 @@ article.log {
 }
 
 /* MARK: Music */
-.music-album-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-  gap: 2em;
-}
-
-.music-album-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  overflow-y: scroll;
-}
+/* .music-album-grid {} */
 
 article.music-album {
-  border: 1px solid var(--lightgray);
-  border-radius: 0.8em;
-  padding: 1em;
-  margin-block-end: auto;
-
   .album-main {
     display: flex;
     gap: 1em;
@@ -475,6 +467,7 @@ article.music-album {
 
     .album-info {
       flex: 3;
+
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
@@ -485,17 +478,6 @@ article.music-album {
         h2 {
           display: inline;
           font-size: 1.2rem;
-          color: var(--black);
-        }
-
-        .album-country {
-          font-size: 0.8rem;
-          line-height: 1;
-          color: var(--gray);
-        }
-
-        *:not(:last-child) {
-          margin-inline-end: 0.3em;
         }
       }
 
@@ -523,62 +505,15 @@ article.music-album {
         .info-key {
           font-weight: 600;
         }
-
-        .info-value {
-          a {
-            color: var(--black);
-          }
-
-          *:not(:last-child) {
-            margin-inline-end: 0.3em;
-          }
-        }
       }
-
-      /* video */
-      .album-video-link {
-        font-size: 0.8rem;
-        color: var(--gray);
-      }
-    }
-  }
-
-  .album-note {
-    font-size: 0.9rem;
-    line-height: 1.35;
-
-    p:last-child {
-      margin-block-end: 0;
     }
   }
 }
 
 /* MARK: Photo */
 .photo-grid {
-  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 3em 2em;
-}
-
-.photo-list {
-  display: flex;
-  gap: 1em;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  block-size: 100%;
-
-  figure.photo {
-    margin-block: 0;
-
-    img {
-      max-block-size: 300px;
-      max-inline-size: unset;
-    }
-
-    p {
-      display: none;
-    }
-  }
 }
 
 figure.photo {
@@ -586,33 +521,16 @@ figure.photo {
 
   figcaption {
     margin-block-start: 0.5lh;
-
-    p {
-      font-size: 0.9rem;
-      line-height: 1.35;
-      margin-block: 0.2lh;
-    }
   }
 }
 
 /* MARK: Clip */
 .clip-grid {
-  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
-  gap: 1.5em;
-}
-
-.clip-list {
-  display: flex;
-  flex-direction: column;
   gap: 1em;
-  overflow-y: scroll;
 }
 
 article.clip {
-  border: 1px solid var(--lightgray);
-  border-radius: 0.8em;
-  margin-block-end: auto;
   padding-block: 0.6em;
   padding-inline: 1em;
 
@@ -623,13 +541,12 @@ article.clip {
     margin-inline-end: 0.2em;
     width: 1.2em;
     height: 1.2em;
+    object-fit: contain;
   }
 
-  /* note */
-  >p {
-    font-size: 0.9rem;
-    line-height: 1.35;
-    margin-block: 0.5lh 0;
+  /* tags */
+  div.info-list {
+    margin-block-start: 0.2lh;
   }
 }
 
@@ -640,37 +557,11 @@ section.quotes {
 
 /* MARK: Track */
 .track-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
   gap: 3em 2em;
 }
 
-.track-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  overflow-y: scroll;
-}
-
 article.track {
-  border: 1px solid var(--lightgray);
-  border-radius: 0.8em;
-  margin-block-end: auto;
-  padding: 1em;
-
   audio {
     width: 100%;
-  }
-
-  /* title */
-  p.track-title {
-    margin-block-start: 1lh;
-  }
-
-  p.track-title,
-  p.track-note {
-    font-size: 0.9rem;
-    line-height: 1.35;
-    margin-block: 0.3lh;
   }
 }

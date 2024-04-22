@@ -34,7 +34,7 @@ renderOrder: 2
 
       {% set query = "type=music-album category='" + category + "'" %}
       {% set albums = search.pages(query, "date=desc") %}
-      <div class="music-album-grid">
+      <div class="grid music-album-grid">
         {% for album in albums %}
         {% include "components/music-album.njk" %}
         {% endfor %}
@@ -47,7 +47,7 @@ renderOrder: 2
 <section>
   <h2 id="logs">日志</h2>
   {% set logs = search.pages("type=music-log", "date=desc") %}
-  <div class="log-grid">
+  <div class="grid log-grid">
     {% for log in logs %}
     {% include "components/music-log.njk" %}
     {% endfor %}
