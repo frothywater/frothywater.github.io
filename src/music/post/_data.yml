@@ -1,1 +1,2 @@
 type: music-log
+layout: layouts/note.njk

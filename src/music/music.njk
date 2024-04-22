@@ -47,7 +47,7 @@ url: /music/
   {% set logs = search.pages("type=music-log", "date=desc") %}
   <div class="log-grid">
     {% for log in logs %}
-    {% include "components/log.njk" %}
+    {% include "components/music-log.njk" %}
     {% endfor %}
   </div>
 </section>

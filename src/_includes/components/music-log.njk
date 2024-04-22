@@ -1,0 +1,7 @@
+<article id="{{ log.basename | slug }}" class="log">
+  {{ log.content | md | safe }}
+
+  <time datetime="{{ log.date | date('DATETIME') }}">
+      <a href="/music/#{{ log.basename | slug }}">{{ log.date | date('yyyy-MM-dd') }}</a>
+  </time>
+</article>
