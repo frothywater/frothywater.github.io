@@ -12,6 +12,9 @@ navLinks:
   /clip/: 剪报
   /track/: 八音盒
 
+footerLinks:
+  /feed.xml: rss
+
 featuredNotes:
   - my-book
   - nostalgia

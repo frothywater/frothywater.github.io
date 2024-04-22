@@ -38,7 +38,14 @@
     </main>
 
     <footer>
-      <small>&copy; cobalt</small>
+      <span>&copy; cobalt</span>
+      <nav class="footer-links">
+        <ul>
+          {% for url_, name in site.footerLinks %}
+            <li><a href="{{ url_ }}" class="bare-link">{{ name }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
     </footer>
 
     <!-- Current page: {{ url }} -->
