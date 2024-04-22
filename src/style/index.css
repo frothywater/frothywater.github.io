@@ -30,34 +30,45 @@ body {
 
 /* MARK: Base layout */
 body {
-  padding-inline: 7vw;
+  padding-inline: 7vi;
 
   /* header */
   >header {
-    margin-block-start: 2lh;
+    display: flex;
+    align-items: start;
+    gap: 0.5em;
+    margin-block: 2lh;
 
-    /* home link */
-    >a {
-      h1 {
-        display: inline;
-        margin-block: 0;
-        margin-inline-end: 0.5em;
+    img {
+      max-block-size: 4lh;
+    }
+
+    .main-header {
+      /* home link */
+      .main-title {
+        a {
+          h1 {
+            display: inline;
+            margin-block: 0;
+            margin-inline-end: 0.5em;
+          }
+
+          color: var(--black);
+        }
+
+        /* description */
+        small {
+          display: inline-block;
+          margin-block-start: 0.5lh;
+          color: var(--gray);
+        }
       }
 
-      color: var(--black);
+      /* navigation links */
+      nav {
+        margin-block-start: 0.6lh;
+      }
     }
-
-    /* description */
-    small {
-      display: inline-block;
-      margin-block-start: 0.5lh;
-      color: var(--gray);
-    }
-  }
-
-  /* navigation links */
-  >nav {
-    margin-block: 0.6lh 2lh;
   }
 
   /* main content area */
@@ -199,7 +210,7 @@ section#track {
     gap: 0.5lh;
 
     padding-block-start: 1lh;
-    padding-inline: 5vw;
+    padding-inline: 5vi;
 
     >header,
     >nav {
@@ -218,7 +229,7 @@ section#track {
     column-gap: 1em;
 
     block-size: 100%;
-    padding-inline: 5vw;
+    padding-inline: 5vi;
 
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
