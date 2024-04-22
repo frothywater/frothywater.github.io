@@ -1,24 +1,18 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="zh">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or site.title }}</title>
+    <title>{{ title + " - " + site.title if title else site.title }}</title>
     <meta name="description" content="{{ description or site.description }}">
-    <link rel="stylesheet" href="/style/index.css">
+    <meta name="author" content="{{ author or site.author.name }}">
     <link rel="stylesheet" href="/style/reset.css">
-    <link rel="stylesheet" href="/style/note.css">
-    <link rel="stylesheet" href="/style/log.css">
-    <link rel="stylesheet" href="/style/photo.css">
-    <link rel="stylesheet" href="/style/music.css">
-    <link rel="stylesheet" href="/style/clip.css">
-    <link rel="stylesheet" href="/style/track.css">
-    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ site.title }}">
-    <link rel="alternate" href="/feed.json" type="application/json" title="{{ site.title }}">
+    <link rel="stylesheet" href="/style/index.css">
     <link rel="shortcut icon" href="/asset/favicon.ico">
     <link rel="icon" type="image/png" href="/asset/favicon-192x192.png" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/asset/apple-touch-icon.png">
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ site.title }}">
   </head>
   <body>
     <header>

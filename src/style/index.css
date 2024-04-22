@@ -23,12 +23,12 @@
 
 html,
 body {
-  font-family: var(--sans);
+  /* font-family: var(--sans); */
   color: var(--black);
   background-color: var(--white);
 }
 
-/* base layout */
+/* MARK: Base layout */
 body {
   padding-inline: 7vw;
 
@@ -77,6 +77,8 @@ body {
     }
   }
 }
+
+/* MARK: Shared */
 
 .nav-links {
   ul {
@@ -148,9 +150,45 @@ time {
   -webkit-line-clamp: var(--line-clamp, 4);
 }
 
+/* MARK: Home page */
+
 .home-grid {
   display: grid;
   column-gap: 2em;
+}
+
+section#note {
+  grid-area: note;
+}
+
+section#log {
+  grid-area: log;
+  display: flex;
+  flex-direction: column;
+}
+
+section#music {
+  grid-area: music;
+  display: flex;
+  flex-direction: column;
+}
+
+section#photo {
+  grid-area: photo;
+  display: flex;
+  flex-direction: column;
+}
+
+section#clip {
+  grid-area: clip;
+  display: flex;
+  flex-direction: column;
+}
+
+section#track {
+  grid-area: track;
+  display: flex;
+  flex-direction: column;
 }
 
 /* phone: parallel scrolling */
@@ -286,36 +324,322 @@ time {
   }
 }
 
-section#note {
-  grid-area: note;
+/* MARK: Note */
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  gap: 2em;
 }
 
-section#log {
-  grid-area: log;
+.note-list {
   display: flex;
-  flex-direction: column;
+  gap: 1em;
+  overflow-x: scroll;
+  inline-size: 100%;
+
+  article.note-card {
+    flex: 0 0 18em;
+    padding: 1em;
+  }
 }
 
-section#music {
-  grid-area: music;
-  display: flex;
-  flex-direction: column;
+article.note-card {
+  border: 1px solid var(--lightgray);
+  padding-block: 1.5lh;
+  padding-inline: 1.5em;
+
+  /* title */
+  >a {
+    color: var(--primary);
+
+    h1 {
+      font-size: 1.2rem;
+      margin-block: 0 0.2lh;
+    }
+  }
+
+  &[data-featured]>a {
+    color: var(--primary-dark);
+  }
+
+  /* digest */
+  p {
+    max-block-size: calc(var(--line-clamp) * 1lh);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-block: 0.5lh 0;
+  }
 }
 
-section#photo {
-  grid-area: photo;
-  display: flex;
-  flex-direction: column;
+article.note {
+  max-inline-size: 42em;
+  line-height: 1.5;
+
+  /* title */
+  header>a {
+    color: var(--primary);
+
+    h1 {
+      margin-block-end: 0.2lh;
+    }
+  }
 }
 
-section#clip {
-  grid-area: clip;
-  display: flex;
-  flex-direction: column;
+/* MARK: Log */
+.log-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  gap: 2em;
 }
 
-section#track {
-  grid-area: track;
+.log-list {
   display: flex;
   flex-direction: column;
+  gap: 1em;
+  overflow-y: scroll;
+}
+
+article.log {
+  border: 1px solid var(--lightgray);
+  border-radius: 0.8em;
+  margin-block-end: auto;
+  padding: 1em;
+
+  /* content */
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-block: 0 0.2lh;
+  }
+}
+
+/* MARK: Music */
+.music-album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  gap: 2em;
+}
+
+.music-album-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  overflow-y: scroll;
+}
+
+article.music-album {
+  border: 1px solid var(--lightgray);
+  border-radius: 0.8em;
+  padding: 1em;
+  margin-block-end: auto;
+
+  .album-main {
+    display: flex;
+    gap: 1em;
+
+    /* cover */
+    .album-cover {
+      flex: 2;
+    }
+
+    .album-info {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0.5lh;
+
+      /* title */
+      .album-title {
+        h2 {
+          display: inline;
+          font-size: 1.2rem;
+          color: var(--black);
+        }
+
+        .album-country {
+          font-size: 0.8rem;
+          line-height: 1;
+          color: var(--gray);
+        }
+
+        *:not(:last-child) {
+          margin-inline-end: 0.3em;
+        }
+      }
+
+      /* artists */
+      .album-artists {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0.5em;
+
+        span {
+          font-size: 0.9rem;
+          font-style: italic;
+        }
+      }
+
+      /* detail grid */
+      .album-detail {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-auto-rows: max-content;
+        gap: 0.2lh 0.5em;
+
+        font-size: 0.8rem;
+
+        .info-key {
+          font-weight: 600;
+        }
+
+        .info-value {
+          a {
+            color: var(--black);
+          }
+
+          *:not(:last-child) {
+            margin-inline-end: 0.3em;
+          }
+        }
+      }
+
+      /* video */
+      .album-video-link {
+        font-size: 0.8rem;
+        color: var(--gray);
+      }
+    }
+  }
+
+  .album-note {
+    font-size: 0.9rem;
+    line-height: 1.35;
+
+    p:last-child {
+      margin-block-end: 0;
+    }
+  }
+}
+
+/* MARK: Photo */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3em 2em;
+}
+
+.photo-list {
+  display: flex;
+  gap: 1em;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  block-size: 100%;
+
+  figure.photo {
+    margin-block: 0;
+
+    img {
+      max-block-size: 300px;
+      max-inline-size: unset;
+    }
+
+    p {
+      display: none;
+    }
+  }
+}
+
+figure.photo {
+  margin: auto;
+
+  figcaption {
+    margin-block-start: 0.5lh;
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.35;
+      margin-block: 0.2lh;
+    }
+  }
+}
+
+/* MARK: Clip */
+.clip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+  gap: 1.5em;
+}
+
+.clip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  overflow-y: scroll;
+}
+
+article.clip {
+  border: 1px solid var(--lightgray);
+  border-radius: 0.8em;
+  margin-block-end: auto;
+  padding-block: 0.6em;
+  padding-inline: 1em;
+
+  /* favicon */
+  img {
+    display: inline;
+    vertical-align: middle;
+    margin-inline-end: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  /* note */
+  >p {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    margin-block: 0.5lh 0;
+  }
+}
+
+section.quotes {
+  max-inline-size: 42em;
+  line-height: 1.5;
+}
+
+/* MARK: Track */
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  gap: 3em 2em;
+}
+
+.track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  overflow-y: scroll;
+}
+
+article.track {
+  border: 1px solid var(--lightgray);
+  border-radius: 0.8em;
+  margin-block-end: auto;
+  padding: 1em;
+
+  audio {
+    width: 100%;
+  }
+
+  /* title */
+  p.track-title {
+    margin-block-start: 1lh;
+  }
+
+  p.track-title,
+  p.track-note {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    margin-block: 0.3lh;
+  }
 }
