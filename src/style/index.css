@@ -209,7 +209,7 @@ p.card-note {
     gap: 0.5lh;
 
     padding-block: 0.5lh;
-    padding-inline: 5vi;
+    padding-inline: 3vi;
 
     >header,
     >nav {
@@ -302,7 +302,7 @@ section+section {
 }
 
 /* phone: parallel scrolling */
-@media (max-width: 50em) {
+@media (max-width: 45em) {
   .home-grid {
     grid-template-columns: repeat(6, 85%);
     grid-template-rows: 100%;
@@ -362,7 +362,7 @@ section+section {
 }
 
 /* medium: 2 columns */
-@media (min-width: 50em) {
+@media (min-width: 45em) {
   .home-grid {
     grid-template:
       "note note" auto
@@ -513,7 +513,6 @@ article.music-album {
 /* MARK: Photo */
 .photo-grid {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 3em 2em;
 }
 
 figure.photo {
@@ -556,10 +555,6 @@ section.quotes {
 }
 
 /* MARK: Track */
-.track-grid {
-  gap: 3em 2em;
-}
-
 article.track {
   audio {
     width: 100%;
