@@ -6,7 +6,10 @@ import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import transformImages from "lume/plugins/transform_images.ts";
 
 import markdownDigest from "./_extra/digest.ts";
-import { Page } from "lume/core/file.ts";
+
+import { imageDimensionsFromData } from "npm:image-dimensions";
+import { join } from "https://deno.land/std@0.223.0/path/mod.ts";
+import { existsSync } from "https://deno.land/std@0.223.0/fs/mod.ts";
 
 const site = lume({
   src: "./src",
@@ -36,6 +39,15 @@ site.filter(
   (path: string, ext: string) =>
     path.includes(".") ? `${path.split(".")[0]}.${ext}` : `${path}.${ext}`,
 );
+
+// Helper: get image's dimension and return img width and height attributes
+site.helper("get_img_size", (path: string) => {
+  const fullPath = join(site.src(), path);
+  if (existsSync(fullPath) === false) return "";
+  const data = Deno.readFileSync(fullPath);
+  const result = imageDimensionsFromData(data);
+  return result ? `width="${result.width}" height="${result.height}"` : "";
+}, { type: "tag" });
 
 // Preprocess: add oldUrl to note pages
 site.preprocess([".md"], (pages) => {

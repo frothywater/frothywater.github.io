@@ -6,7 +6,7 @@
 
   <div class="post-info">
     {% for tag in clip.tags %}
-      <span class="tag">{{ tag }}</span>
+      <a href="/clip/tag/#{{ tag | slug }}" class="tag">{{ tag }}</a>
     {% endfor %}
   </div>
 

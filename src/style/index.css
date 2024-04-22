@@ -1,11 +1,24 @@
 :root {
   --white: #fffdf8;
   --black: #242424;
+  --gray: #888;
+  --lightgray: #eee;
   --primary: #a1c390;
   --primary-dark: #2a6c45;
 
   --sans: -apple-system, system-ui, sans-serif;
   --serif: serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #121113;
+    --black: #e7e6e0;
+    --gray: #888;
+    --lightgray: #222;
+    --primary: #458a62;
+    --primary-dark: #8eb57b;
+  }
 }
 
 html,
@@ -38,7 +51,7 @@ body {
     small {
       display: inline-block;
       margin-block-start: 0.5lh;
-      color: gray;
+      color: var(--gray);
     }
   }
 
@@ -60,7 +73,7 @@ body {
     >* {
       display: block;
       text-align: end;
-      color: gray;
+      color: var(--gray);
     }
   }
 }
@@ -104,14 +117,22 @@ section+section {
 
 .tag,
 .category {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   text-transform: lowercase;
-  color: gray;
+  color: var(--gray);
 }
 
 time {
-  font-size: 0.8em;
-  color: gray;
+  font-size: 0.8rem;
+  color: var(--gray);
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .post-info>* {
@@ -138,7 +159,7 @@ time {
     display: flex;
     flex-direction: column;
     gap: 0.5lh;
-    
+
     padding-block-start: 1lh;
     padding-inline: 5vw;
 
@@ -165,7 +186,7 @@ time {
     scroll-snap-type: x mandatory;
 
     >section {
-      scroll-snap-align: center; 
+      scroll-snap-align: center;
     }
   }
 

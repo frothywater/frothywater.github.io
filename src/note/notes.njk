@@ -7,12 +7,11 @@ url: /note/
   <ul>
     <span>&gt;</span>
     {% for category in categories %}
-      <li>
-        <a href="#{{ category | slug }}">{{ categoryName[category] }}</a>
-      </li>
+      <li><a href="#{{ category | slug }}">{{ categoryName[category] }}</a></li>
     {% endfor %}
   </ul>
 </nav>
+<a href="/note/tag/"><p>[按标签分类]</p></a>
 
 {% for category in categories %}
   <section>

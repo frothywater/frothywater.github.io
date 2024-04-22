@@ -502,16 +502,52 @@
     "file": "125-20190727.jpg",
     "date": "2019-07-27"
   },
-  {"file": "va-11-cobalt-velvet.jpg"},
-  {"file": "acnh1.jpg"},
-  {"file": "acnh2.jpg"},
-  {"file": "acnh3.jpg"},
-  {"file": "acnh4.jpg"},
-  {"file": "acnh5.jpg"},
-  {"file": "acnh6.jpg"},
-  {"file": "acnh7.jpg"},
-  {"file": "acnh8.jpg"},
-  {"file": "acnh9.jpg"},
-  {"file": "acnh10.jpg"},
-  {"file": "acnh11.jpg"}
+  {
+    "file": "va-11-cobalt-velvet.jpg",
+    "date": "2018-07-24"
+  },
+  {
+    "file": "acnh1.jpg",
+    "date": "2023-03-18"
+  },
+  {
+    "file": "acnh2.jpg",
+    "date": "2023-11-20"
+  },
+  {
+    "file": "acnh3.jpg",
+    "date": "2023-11-20"
+  },
+  {
+    "file": "acnh4.jpg",
+    "date": "2020-04-04"
+  },
+  {
+    "file": "acnh5.jpg",
+    "date": "2020-04-06"
+  },
+  {
+    "file": "acnh6.jpg",
+    "date": "2020-04-03"
+  },
+  {
+    "file": "acnh7.jpg",
+    "date": "2020-04-06"
+  },
+  {
+    "file": "acnh8.jpg",
+    "date": "2020-04-06"
+  },
+  {
+    "file": "acnh9.jpg",
+    "date": "2021-11-20"
+  },
+  {
+    "file": "acnh10.jpg",
+    "date": "2023-12-20"
+  },
+  {
+    "file": "acnh11.jpg",
+    "date": "2021-11-07"
+  }
 ]

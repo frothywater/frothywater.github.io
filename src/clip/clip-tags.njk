@@ -1,0 +1,38 @@
+---
+url: /clip/tag/
+---
+
+{% set tags = [] %}
+{% for clip in clips %}
+  {% for tag in clip.tags %}
+    {% if clip.tags and not tags.includes(tag) %}
+      {% set tags = tags.concat([tag]) %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{# tag nav #}
+<a href="/clip/"><p>返回 [按类型分类]</p></a>
+
+<nav class="nav-links section-links">
+  <ul>
+    <span>&gt;</span>
+    {% for tag in tags %}
+      <li><a href="#{{ tag | slug }}">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+
+{% for tag in tags %}
+  <section>
+    <h2 id="{{ tag | slug }}">{{ tag }}</h2>
+
+    <div class="clip-grid">
+      {% for clip in clips %}
+        {% if clip.tags and clip.tags.includes(tag) %}
+            {% include "components/clip.njk" %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}

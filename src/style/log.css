@@ -12,14 +12,14 @@
 }
 
 article.log {
-    border: 1px solid lightgray;
+    border: 1px solid var(--lightgray);
     border-radius: 0.8em;
     margin-block-end: auto;
     padding: 1em;
 
     /* content */
     p {
-        font-size: 0.9em;
+        font-size: 0.9rem;
         line-height: 1.5;
         margin-block: 0 0.2lh;
     }

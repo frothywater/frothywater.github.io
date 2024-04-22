@@ -12,7 +12,7 @@
 }
 
 article.music-album {
-    border: 1px solid lightgray;
+    border: 1px solid var(--lightgray);
     border-radius: 0.8em;
     padding: 1em;
     margin-block-end: auto;
@@ -36,14 +36,14 @@ article.music-album {
             .album-title {
                 h2 {
                     display: inline;
-                    font-size: 1.2em;
+                    font-size: 1.2rem;
                     color: var(--black);
                 }
 
                 .album-country {
-                    font-size: 0.8em;
+                    font-size: 0.8rem;
                     line-height: 1;
-                    color: gray;
+                    color: var(--gray);
                 }
 
                 *:not(:last-child) {
@@ -57,7 +57,7 @@ article.music-album {
                 column-gap: 0.5em;
 
                 span {
-                    font-size: 0.9em;
+                    font-size: 0.9rem;
                     font-style: italic;
                 }
             }
@@ -68,13 +68,17 @@ article.music-album {
                 grid-auto-rows: max-content;
                 gap: 0.2lh 0.5em;
 
-                font-size: 0.8em;
+                font-size: 0.8rem;
 
                 .info-key {
                     font-weight: 600;
                 }
 
                 .info-value {
+                    a {
+                        color: var(--black);
+                    }
+
                     *:not(:last-child) {
                         margin-inline-end: 0.3em;
                     }
@@ -82,14 +86,14 @@ article.music-album {
             }
 
             .album-video-link {
-                font-size: 0.8em;
-                color: gray;
+                font-size: 0.8rem;
+                color: var(--gray);
             }
         }
     }
 
     .album-note {
-        font-size: 0.9em;
+        font-size: 0.9rem;
         line-height: 1.35;
 
         p:last-child {

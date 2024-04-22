@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="/style/track.css">
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ site.title }}">
     <link rel="alternate" href="/feed.json" type="application/json" title="{{ site.title }}">
+    <link rel="shortcut icon" href="/asset/favicon.ico">
+    <link rel="icon" type="image/png" href="/asset/favicon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/asset/apple-touch-icon.png">
   </head>
   <body>
     <header>
@@ -26,7 +29,7 @@
     <nav class="nav-links">
       <ul>
         {% for url_, name in site.navLinks %}
-          <li><a href="{{ url_ }}" class="bare-link" {% if url == url_ %}aria-current="page"{% endif %}>{{ name }}</a></li>
+          <li><a href="{{ url_ }}" class="bare-link" {% if (url == url_) or (url_ != "/" and url.startsWith(url_)) %}aria-current="page"{% endif %}>{{ name }}</a></li>
         {% endfor %}
       </ul>
     </nav>

@@ -50,7 +50,7 @@
           <span class="info-key">Genre</span>
           <div class="info-value">
             {% for genre in album.genre %}
-              <span class="album-genre">{{ genre }}</span>
+              <a href="/music/tag/#genre-{{ genre | slug }}" class="album-genre">{{ genre }}</a>
             {% endfor %}
           </div>
         {% endif %}
@@ -59,7 +59,7 @@
           <span class="info-key">Style</span>
           <div class="info-value">
             {% for style in album.styles %}
-              <span class="album-style">{{ style }}</span>
+              <a href="/music/tag/#style-{{ style | slug }}" class="album-style">{{ style }}</a>
             {% endfor %}
           </div>
         {% endif %}

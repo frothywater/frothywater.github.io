@@ -12,7 +12,7 @@
 }
 
 article.track {
-    border: 1px solid lightgray;
+    border: 1px solid var(--lightgray);
     border-radius: 0.8em;
     margin-block-end: auto;
     padding: 1em;
@@ -28,7 +28,7 @@ article.track {
 
     /* note */
     p.track-note {
-        font-size: 0.9em;
+        font-size: 0.9rem;
     }
 
     p {

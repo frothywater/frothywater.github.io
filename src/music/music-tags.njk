@@ -1,0 +1,54 @@
+---
+url: /music/tag/
+---
+
+{% set genreTags = search.values("genre", "type=music-album") %}
+{% set styleTags = search.values("styles", "type=music-album") %}
+
+{# tag nav #}
+<a href="/music/"><p>返回 [按类型分类]</p></a>
+
+<nav class="nav-links section-links">
+  <ul>
+    <span>&gt;</span>
+    {% for tag in genreTags %}
+      <li><a href="#genre-{{ tag | slug }}">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+<nav class="nav-links section-links">
+  <ul>
+    <span>&gt;</span>
+    {% for tag in styleTags %}
+      <li><a href="#style-{{ tag | slug }}">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+
+{% for tag in genreTags %}
+  <section>
+    <h2 id="genre-{{ tag | slug }}">{{ tag }}</h2>
+
+    {% set query = "type=music-album genre*='" + tag + "'" %}
+    {% set albums = search.pages(query, "date=desc") %}
+    <div class="music-album-grid">
+      {% for album in albums %}
+      {% include "components/music-album.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}
+
+{% for tag in styleTags %}
+  <section>
+    <h2 id="style-{{ tag | slug }}">{{ tag }}</h2>
+
+    {% set query = "type=music-album styles*='" + tag + "'" %}
+    {% set albums = search.pages(query, "date=desc") %}
+    <div class="music-album-grid">
+      {% for album in albums %}
+      {% include "components/music-album.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}

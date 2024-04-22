@@ -1,5 +1,6 @@
 <figure class="photo">
   <a href="/photo/image/{{ photo.file }}">
+    {% set path = "/photo/image/" + photo.file %}
     <img src="/photo/image/{{ photo.file | with_ext('small.jpg') }}">
   </a>
   <figcaption>

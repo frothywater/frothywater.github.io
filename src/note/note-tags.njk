@@ -1,0 +1,32 @@
+---
+url: /note/tag/
+renderOrder: 2
+---
+
+{% set tags = search.values("tags", "type=note") %}
+
+{# tag nav #}
+<a href="/note/"><p>返回 [按类型分类]</p></a>
+
+<nav class="nav-links section-links">
+  <ul>
+    <span>&gt;</span>
+    {% for tag in tags %}
+      <li><a href="#{{ tag | slug }}">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+
+{% for tag in tags %}
+  <section>
+    <h2 id="{{ tag | slug }}">{{ tag }}</h2>
+
+    {% set query = "type=note tags*='" + tag + "'" %}
+    {% set notes = search.pages(query, "date=desc") %}
+    <div class="note-grid">
+      {% for note in notes %}
+      {% include "components/note-card.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}
