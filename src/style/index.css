@@ -46,6 +46,10 @@ time {
   }
 }
 
+p:has(time) {
+  line-height: 1;
+}
+
 figure {
   margin-block: 1lh;
 
@@ -170,11 +174,15 @@ body {
 .card-note {
   font-size: 0.9rem;
   line-height: 1.35;
-  margin-block: 0.5lh 0;
 
-  &:not(:last-child) {
-    margin-block-end: 0.5lh;
+  p {
+    margin-block: 0.5lh 0;
   }
+}
+
+.card-note+time {
+  display: block;
+  margin-block-start: 0.5lh;
 }
 
 .tag,
@@ -188,15 +196,6 @@ body {
   *:not(:last-child) {
     margin-inline-end: 0.3em;
   }
-}
-
-/* not working on vertical writing mode */
-.multiline-ellipsis {
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: block-axis;
-  -webkit-line-clamp: var(--line-clamp, 4);
 }
 
 /* MARK: Mobile layout */
@@ -421,6 +420,11 @@ article.note-card {
   .note-digest {
     max-block-size: calc(var(--line-clamp) * 1lh);
     overflow: hidden;
+    margin-block-start: 0.5lh;
+
+    p:first-child {
+      margin-block: 0;
+    }
   }
 }
 
@@ -517,8 +521,11 @@ article.music-album {
 figure.photo {
   margin: auto;
 
-  figcaption {
-    margin-block-start: 0.5lh;
+  /* cancel original margin because card-note already has it */
+  &:has(.card-note) {
+    figcaption {
+      margin-block-start: 0;
+    }
   }
 }
 
@@ -531,6 +538,10 @@ figure.photo {
 article.clip {
   padding-block: 0.6em;
   padding-inline: 1em;
+
+  a {
+    line-height: 1.35;
+  }
 
   /* favicon */
   img {

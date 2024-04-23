@@ -2,12 +2,14 @@
 <article id="{{ name | slug }}" class="track card">
   <audio src="/track/audio/{{ track.file }}" controls></audio>
 
-  <p class="track-title card-note"><em>{{ name }}</em></p>
-  {% if track.text %}
-    <div class="card-note track-note text-grid-container">
-      <div class="text-grid">{{ track.text | md | cjk | safe }}</div>
+  <div class="card-note track-note text-grid-container">
+    <div class="text-grid">
+      <p class="track-title"><em>{{ name }}</em></p>
+      {% if track.text %}
+        {{ track.text | md | cjk | safe }}
+      {% endif %}
     </div>
-  {% endif %}
+  </div>
 
   <time datetime="{{ track.date | date('DATETIME') }}">
     <a href="/track/#{{ name | slug }}" class="bare-link">{{ track.date | date('yyyy-MM-dd') }}</a>

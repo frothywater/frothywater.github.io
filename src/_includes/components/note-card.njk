@@ -20,7 +20,7 @@
     {% endfor %}
   </div>
 
-  <div class="note-digest card-note text-grid-container">
-    <div class="text-grid">{{ note.digest | cjk | safe }}</div>
+  <div class="card-note text-grid-container">
+    <div class="note-digest text-grid">{{ note.digest | md | cjk | safe }}</div>
   </div>
 </article>
