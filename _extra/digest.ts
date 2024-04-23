@@ -24,7 +24,7 @@ export default function markdownDigest(md: any, maxLength: number = 200) {
       if (tokens[i].type === "paragraph_open") {
         const token = tokens[i + 1];
         if (token?.type === "inline") {
-          result += getRawText(token.children);
+          result += getRawText(token.children) + " ";
         }
       }
       if (result.length > maxLength) break;

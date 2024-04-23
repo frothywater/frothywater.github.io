@@ -8,6 +8,7 @@ import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import transformImages from "lume/plugins/transform_images.ts";
 
 import markdownDigest from "./_extra/digest.ts";
+import processCJK from "./_extra/cjk.ts";
 
 import { existsSync } from "https://deno.land/std@0.223.0/fs/mod.ts";
 import { join } from "https://deno.land/std@0.223.0/path/mod.ts";
@@ -45,6 +46,9 @@ site
 
 // Generate digest for markdown files with type of post
 site.hooks.addMarkdownItPlugin(markdownDigest);
+
+// Filter: CJK typography
+site.filter("cjk", processCJK);
 
 // Filter: turn phrase into a slug
 site.filter("slug", (phrase: string) =>

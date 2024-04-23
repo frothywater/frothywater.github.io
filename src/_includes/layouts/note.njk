@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 
-<article class="note">
+<article class="note text-grid-container">
   <header class="note-header">
     <a href="{{ url }}" class="bare-link"><h1>{{ title }}</h1></a>
 
@@ -21,7 +21,7 @@ layout: layouts/base.njk
     </nav>
   </header>
 
-  <main>
-    {{ content | safe }}
+  <main class="text-grid">
+    {{ content | cjk | safe }}
   </main>
 </article>

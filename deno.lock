@@ -672,7 +672,8 @@
   },
   "redirects": {
     "https://deno.land/std/fs/mod.ts": "https://deno.land/std@0.223.0/fs/mod.ts",
-    "https://deno.land/std/path/mod.ts": "https://deno.land/std@0.223.0/path/mod.ts"
+    "https://deno.land/std/path/mod.ts": "https://deno.land/std@0.223.0/path/mod.ts",
+    "https://deno.land/x/deno_dom/deno-dom-wasm.ts": "https://deno.land/x/deno_dom@v0.1.45/deno-dom-wasm.ts"
   },
   "remote": {
     "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.3.1/adapters/lume.ts": "5c98755ab6d8916641b11462d515f7e77147d1cd375557380829919f9b5ae216",
