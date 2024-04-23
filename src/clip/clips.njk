@@ -45,11 +45,13 @@ renderOrder: 2
 
 {# 2. quotes #}
 {% set quotes = search.pages("type=quote") %}
-<section class="quotes">
+<section class="quotes text-grid-container">
   <h2 id="quotes">引文</h2>
-  {% for quote in quotes %}
-    {{ quote.content | md | safe }}
-  {% endfor %}
+  <div class="text-grid">
+    {% for quote in quotes %}
+      {{ quote.content | md | cjk | safe }}
+    {% endfor %}
+  </div>
 </section>
 
 {# 3. topics #}
