@@ -10,6 +10,7 @@ export default function processCJK(content: string): string {
   if (!doc) return content;
   format(doc.body, doc);
   correctAmbiguousPunc(doc.body);
+  removeInterScriptSpace(doc.body);
   return doc.body.innerHTML;
 }
 
@@ -36,7 +37,7 @@ type Segment = {
   segmentClass: SegmentClass;
 };
 
-const STOP_TAGS = ["BR", "RUBY", "PRE", "CODE", "IMG"];
+const STOP_TAGS = ["BR", "RUBY", "PRE", "CODE", "IMG", "STYLE"];
 
 // ambiguous: ([/–·]+)
 // cjk-punc:  ([‼⁇-⁉、。〝〟！，：；？〈-】〔-〛（）]+|——|⋯⋯)
@@ -114,8 +115,6 @@ function insertSegment(
     // Set lang attribute
     if (segment.segmentClass === SegmentClass.latin) {
       span.setAttribute("lang", "en");
-      // Experimental: trim leading and trailing spaces
-      span.innerHTML = text.trim();
     } else if (segment.segmentClass === SegmentClass.kana) {
       span.setAttribute("lang", "ja");
     }
@@ -127,37 +126,66 @@ function insertSegment(
 
 // Correct ambiguous punctuations: slash, dash, and ellipsis
 function correctAmbiguousPunc(body: Element) {
-  Array.from(body.getElementsByClassName(SegmentClass.ambiguous), (el) => {
-    const text = el.innerHTML;
-    if (!el.previousElementSibling || !el.nextElementSibling) {
-      // Assume latin for single segment
-      el.classList.add(SegmentClass.latin);
-    } else if (
-      el.previousElementSibling.classList.contains(SegmentClass.latin) &&
-      el.nextElementSibling.classList.contains(SegmentClass.latin)
-    ) {
-      // Assume latin between latin segments
-      el.classList.add(SegmentClass.latin);
-    } else if (text === "/") {
-      // CJK slash U+002F -> U+FF0F
-      // Force full width slash
-      el.innerHTML = "／";
-      el.classList.add(SegmentClass.cjkPunc, PuncClass.connector);
-    } else if (text === "–") {
-      // CJK dash U+2013 -> U+2014
-      // Force full width dash
-      el.innerHTML = "—";
-      el.classList.add(SegmentClass.cjkPunc, PuncClass.connector);
-    } else if (text === "·") {
-      // CJK middle dot U+00B7 -> U+30FB
-      // Assume full width middle dot is not well supported
-      el.innerHTML = "・";
-      el.classList.add(SegmentClass.cjkPunc, PuncClass.middle);
-    } else {
-      // Assume latin for other ambiguous segments
-      el.classList.add(SegmentClass.latin);
+  Array.from(
+    body.getElementsByClassName(SegmentClass.ambiguous),
+    (el: Element) => {
+      const text = el.innerHTML;
+      if (!el.previousElementSibling || !el.nextElementSibling) {
+        // Assume latin for single segment
+        el.classList.add(SegmentClass.latin);
+      } else if (
+        el.previousElementSibling.classList.contains(SegmentClass.latin) &&
+        el.nextElementSibling.classList.contains(SegmentClass.latin)
+      ) {
+        // Assume latin between latin segments
+        el.classList.add(SegmentClass.latin);
+      } else if (text === "/") {
+        // CJK slash U+002F -> U+FF0F
+        // Force full width slash
+        el.innerHTML = "／";
+        el.classList.add(SegmentClass.cjkPunc, PuncClass.connector);
+      } else if (text === "–") {
+        // CJK dash U+2013 -> U+2014
+        // Force full width dash
+        el.innerHTML = "—";
+        el.classList.add(SegmentClass.cjkPunc, PuncClass.connector);
+      } else if (text === "·") {
+        // CJK middle dot U+00B7 -> U+30FB
+        // Assume full width middle dot is not well supported
+        el.innerHTML = "・";
+        el.classList.add(SegmentClass.cjkPunc, PuncClass.middle);
+      } else {
+        // Assume latin for other ambiguous segments
+        el.classList.add(SegmentClass.latin);
+      }
+      el.classList.remove(SegmentClass.ambiguous);
+    },
+  );
+}
+
+// Remove leading or trailing space in latin script that comes after or before non-latin script
+function removeInterScriptSpace(body: Element) {
+  Array.from(body.getElementsByClassName(SegmentClass.latin), (el: Element) => {
+    if (el.previousElementSibling) {
+      const prev = el.previousElementSibling;
+      if (
+        prev.classList.contains(SegmentClass.cjk) ||
+        prev.classList.contains(SegmentClass.cjkPunc) ||
+        prev.classList.contains(SegmentClass.kana)
+      ) {
+        el.innerHTML = el.innerHTML.replace(/^\s+/, "");
+      }
     }
-    el.classList.remove(SegmentClass.ambiguous);
+    if (el.nextElementSibling) {
+      const next = el.nextElementSibling;
+      if (
+        next.classList.contains(SegmentClass.cjk) ||
+        next.classList.contains(SegmentClass.cjkPunc) ||
+        next.classList.contains(SegmentClass.kana)
+      ) {
+        el.innerHTML = el.innerHTML.replace(/\s+$/, "");
+      }
+    }
   });
 }
 

@@ -11,6 +11,8 @@
   </div>
 
   {% if clip.note %}
-    <p class="card-note">{{ clip.note }}</p>
+    <div class="card-note text-grid-container">
+      <div class="text-grid">{{ clip.note | md | cjk | safe }}</div>
+    </div>
   {% endif %}
 </article>

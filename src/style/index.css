@@ -10,6 +10,8 @@
   --zh-trad-font: "Source Han Sans TC", "Noto Sans CJK TC", "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", sans-serif;
   --ja-font: "Source Han Sans JP", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
   --latin-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --line-clamp: 4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,6 +43,15 @@ time {
   &,
   >* {
     color: var(--gray);
+  }
+}
+
+figure {
+  margin-block: 1lh;
+
+  figcaption {
+    margin-block-start: 0.5lh;
+    font-size: 0.9rem;
   }
 }
 
@@ -156,21 +167,7 @@ body {
   color: var(--gray);
 }
 
-p.card-note {
-  margin-block: 0;
-  font-size: 0.9rem;
-  line-height: 1.35;
-
-  &:not(:first-child) {
-    margin-block-start: 0.5lh;
-  }
-
-  &:not(:last-child) {
-    margin-block-end: 0.5lh;
-  }
-}
-
-.card-note>p {
+.card-note {
   font-size: 0.9rem;
   line-height: 1.35;
   margin-block: 0.5lh 0;
@@ -284,7 +281,7 @@ section+section {
   }
 
   article.note-card {
-    flex: 0 0 18em;
+    flex: 0 0 20em;
     padding: 1em;
   }
 
@@ -421,8 +418,9 @@ article.note-card {
   }
 
   /* digest */
-  p {
+  .note-digest {
     max-block-size: calc(var(--line-clamp) * 1lh);
+    overflow: hidden;
   }
 }
 
@@ -590,26 +588,25 @@ article.track {
 .cjk+.latin::before,
 .latin+.cjk::before,
 .cjk:has(+*>.latin:first-child)::after,
+.cjk:has(+*>*:first-child>.latin:first-child)::after,
 *:has(>.cjk:last-child)+.latin::before,
+*:has(>*:last-child>.cjk:last-child)+.latin::before,
 .latin:has(+*>.cjk:first-child)::after,
-*:has(>.latin:last-child)+.cjk::before {
-  content: " ";
-}
-
-.latin:has(+*>.latin:first-child)::after,
-*:has(>.latin:last-child)+.latin::before {
+.latin:has(+*>*:first-child>.cjk:first-child)::after,
+*:has(>.latin:last-child)+.cjk::before,
+*:has(>*:last-child>.latin:last-child)+.cjk::before {
   content: " ";
 }
 
 /* CJK punctuation squeeze */
-.opening-punc:first-child,
+p>.opening-punc:first-child,
 .dot-punc+.opening-punc,
 .opening-punc+.opening-punc,
 .closing-punc+.opening-punc {
   margin-inline-start: -0.5em;
 }
 
-.closing-punc:last-child,
+p>.closing-punc:last-child,
 .dot-punc:has(+.closing-punc),
 .closing-punc:has(+.closing-punc),
 .closing-punc:has(+.dot-punc) {
@@ -619,59 +616,11 @@ article.track {
 /* MARK: Text grid typography */
 .text-grid-container {
   container-type: inline-size;
-  text-align: justify;
-}
-
-@container (min-inline-size: 10em) {
-  .text-grid {
-    inline-size: 10em;
-  }
-}
-
-@container (min-inline-size: 11em) {
-  .text-grid {
-    inline-size: 11em;
-  }
-}
-
-@container (min-inline-size: 12em) {
-  .text-grid {
-    inline-size: 12em;
-  }
-}
-
-@container (min-inline-size: 13em) {
-  .text-grid {
-    inline-size: 13em;
-  }
-}
-
-@container (min-inline-size: 14em) {
-  .text-grid {
-    inline-size: 14em;
-  }
-}
-
-@container (min-inline-size: 15em) {
-  .text-grid {
-    inline-size: 15em;
-  }
-}
-
-@container (min-inline-size: 16em) {
-  .text-grid {
-    inline-size: 16em;
-  }
-}
-
-@container (min-inline-size: 17em) {
-  .text-grid {
-    inline-size: 17em;
-  }
 }
 
 @container (min-inline-size: 18em) {
   .text-grid {
+    text-align: justify;
     inline-size: 18em;
   }
 }

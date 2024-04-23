@@ -20,5 +20,7 @@
     {% endfor %}
   </div>
 
-  <p class="card-note multiline-ellipsis">{{ note.digest }}</p>
+  <div class="note-digest card-note text-grid-container">
+    <div class="text-grid">{{ note.digest | cjk | safe }}</div>
+  </div>
 </article>

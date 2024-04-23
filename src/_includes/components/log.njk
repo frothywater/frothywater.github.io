@@ -1,5 +1,7 @@
 <article id="{{ log.basename | slug }}" class="log card">
-  {{ log.content | md | safe }}
+  <div class="text-grid-container">
+    <div class="text-grid">{{ log.content | md | cjk | safe }}</div>
+  </div>
 
   <time datetime="{{ log.date | date('DATETIME') }}">
       <a href="/log/#{{ log.basename | slug }}" class="bare-link">{{ log.date | date('yyyy-MM-dd') }}</a>

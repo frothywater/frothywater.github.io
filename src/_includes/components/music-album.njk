@@ -76,6 +76,8 @@
 
   {# note #}
   {% if album.content %}
-    <div class="album-note card-note">{{ album.content | md | safe }}</div>
+    <div class="album-note card-note text-grid-container">
+      <div class="text-grid">{{ album.content | md | cjk | safe }}</div>
+    </div>
   {% endif %}
 </article>

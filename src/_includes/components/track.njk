@@ -4,7 +4,9 @@
 
   <p class="track-title card-note"><em>{{ name }}</em></p>
   {% if track.text %}
-    <p class="track-note card-note">{{ track.text }}</p>
+    <div class="card-note track-note text-grid-container">
+      <div class="text-grid">{{ track.text | md | cjk | safe }}</div>
+    </div>
   {% endif %}
 
   <time datetime="{{ track.date | date('DATETIME') }}">
