@@ -13,7 +13,7 @@ category: Essay
 以及[一天世界 Telegram 频道里提到的](https://t.me/yitianshijie/2595)，[Jeff Johnson 的 tweet](https://twitter.com/lapcatsoftware/status/1399318306310533123):
 > The real problem is that the tech companies have \*devalued\* products and work.
 >
-> […] You used to have to spend a significant price upfront to buy an album or to run an app. Now you can get a ton of stuff for free, or get almost everything you want for a small fee.
+> \[…\] You used to have to spend a significant price upfront to buy an album or to run an app. Now you can get a ton of stuff for free, or get almost everything you want for a small fee.
 
 [一天世界《App Store 是 iPad 的掣肘》](https://blog.yitianshijie.net/2021/05/21/app-store-is-the-elephant-in-the-room/)把这个矛盾揭露得很彻底：
 > 苹果一向是硬件强于软件，macOS 的可口更多倚赖于第三方开发者——尤其是独立开发者。在前 iOS 时代，为 macOS 写软件的第三方开发者所拥有的自由度是如今难以想像的。在 iOS/iPadOS 上，开发者不仅有大量技术和商业模式上的限制，甚至不能提供色情内容，不能提供邪恶政权禁止的内容。苹果把 iOS 用户当孩子对待，这是其软件开发的最高领导者亲口承认的。
@@ -29,7 +29,7 @@ cobalt 想要成为 iOS 独立开发者，是因为 Apple 的软件生态和硬�
 Hayami 在她的 Telegram 频道里提到了[发人深省的两个例子](https://t.me/hayami_kiraa/80)，然后她总结道：
 > 每一次的技术革新都带来「知识分子」呼天抢地的怒吼，大家哀叹文化已死、娱乐至上、江河日下，这是一个越来越坏的时代。
 > 但是，但是，技术的更新和门槛的降低，也同时赋予了普通人更多的信息和能力。
-> […] 我当然知道，这种过载的信息和看似平等的话语权存在着恶劣的问题。在遇到糟糕的大环境时，我的朋友们也经常把「你国网民本科率不足一成」用来互相劝慰和开导。
+> ……我当然知道，这种过载的信息和看似平等的话语权存在着恶劣的问题。在遇到糟糕的大环境时，我的朋友们也经常把「你国网民本科率不足一成」用来互相劝慰和开导。
 > 但有时候，我们似乎也应该放下一些高高在上的成见。
 
 或许我们还有很长很长的路要走。但我希望自己能够做到的事情是，继续感受和创造美，同样地，继续学习和反思。

@@ -9,7 +9,7 @@ category: Translation
 
 最近很迷 Adams 的这两部作品，都是钢琴独奏，China Gates 五分钟左右，Phrygian Gates 二十二分钟左右，分三个乐章。John Adams 是美国极简主义（Minimalism）作曲家。搜索的时候竟然发现了[他的个人网站](https://www.earbox.com/phrygian-gates-china-gates/)，上面有他对这个作品的详细介绍。这可是 1977 年的作品诶！稍微有些惊讶。在那里发现了有意思的东西，因为我单纯听难以从作曲层面听出什么东西，毕竟 cobalt 的音乐水平有限。那么在这里节选地分享出来吧，并配上我拙劣的翻译以供参考。（如果大家有兴趣听的话，可以先从比较短小、结构和技巧比较简单的 China Gates 开始听起，可能会比较有感觉。）
 
-> The 1970’s was a time of enormous ideological conflict in new music when the assumptions of post-Schoenbergian aesthetics finally began to be challenged by composers who saw little future in the principles of serialism. … Minimalism, although an admittedly reduced and at times naive style, offered me a way out of this bind. I found the combination of tonality, pulsation and large architectonic structures to be extremely promising.
+> The 1970’s was a time of enormous ideological conflict in new music when the assumptions of post-Schoenbergian aesthetics finally began to be challenged by composers who saw little future in the principles of serialism. \[…\] Minimalism, although an admittedly reduced and at times naive style, offered me a way out of this bind. I found the combination of tonality, pulsation and large architectonic structures to be extremely promising.
 
 19 世纪 70 年代，新音乐领域充满意识形态上的冲突。那时，后[勋伯格](https://en.wikipedia.org/wiki/Arnold_Schoenberg)主义美学假设终于开始被那些不认可[序列主义](https://en.wikipedia.org/wiki/Serialism)原则的作曲家所挑战。……而极简主义，虽然确实是个简单的、在当时看来不成熟的流派，却引领我走出了上述的困境。我认为极简主义中，调性、律动、庞大的建筑般的结构组合起来，极其有潜力。
 
