@@ -11,7 +11,7 @@ category: Murmur
 
 <figure>
   <img src="https://d32dm0rphc51dk.cloudfront.net/rIINltqJlK77TGd6v_jqkQ/normalized.jpg" alt="Path under the Rose Arches, Monet, 1918–1924, oil on canvas.">
-  <figcaption>Path under the Rose Arches, Monet, Giverny, 1918–1924, oil on canvas. ©Kimbell Art Museum</figcaption>
+  <figcaption>Path under the Rose Arches, Monet, 1918–1924, oil on canvas.</figcaption>
 </figure>
 
 解开所有锚定，潜到水下去，趁着夜色正浓。

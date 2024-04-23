@@ -12,6 +12,6 @@ video: https://www.youtube.com/watch?v=GZgR2rXsRC0
 category: Nu Jazz
 ---
 
-Jacob Collier是literally「音乐天才」。他的乐曲里面充满了快速变化和不寻常的和声结构（polyharmony, negative harmony, non-functional harmony, microtonal harmony, etc.）、以及特殊的复合节奏（polyrhythm）。他一个人multitrack自己的人声，multitrack多种乐器。不过，抛开这些，他的音乐本身就充满了压倒性的生命力。
+Jacob Collier是literally「音乐天才」。他的乐曲里面充满了快速变化和不寻常的和声结构 (polyharmony, negative harmony, non-functional harmony, microtonal harmony, etc.)、以及特殊的复合节奏 (polyrhythm)。他一个人multitrack自己的人声，multitrack多种乐器。不过，抛开这些，他的音乐本身就充满了压倒性的生命力。
 
 <time>2020-06-16</time>
