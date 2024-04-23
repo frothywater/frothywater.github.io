@@ -9,13 +9,19 @@ category: Murmur
 
 我想要解开所有的锚定，张开所有蜷缩的维度。在浓郁的黑夜看不见的裂缝中伸进手去，抚摸混沌和复杂性。我想要明晰的晦涩。你问什么是明晰的晦涩？莫奈晚年眼疾逐渐恶化，却可以感知一部分紫外光区，他晚年笔下的花园总是充满诡谲的色彩。就是多义性，犹如山顶的晨光那样清新的多义性。维度，隐喻，语境，多义性。世界失去了这些就没办法运作。但是在白天，所有事物都是静态，时间是切面的，空间是经典的。一切都很完美，就像水泥墙那样苍白而黯淡地完美。啊，这样不行啊。
 
-![Path under the Rose Arches, Monet, Giverny, 1918–1924, oil on canvas. Photo © Kimbell Art Museum](https://www.kimbellart.org/sites/default/files/styles/full_width_image_gallery/public/2018-12/5089.JPG?itok=X_hVzoln)
+<figure>
+  <img src="https://d32dm0rphc51dk.cloudfront.net/rIINltqJlK77TGd6v_jqkQ/normalized.jpg" alt="Path under the Rose Arches, Monet, 1918–1924, oil on canvas.">
+  <figcaption>Path under the Rose Arches, Monet, Giverny, 1918–1924, oil on canvas. ©Kimbell Art Museum</figcaption>
+</figure>
 
 解开所有锚定，潜到水下去，趁着夜色正浓。
 
 你说一件事情对，一件事情错，那样只有一个维度。就像塑料玩具上那种劣质的人造色彩一样，被小朋友抛弃在正在拆除的街边公园里。其实，你无法锚定任何事物，但你总是锚定任何事物。你去听柯川，就能理解什么是明晰的晦涩。噢，我感觉语言太刻板，我只能说陈述句、疑问句、感叹句、祈使句。我只能说一个东西是怎么样，不是怎么样，但谁知道呢？维度正蜷缩在黑暗当中！但人们等不及天黑，他们讨厌黑暗。
 
-![A Love Supreme, John Coltrane, 1964](https://images-na.ssl-images-amazon.com/images/I/81RP7J8a%2BkL._AC_SL1500_.jpg)
+<figure>
+  <img src="/music/image/A Love Supreme-6890747.jpg" alt="A Love Supreme, John Coltrane, 1964">
+  <figcaption>A Love Supreme, John Coltrane, 1964</figcaption>
+</figure>
 
 啊，色彩。你问和弦上面怎么会附着色彩？是，或不是，我没办法说。但是我闭着眼睛去听，我听到每个和弦上都附着色彩。你必须要解开所有锚定去听柯川的音乐，就像你一定不能把世界当成一个个完美的断片。多用耳朵！声音从祖先那里开始就是隐喻的。我好敬佩来自非洲的节奏，鼓声充斥着动量，身体的晃动蕴涵着原始的力。向黑夜致以原始的朝圣！
 
