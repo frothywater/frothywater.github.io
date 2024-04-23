@@ -13,4 +13,5 @@ category: Nu Jazz
 ---
 
 爵士跨界电子。《Shapes That Change Shape》前段合成器一响起来就好像坠入云层……
+
 <time>2020-05-08</time>

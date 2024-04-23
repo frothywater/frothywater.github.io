@@ -14,4 +14,5 @@ category: J-Rock
 ---
 
 《Back To My Place》后半段的鼓速度降下来的时候尤其扣人心弦。
+
 <time>2019-12-28</time>
