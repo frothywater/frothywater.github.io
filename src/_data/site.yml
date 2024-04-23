@@ -13,7 +13,7 @@ navLinks:
   /track/: 八音盒
 
 footerLinks:
-  /feed.xml: rss
+  /feed.rss: rss
 
 featuredNotes:
   - my-book
