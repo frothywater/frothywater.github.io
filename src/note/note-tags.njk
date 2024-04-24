@@ -24,7 +24,7 @@ renderOrder: 2
 
     {% set query = "type=note tags*='" + tag + "'" %}
     {% set notes = search.pages(query, "date=desc") %}
-    <div class="note-grid">
+    <div class="grid note-grid">
       {% for note in notes %}
       {% include "components/note-card.njk" %}
       {% endfor %}

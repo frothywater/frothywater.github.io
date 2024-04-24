@@ -33,7 +33,7 @@ renderOrder: 2
 
     {% set query = "type=music-album genre*='" + tag + "'" %}
     {% set albums = search.pages(query, "date=desc") %}
-    <div class="music-album-grid">
+    <div class="grid music-album-grid">
       {% for album in albums %}
       {% include "components/music-album.njk" %}
       {% endfor %}
@@ -47,7 +47,7 @@ renderOrder: 2
 
     {% set query = "type=music-album styles*='" + tag + "'" %}
     {% set albums = search.pages(query, "date=desc") %}
-    <div class="music-album-grid">
+    <div class="grid music-album-grid">
       {% for album in albums %}
       {% include "components/music-album.njk" %}
       {% endfor %}

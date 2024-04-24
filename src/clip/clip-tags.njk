@@ -29,7 +29,7 @@ renderOrder: 2
   <section>
     <h2 id="{{ tag | slug }}">{{ tag }}</h2>
 
-    <div class="clip-grid">
+    <div class="grid clip-grid">
       {% for clip in clips %}
         {% if clip.tags and clip.tags.includes(tag) %}
             {% include "components/clip.njk" %}
