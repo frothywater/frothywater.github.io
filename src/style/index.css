@@ -37,6 +37,12 @@ a {
   color: var(--black);
 }
 
+blockquote {
+  margin-inline: 0;
+  padding-inline-start: 1.8em;
+  border-inline-start: 0.2em solid var(--black);
+}
+
 time {
   font-size: 0.8rem;
 
@@ -63,6 +69,7 @@ section+section {
   margin-block-start: 2lh;
 }
 
+/* MARK: Base layout */
 body {
   display: flex;
   flex-direction: column;
@@ -224,7 +231,7 @@ body {
 /* MARK: Home page */
 .home-grid {
   display: grid;
-  grid-template-columns: repeat(6, 20em);
+  grid-template-columns: repeat(6, 22em);
   grid-template-rows: 100%;
   grid-template-areas: "note log music photo clip track";
   column-gap: 1em;
@@ -232,7 +239,7 @@ body {
   block-size: 100%;
   padding-inline: 7vi;
 
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
 
   >section {
@@ -247,7 +254,7 @@ body {
       display: flex;
       flex-direction: column;
       gap: 1em;
-      overflow-y: scroll;
+      overflow-y: auto;
       overflow-x: hidden;
     }
   }
