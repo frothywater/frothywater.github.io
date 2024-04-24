@@ -34,8 +34,16 @@
     "url": "https://chunghwa.asia/",
     "tags": ["digital", "culture", "japan"],
     "category": "blog",
-    "note": "托托的个人网站。「一切关于〇〇一代的折衷主义」。",
+    "note": "托托的个人网站。「一切關於〇〇一代的折衷主義活法」。",
     "favicon": "https://chunghwa.asia/favicon.png"
+  },
+  {
+    "title": "薬",
+    "url": "https://kusuri.pubpub.org",
+    "tags": ["culture", "japan"],
+    "category": "blog",
+    "note": "托托的翻译。“Meds for Self-Imposed Exiles from Homeland”.",
+    "favicon": "https://assets.pubpub.org/hrdf0x0w/41603556891699.png"
   },
   {
     "title": "Bret Victor",
