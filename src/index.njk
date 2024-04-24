@@ -27,14 +27,14 @@ renderOrder: 4
     {% endfor %}
 
     <div class="note-section home-list">
-      <div class="note-list home-inline-list">
+      <div class="note-list">
         {% for note in featuredNotes %}
         {% include "components/note-card.njk" %}
         {% endfor %}
       </div>
 
       <h3>最近在写</h3>
-      <div class="note-list home-inline-list">
+      <div class="note-list">
         {% for note in recentNotes %}
         {% include "components/note-card.njk" %}
         {% endfor %}
@@ -90,7 +90,7 @@ renderOrder: 4
       {% endfor %}
     {% endfor %}
 
-    <div class="home-inline-list photo-list">
+    <div class="photo-list home-list">
       {% for photo in featuredPhotos %}
         {% include "components/photo.njk" %}
       {% endfor %}
@@ -130,25 +130,3 @@ renderOrder: 4
       {% endfor %}
     </div>
 </div>
-
-<style>
-@media (max-width: 45em) {
-  body {
-    block-size: 100dvh;
-    padding-inline: 0;
-    
-    >header, >footer {
-      padding-inline: 3vi;
-    }
-
-    >main {
-      min-block-size: 0;
-      margin-block: 0;
-
-      section>a>h2 {
-        margin-block-start: 0.2lh;
-      }
-    }
-  }
-}
-</style>

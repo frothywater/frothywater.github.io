@@ -59,8 +59,16 @@ figure {
   }
 }
 
-/* MARK: Base layout */
+section+section {
+  margin-block-start: 2lh;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  gap: 2lh;
+
+  padding-block: 1lh;
   padding-inline: 7vi;
 
   /* header */
@@ -68,7 +76,7 @@ body {
     display: flex;
     align-items: start;
     gap: 0.5em;
-    margin-block: 2lh;
+    margin-block: 0;
 
     /* icon */
     img {
@@ -103,7 +111,7 @@ body {
 
   /* main content area */
   >main {
-    margin-block: 2lh;
+    margin-block: 0;
   }
 
   /* footer */
@@ -111,11 +119,26 @@ body {
     display: flex;
     justify-content: end;
     gap: 1em;
-    margin-block: 2lh;
+    margin-block: 0;
 
     a {
       color: var(--gray);
     }
+  }
+}
+
+/* mobile layout */
+@media screen and (max-width: 50em) {
+  body {
+    padding-inline: 4vi;
+  }
+
+  div.grid {
+    gap: 1em;
+  }
+
+  div.grid>article.note-card {
+    padding: 1em;
   }
 }
 
@@ -198,65 +221,53 @@ body {
   }
 }
 
-/* MARK: Mobile layout */
-@media (max-width: 50em) {
-  body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5lh;
-
-    padding-block: 0.5lh;
-    padding-inline: 3vi;
-
-    >header,
-    >nav {
-      margin-block: 0;
-    }
-
-    >main {
-      margin-block: 1lh;
-    }
-
-    >footer {
-      margin-block: 0;
-    }
-  }
-}
-
 /* MARK: Home page */
-
-section a>h2 {
-  margin-block: 0 0.8lh;
-}
-
-section+section {
-  margin-block-start: 2lh;
-}
-
 .home-grid {
   display: grid;
-  column-gap: 2em;
+  grid-template-columns: repeat(6, 20em);
+  grid-template-rows: 100%;
+  grid-template-areas: "note log music photo clip track";
+  column-gap: 1em;
+
+  block-size: 100%;
+  padding-inline: 7vi;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
 
   >section {
     display: flex;
     flex-direction: column;
 
+    a>h2 {
+      margin-block: 0 0.8lh;
+    }
+
     .home-list {
+      display: flex;
+      flex-direction: column;
       gap: 1em;
       overflow-y: scroll;
       overflow-x: hidden;
-    }
-
-    .home-inline-list {
-      display: flex;
-      gap: 1em;
-      overflow-x: scroll;
-      overflow-y: hidden;
     }
   }
 
   section#note {
     grid-area: note;
+
+    .note-section {
+      gap: 0;
+
+      .note-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        .note-card {
+          padding: 1em;
+        }
+      }
+    }
   }
 
   section#log {
@@ -269,6 +280,14 @@ section+section {
 
   section#photo {
     grid-area: photo;
+
+    .photo-list {
+      figure.photo {
+        p {
+          display: none;
+        }
+      }
+    }
   }
 
   section#clip {
@@ -279,123 +298,51 @@ section+section {
     grid-area: track;
   }
 
-  article.note-card {
-    flex: 0 0 20em;
-    padding: 1em;
-  }
-
-  .photo-list {
-    figure.photo {
-      img {
-        max-block-size: 300px;
-        max-inline-size: unset;
-      }
-
-      p {
-        display: none;
-      }
-    }
+  /* cancel section spacing */
+  section+section {
+    margin-block-start: 0;
   }
 }
 
-/* phone: parallel scrolling */
-@media (max-width: 45em) {
+body:has(.home-grid) {
+  block-size: 100dvh;
+  gap: 0.5lh;
+  padding-block: 0.5lh;
+  padding-inline: 0;
+
+  >header,
+  >footer {
+    padding-inline: 7vi;
+  }
+
+  >main {
+    min-block-size: 0;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  body:has(.home-grid) {
+    gap: 0.5lh;
+    padding-block: 0.5lh;
+
+    >header,
+    >footer {
+      padding-inline: 4vi;
+    }
+  }
+
   .home-grid {
-    grid-template-columns: repeat(6, 85%);
-    grid-template-rows: 100%;
-    grid-template-areas: "note log music photo clip track";
-    column-gap: 1em;
-
-    block-size: 100%;
-    padding-inline: 5vi;
-
     /* page-like horizontal view */
-    overflow-x: scroll;
     scroll-snap-type: x mandatory;
 
     >section {
       scroll-snap-align: center;
     }
   }
-
-  /* cancel section spacing */
-  section+section {
-    margin-block-start: 0;
-  }
-
-  .home-list {
-    display: flex;
-    flex-direction: column;
-    padding-block-end: 2lh;
-  }
-
-  /* turn notes to vertical scroll view */
-  section#note div.note-list {
-    display: flex;
-    flex-direction: column;
-    overflow-y: unset;
-    overflow-x: unset;
-
-    article.note-card {
-      flex: unset;
-    }
-  }
-
-  /* turn photos to vertical scroll view */
-  section#photo div.photo-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5lh;
-    overflow-y: scroll;
-    overflow-x: unset;
-
-    figure.photo {
-      img {
-        max-block-size: unset;
-        max-inline-size: 100%;
-      }
-    }
-  }
 }
 
-/* medium: 2 columns */
-@media (min-width: 45em) {
-  .home-grid {
-    grid-template:
-      "note note" auto
-      "log music" 35lh
-      "photo photo" auto
-      "clip track" 25lh
-      / 1fr 1fr;
-  }
-}
-
-/* wide: 3 columns */
-@media (min-width: 75em) {
-  .home-grid {
-    grid-template:
-      "note note note" auto
-      "log music track" 35lh
-      "photo photo photo" auto
-      "clip clip clip" auto
-      / 1fr 1fr 1fr;
-  }
-}
-
-/* extra wide: 4 columns */
-@media (min-width: 100em) {
-  .home-grid {
-    grid-template:
-      "note note note note" auto
-      "log music track clip" 35lh
-      "photo photo photo photo" auto
-      / 1fr 1fr 1fr 1fr;
-  }
-}
 
 /* MARK: Note */
-/* .note-grid {} */
-
 article.note-card {
   border-radius: 0;
   margin-block: 0;
@@ -443,8 +390,6 @@ article.note {
 }
 
 /* MARK: Log */
-/* .log-grid {} */
-
 article.log {
 
   /* content */

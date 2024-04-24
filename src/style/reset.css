@@ -33,7 +33,7 @@ html {
 body {
     /* Remove the margin in all browsers. */
     margin: 0;
-    /* min-block-size: 100svb; */
+    min-block-size: 100svb;
 }
 
 /**
