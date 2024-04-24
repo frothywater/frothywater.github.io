@@ -391,11 +391,11 @@ article.note {
 
 /* MARK: Log */
 article.log {
+  font-size: 0.9rem;
+  line-height: 1.5;
 
   /* content */
   p {
-    font-size: 0.9rem;
-    line-height: 1.5;
     margin-block: 0 0.2lh;
   }
 }
