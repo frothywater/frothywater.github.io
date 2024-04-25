@@ -1,11 +1,10 @@
 ---
 url: /photo/
 title: 相册
-renderOrder: 2
 ---
 
 <div class="grid photo-grid">
-  {% for photo in photos %}
+  {% asyncEach photo in photos %}
     {% include "components/photo.njk" %}
-  {% endfor %}
+  {% endeach %}
 </div>

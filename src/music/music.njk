@@ -1,7 +1,6 @@
 ---
 url: /music/
 title: 唱片柜
-renderOrder: 2
 ---
 
 {# 1st nav #}
@@ -35,9 +34,9 @@ renderOrder: 2
       {% set query = "type=music-album category='" + category + "'" %}
       {% set albums = search.pages(query, "date=desc") %}
       <div class="grid music-album-grid">
-        {% for album in albums %}
-        {% include "components/music-album.njk" %}
-        {% endfor %}
+        {% asyncEach album in albums %}
+          {% include "components/music-album.njk" %}
+        {% endeach %}
       </div>
     </section>
   {% endfor %}
@@ -48,8 +47,8 @@ renderOrder: 2
   <h2 id="logs">日志</h2>
   {% set logs = search.pages("type=music-log", "date=desc") %}
   <div class="grid log-grid">
-    {% for log in logs %}
-    {% include "components/music-log.njk" %}
-    {% endfor %}
+    {% asyncEach log in logs %}
+      {% include "components/music-log.njk" %}
+    {% endeach %}
   </div>
 </section>

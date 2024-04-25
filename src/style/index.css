@@ -177,6 +177,10 @@ body>footer {
 
 .section-links {
   font-style: italic;
+
+  &+.section-links {
+   margin-block-start: 0.5lh; 
+  }
 }
 
 .bare-link {

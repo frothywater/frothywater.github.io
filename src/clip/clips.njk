@@ -1,7 +1,6 @@
 ---
 url: /clip/
 title: 剪报
-renderOrder: 2
 ---
 
 {# 1st nav #}
@@ -33,11 +32,11 @@ renderOrder: 2
     <section>
       <h3 id="clip-{{ category | slug }}">{{ categoryName[category] }}</h3>
       <div class="grid clip-grid">
-        {% for clip in clips %}
-          {% if clip.category == category %}
-          {% include "components/clip.njk" %}
+        {% asyncEach clip in clips %}
+          {% ifAsync clip.category == category %}
+           {% include "components/clip.njk" %}
           {% endif %}
-        {% endfor %}
+        {% endeach %}
       </div>
     </section>
   {% endfor %}

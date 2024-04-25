@@ -1,7 +1,6 @@
 ---
 url: /note/
 title: 笔记本
-renderOrder: 2
 ---
 
 {# category nav #}
@@ -22,9 +21,9 @@ renderOrder: 2
     {% set query = "type=note category='" + category + "'" %}
     {% set notes = search.pages(query, "date=desc") %}
     <div class="grid note-grid">
-      {% for note in notes %}
-      {% include "components/note-card.njk" %}
-      {% endfor %}
+      {% asyncEach note in notes %}
+        {% include "components/note-card.njk" %}
+      {% endeach %}
     </div>
   </section>
 {% endfor %}

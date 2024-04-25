@@ -1,7 +1,7 @@
 ---
 url: /clip/tag/
 title: 剪报
-renderOrder: 2
+renderOrder: 1
 ---
 
 {% set tags = [] %}
@@ -30,11 +30,11 @@ renderOrder: 2
     <h2 id="{{ tag | slug }}">{{ tag }}</h2>
 
     <div class="grid clip-grid">
-      {% for clip in clips %}
+      {% asyncEach clip in clips %}
         {% if clip.tags and clip.tags.includes(tag) %}
-            {% include "components/clip.njk" %}
+          {% include "components/clip.njk" %}
         {% endif %}
-      {% endfor %}
+      {% endeach %}
     </div>
   </section>
 {% endfor %}

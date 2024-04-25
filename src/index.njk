@@ -1,5 +1,4 @@
 ---
-renderOrder: 4
 ---
 
 {# recent notes #}
@@ -27,9 +26,9 @@ renderOrder: 4
     <a href="/note/"><h2 class="section-title">笔记本</h2></a>
 
     <div class="grid note-grid home-list">
-      {% for note in featuredNotes %}
-      {% include "components/note-card.njk" %}
-      {% endfor %}
+      {% asyncEach note in featuredNotes %}
+        {% include "components/note-card.njk" %}
+      {% endeach %}
     </div>
   </section>
 
@@ -38,9 +37,9 @@ renderOrder: 4
     <h2 class="section-title">最近在写</h2>
 
     <div class="grid note-grid home-list">
-      {% for note in recentNotes %}
-      {% include "components/note-card.njk" %}
-      {% endfor %}
+      {% asyncEach note in recentNotes %}
+        {% include "components/note-card.njk" %}
+      {% endeach %}
     </div>
   </section>
 
@@ -50,9 +49,9 @@ renderOrder: 4
 
     {% set logs = search.pages("type=log", "date=desc", 10) %}
     <div class="grid log-grid home-list">
-      {% for log in logs %}
-      {% include "components/log.njk" %}
-      {% endfor %}
+      {% asyncEach log in logs %}
+        {% include "components/log.njk" %}
+      {% endeach %}
     </div>
   </section>
 
@@ -71,9 +70,9 @@ renderOrder: 4
     {% endfor %}
 
     <div class="grid music-album-grid home-list">
-      {% for album in featuredAlbums %}
-      {% include "components/music-album.njk" %}
-      {% endfor %}
+      {% asyncEach album in featuredAlbums %}
+        {% include "components/music-album.njk" %}
+      {% endeach %}
     </div>
   </section>
 
@@ -83,9 +82,9 @@ renderOrder: 4
 
     {% set logs = search.pages("type=music-log", "date=desc", 10) %}
     <div class="grid log-grid home-list">
-      {% for log in logs %}
-      {% include "components/music-log.njk" %}
-      {% endfor %}
+      {% asyncEach log in logs %}
+        {% include "components/music-log.njk" %}
+      {% endeach %}
     </div>
   </section>
 
@@ -105,9 +104,9 @@ renderOrder: 4
     {% endfor %}
 
     <div class="photo-list home-list">
-      {% for photo in featuredPhotos %}
+      {% asyncEach photo in featuredPhotos %}
         {% include "components/photo.njk" %}
-      {% endfor %}
+      {% endeach %}
     </div>
   </section>
 
@@ -127,9 +126,9 @@ renderOrder: 4
     {% endfor %}
 
     <div class="grid clip-grid home-list">
-      {% for clip in featuredClips %}
+      {% asyncEach clip in featuredClips %}
         {% include "components/clip.njk" %}
-      {% endfor %}
+      {% endeach %}
     </div>
   </section>
 
@@ -139,8 +138,8 @@ renderOrder: 4
 
     {% set tracks = search.data("/track/").tracks %}
     <div class="grid track-grid home-list">
-      {% for track in tracks %}
+      {% asyncEach track in tracks %}
         {% include "components/track.njk" %}
-      {% endfor %}
+      {% endeach %}
     </div>
 </div>

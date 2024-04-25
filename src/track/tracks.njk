@@ -1,11 +1,10 @@
 ---
 url: /track/
 title: 八音盒
-renderOrder: 2
 ---
 
 <div class="grid track-grid">
-  {% for track in tracks %}
+  {% asyncEach track in tracks %}
     {% include "components/track.njk" %}
-  {% endfor %}
+  {% endeach %}
 </div>

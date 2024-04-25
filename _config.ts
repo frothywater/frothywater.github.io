@@ -10,10 +10,6 @@ import transformImages from "lume/plugins/transform_images.ts";
 import markdownDigest from "./_extra/digest.ts";
 import processCJK from "./_extra/cjk.ts";
 
-import { existsSync } from "https://deno.land/std@0.223.0/fs/mod.ts";
-import { join } from "https://deno.land/std@0.223.0/path/mod.ts";
-import { imageDimensionsFromData } from "npm:image-dimensions";
-
 const site = lume({
   src: "./src",
 });
@@ -64,14 +60,10 @@ site.filter(
     path.includes(".") ? `${path.split(".")[0]}.${ext}` : `${path}.${ext}`,
 );
 
-// Helper: get image's dimension and return img width and height attributes
-site.helper("get_img_size", (path: string) => {
-  const fullPath = join(site.src(), path);
-  if (existsSync(fullPath) === false) return "";
-  const data = Deno.readFileSync(fullPath);
-  const result = imageDimensionsFromData(data);
-  return result ? `width="${result.width}" height="${result.height}"` : "";
-}, { type: "tag" });
+site.data(
+  "getNotes",
+  () => site.search.pages("type=note", "date=desc").slice(0, 5),
+);
 
 // Preprocess: add oldUrl to note pages
 site.preprocess([".md"], (pages) => {

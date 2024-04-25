@@ -1,12 +1,11 @@
 ---
 url: /log/
 title: 手帐
-renderOrder: 2
 ---
 
 {% set logs = search.pages("type=log", "date=desc") %}
 <div class="grid log-grid">
-  {% for log in logs %}
-  {% include "components/log.njk" %}
-  {% endfor %}
+  {% asyncEach log in logs %}
+    {% include "components/log.njk" %}
+  {% endeach %}
 </div>
