@@ -17,10 +17,10 @@
       <div class="main-header">
         <div class="main-title">
           <a class="bare-link" href="/"><h1>{{ site.title }}</h1></a>
-          <small>{{ site.description }}</small>
+          <span class="main-description cjk">{{ site.description }}</span>
         </div>
 
-        <nav class="nav-links">
+        <nav class="nav-links cjk">
           <ul>
             {% for url_, name in site.navLinks %}
               <li><a href="{{ url_ }}" class="bare-link" {% if (url == url_) or (url_ != "/" and url.startsWith(url_)) %}aria-current="page"{% endif %}>{{ name }}</a></li>
@@ -30,7 +30,7 @@
       </div>
     </header>
 
-    <main class="{{ bodyClass }}">
+    <main>
       {{ content | safe }}
     </main>
 

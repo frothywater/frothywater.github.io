@@ -1,8 +1,10 @@
 <article class="clip card">
-  {% if clip.favicon %}
-    <img src="{{ clip.favicon }}">
-  {% endif %}
-  <a href="{{ clip.url }}">{{ clip.title }}</a>
+  <div class="clip-title">
+    {% if clip.favicon %}
+      <img src="{{ clip.favicon }}">
+    {% endif %}
+    <a href="{{ clip.url }}">{{ clip.title }}</a>
+  </div>
 
   <div class="info-list">
     {% for tag in clip.tags %}
@@ -11,7 +13,7 @@
   </div>
 
   {% if clip.note %}
-    <div class="clip-note card-note text-grid-container">
+    <div class="clip-note text-grid-container">
       <div class="text-grid">{{ clip.note | md | cjk | safe }}</div>
     </div>
   {% endif %}
