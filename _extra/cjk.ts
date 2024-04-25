@@ -201,11 +201,11 @@ function getPuncClass(punc: string): PuncClass {
 function normalizePunc(text: string): string {
   return text
     // Go evil with Apple Inc.
-    .replace(/……/g, "⋯⋯")
-    .replace(/！！|\!\!/g, "‼")
-    .replace(/？？|\?\?/g, "⁇")
-    .replace(/？！|\?\!/g, "⁈")
-    .replace(/！？|\!\?/g, "⁉");
+    .replace("……", "⋯⋯")
+    .replace("！！", "‼")
+    .replace("？？", "⁇")
+    .replace("？！", "⁈")
+    .replace("！？", "⁉");
 }
 
 function segmentize(str: string): Segment[] {

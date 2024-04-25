@@ -117,8 +117,8 @@ body>header {
 
   /* icon */
   img {
-    min-inline-size: 3.2lh;
-    max-block-size: 3.2lh;
+    min-inline-size: 3lh;
+    max-block-size: 3lh;
   }
 
   /* home link */
@@ -130,13 +130,13 @@ body>header {
 
   .main-description {
     display: inline-block;
-    margin-block-start: 0.5lh;
+    margin-block-start: 0.25lh;
     color: var(--gray);
   }
 
   /* navigation links */
   nav {
-    margin-block-start: 0.2lh;
+    margin-block-start: 0.25lh;
   }
 }
 
@@ -157,12 +157,10 @@ body>footer {
 /* MARK: Shared */
 
 .nav-links {
-  line-height: 1.8;
-
   ul {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 1em;
+    gap: 0.25lh 1em;
     list-style-type: none;
     padding: 0;
     margin: 0;
