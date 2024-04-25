@@ -2,49 +2,51 @@
 renderOrder: 4
 ---
 
+{# recent notes #}
+{% set allNotes = search.pages("type=note", "date=desc") %}
+{% set recentNotes = [] %}
+{% for note in allNotes %}
+  {% if recentNotes.length < 5 %}
+    {% set recentNotes = recentNotes.concat(note) %}
+  {% endif %}
+{% endfor %}
+
+{# featured notes #}
+{% set featuredNotes = [] %}
+{% for name in site.featuredNotes %}
+  {% set query = "type=note basename='" + name + "'" %}
+  {% set page = search.page(query) %}
+  {% if page and not recentNotes.includes(page) %}
+    {% set featuredNotes = featuredNotes.concat(page) %}
+  {% endif %}
+{% endfor %}
+
 <div class="home-grid">
-  {# 1. notes #}
+  {# notes #}
   <section id="note">
-    <a href="/note/"><h2>笔记本</h2></a>
+    <a href="/note/"><h2 class="section-title">笔记本</h2></a>
 
-    {# featured notes #}
-    {% set featuredNotes = [] %}
-    {% for name in site.featuredNotes %}
-      {% set query = "type=note basename='" + name + "'" %}
-      {% set page = search.page(query) %}
-      {% if page %}
-        {% set featuredNotes = featuredNotes.concat(page) %}
-      {% endif %}
-    {% endfor %}
-
-    {# recent notes #}
-    {% set allNotes = search.pages("type=note", "date=desc") %}
-    {% set recentNotes = [] %}
-    {% for note in allNotes %}
-      {% if recentNotes.length < 5 and not featuredNotes.includes(note) %}
-        {% set recentNotes = recentNotes.concat(note) %}
-      {% endif %}
-    {% endfor %}
-
-    <div class="note-section home-list">
-      <div class="note-list">
-        {% for note in featuredNotes %}
-        {% include "components/note-card.njk" %}
-        {% endfor %}
-      </div>
-
-      <h3>最近在写</h3>
-      <div class="note-list">
-        {% for note in recentNotes %}
-        {% include "components/note-card.njk" %}
-        {% endfor %}
-      </div>
+    <div class="grid note-grid home-list">
+      {% for note in featuredNotes %}
+      {% include "components/note-card.njk" %}
+      {% endfor %}
     </div>
   </section>
 
-  {# 2. logs #}
+  {# recent notes #}
+  <section id="recent-note">
+    <h2 class="section-title">最近在写</h2>
+
+    <div class="grid note-grid home-list">
+      {% for note in recentNotes %}
+      {% include "components/note-card.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+
+  {# logs #}
   <section id="log">
-    <a href="/log/"><h2>手帐</h2></a>
+    <a href="/log/"><h2 class="section-title">手帐</h2></a>
 
     {% set logs = search.pages("type=log", "date=desc", 10) %}
     <div class="grid log-grid home-list">
@@ -54,9 +56,9 @@ renderOrder: 4
     </div>
   </section>
 
-  {# 3. music #}
+  {# music #}
   <section id="music">
-    <a href="/music/"><h2>唱片柜</h2></a>
+    <a href="/music/"><h2 class="section-title">唱片柜</h2></a>
 
     {# featured albums #}
     {% set featuredAlbums = [] %}
@@ -75,9 +77,21 @@ renderOrder: 4
     </div>
   </section>
 
-  {# 4. photos #}
+  {# music log #}
+  <section id="music-log">
+    <a href="/music/#logs"><h2 class="section-title">音乐日志</h2></a>
+
+    {% set logs = search.pages("type=music-log", "date=desc", 10) %}
+    <div class="grid log-grid home-list">
+      {% for log in logs %}
+      {% include "components/music-log.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+
+  {# photos #}
   <section id="photo">
-    <a href="/photo/"><h2>相册</h2></a>
+    <a href="/photo/"><h2 class="section-title">相册</h2></a>
 
     {# featured photos #}
     {% set featuredPhotos = [] %}
@@ -97,9 +111,9 @@ renderOrder: 4
     </div>
   </section>
 
-  {# 5. clips #}
+  {# clips #}
   <section id="clip" >
-    <a href="/clip/"><h2>剪报</h2></a>
+    <a href="/clip/"><h2 class="section-title">剪报</h2></a>
 
     {# featured clips #}
     {% set featuredClips = [] %}
@@ -119,9 +133,9 @@ renderOrder: 4
     </div>
   </section>
 
-  {# 6. tracks #}
+  {# tracks #}
   <section id="track">
-    <a href="/track/"><h2>八音盒</h2></a>
+    <a href="/track/"><h2 class="section-title">八音盒</h2></a>
 
     {% set tracks = search.data("/track/").tracks %}
     <div class="grid track-grid home-list">

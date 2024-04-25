@@ -11,7 +11,11 @@
   --ja-font: "Source Han Sans JP", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
   --latin-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-  --line-clamp: 4;
+  --dyn-inline-pad: max(1em, calc(10vi - 1.5em));
+  --dyn-block-pad: min(1vb, 2lh);
+  --dyn-block-gap: min(0.5vb, 2lh);
+  --dyn-row-gap: clamp(1lh, 2vb, 2lh);
+  --dyn-col-gap: clamp(1em, 2vi, 2em);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,8 +46,8 @@ a {
 
 blockquote {
   margin-inline: 0;
-  padding-inline-start: 1.8em;
-  border-inline-start: 0.2em solid var(--black);
+  padding-inline-start: 1.9em;
+  border-inline-start: 0.1em solid var(--black);
 }
 
 time {
@@ -71,59 +75,38 @@ section+section {
 body {
   display: flex;
   flex-direction: column;
-  gap: 2lh;
-
-  padding-block: 1lh;
-  padding-inline: 7vi;
+  gap: var(--dyn-block-gap);
+  padding-block: var(--dyn-block-pad);
+  padding-inline: var(--dyn-inline-pad);
 
   >header,
-  >main,
   >footer {
     margin-block: 0;
   }
-}
 
-/* mobile layout */
-@media screen and (max-width: 50em) {
-  body {
-    padding-inline: 4vi;
-  }
-
-  div.grid {
-    gap: 1em;
-  }
-
-  div.grid>article.note-card {
-    padding: 1em;
+  >main {
+    margin-block: 2lh;
   }
 }
 
 /* adjust base layout for home page */
 body:has(.home-grid) {
-  block-size: 100dvh;
-  gap: 0.5lh;
-  padding-block: 0.5lh;
+  block-size: 100dvb;
   padding-inline: 0;
 
   >header,
   >footer {
-    padding-inline: 7vi;
+    padding-inline: var(--dyn-inline-pad);
   }
 
   >main {
+    /* make it fit */
     min-block-size: 0;
+    margin-block: 0;
   }
-}
 
-@media screen and (max-width: 50em) {
-  body:has(.home-grid) {
-    gap: 0.5lh;
-    padding-block: 0.5lh;
-
-    >header,
-    >footer {
-      padding-inline: 4vi;
-    }
+  .home-grid {
+    padding-inline: var(--dyn-inline-pad);
   }
 }
 
@@ -153,7 +136,7 @@ body>header {
 
   /* navigation links */
   nav {
-    margin-block-start: 0.25lh;
+    margin-block-start: 0.2lh;
   }
 }
 
@@ -164,6 +147,10 @@ body>footer {
 
   a {
     color: var(--gray);
+  }
+
+  .nav-links {
+    line-height: unset;
   }
 }
 
@@ -204,7 +191,7 @@ body>footer {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
-  gap: 2em 2lh;
+  gap: var(--dyn-row-gap) var(--dyn-col-gap);
 }
 
 .card {
@@ -215,7 +202,8 @@ body>footer {
   border: 1px solid var(--lightgray);
   border-radius: 1em;
   margin-block-end: auto;
-  padding: 1em;
+  /* count in border width */
+  padding: calc(1em - 1px);
 
   p {
     margin-block: 0;
@@ -249,13 +237,11 @@ body>footer {
 /* MARK: Home page */
 .home-grid {
   display: grid;
-  grid-template-columns: repeat(6, 22em);
+  grid-template-columns: repeat(8, clamp(22em, 85%, 26em));
   grid-template-rows: 100%;
-  grid-template-areas: "note log music photo clip track";
-  column-gap: 1em;
-
+  grid-template-areas: "note recent-note photo log music music-log clip track";
+  column-gap: var(--dyn-col-gap);
   block-size: 100%;
-  padding-inline: 7vi;
 
   overflow-x: auto;
   overflow-y: hidden;
@@ -266,35 +252,29 @@ body>footer {
     margin-block-start: 0;
   }
 
-  /* section title */
-  >section>a>h2 {
+  .section-title {
     margin-block: 0 0.8lh;
   }
 
   .home-list {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: var(--dyn-row-gap);
     overflow-y: auto;
     overflow-x: hidden;
   }
 
+  /* don't show photo note */
+  .photo-list figure p {
+    display: none;
+  }
+
   section#note {
     grid-area: note;
+  }
 
-    .note-section {
-      gap: 0;
-    }
-
-    .note-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-    }
-
-    .note-card {
-      padding: 1em;
-    }
+  section#recent-note {
+    grid-area: recent-note;
   }
 
   section#log {
@@ -305,13 +285,12 @@ body>footer {
     grid-area: music;
   }
 
+  section#music-log {
+    grid-area: music-log;
+  }
+
   section#photo {
     grid-area: photo;
-
-    /* don't show photo note */
-    .photo-list figure p {
-      display: none;
-    }
   }
 
   section#clip {
@@ -338,8 +317,6 @@ body>footer {
 article.note-card {
   border-radius: 0;
   margin-block: 0;
-  padding-block: 1lh;
-  padding-inline: 1em;
 
   .note-card-title {
     color: var(--primary);
@@ -571,6 +548,7 @@ p>.closing-punc:last-child,
 }
 
 /* MARK: Text grid typography */
+/* polyfill for `round()` function... */
 .text-grid-container {
   container-type: inline-size;
 }
