@@ -179,7 +179,7 @@ body>footer {
   font-style: italic;
 
   &+.section-links {
-   margin-block-start: 0.5lh; 
+    margin-block-start: 0.5lh;
   }
 }
 
@@ -232,6 +232,14 @@ body>footer {
 
   >*:not(:last-child) {
     margin-inline-end: 0.25em;
+  }
+}
+
+details.section-detail {
+  margin-block-end: 1lh;
+
+  summary {
+    color: var(--gray);
   }
 }
 

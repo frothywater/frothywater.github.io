@@ -3,6 +3,7 @@ import basePath from "lume/plugins/base_path.ts";
 import date from "lume/plugins/date.ts";
 import favicon from "lume/plugins/favicon.ts";
 import feed from "lume/plugins/feed.ts";
+import minifyHTML from "lume/plugins/minify_html.ts";
 import nunjucks from "lume/plugins/nunjucks.ts";
 import redirects from "lume/plugins/redirects.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
@@ -23,6 +24,7 @@ site
   .use(date())
   .use(basePath())
   .use(redirects())
+  .use(minifyHTML())
   .use(slugifyUrls())
   .use(transformImages())
   .use(favicon({ input: "/favicon.png" }))
@@ -61,11 +63,6 @@ site.filter(
   "with_ext",
   (path: string, ext: string) =>
     path.includes(".") ? `${path.split(".")[0]}.${ext}` : `${path}.${ext}`,
-);
-
-site.data(
-  "getNotes",
-  () => site.search.pages("type=note", "date=desc").slice(0, 5),
 );
 
 // Preprocess: add oldUrl to note pages

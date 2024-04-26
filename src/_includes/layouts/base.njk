@@ -31,6 +31,10 @@
     </header>
 
     <main>
+      {% ifAsync description %}
+        {% include "components/disclosure.njk" %}
+      {% endif %}
+
       {{ content | safe }}
     </main>
 
