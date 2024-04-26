@@ -10,22 +10,13 @@
 
     <div class="album-info">
       <div class="album-title info-list">
-
-        {# title-link, date, country #}
-        {% if album.link %}
-          {% set link = album.link %}
-        {% elif album.discogs_master_id %}
-          {% set link = "https://www.discogs.com/master/" ~ album.discogs_master_id %}
-        {% elif album.discogs_id %}
-          {% set link = "https://www.discogs.com/release/" ~ album.discogs_id %}
-        {% endif %}
-        {% if link %}
-          <a href="{{ link }}" class="bare-link"><h2>{{ album.title }}</h2></a>
-        {% else %}
-          <h2>{{ album.title }}</h2>
-        {% endif %}
+        {# title, date, country #}
+        <a href="#album-{{ album.title | slug }}" class="bare-link">
+          <h2 id="album-{{ album.title | slug }}">{{ album.title }}</h2>
+        </a>
 
         <time datetime="{{ album.date | date('DATETIME') }}">{{ album.date | date('yyyy') }}</time>
+
         {% if album.country %}
           <span class="album-country small">{{ album.country }}</span>
         {% endif %}
@@ -66,10 +57,22 @@
 
       </div>
 
-      {# video #}
-      {% if album.video %}
-        <a href="{{ album.video }}" class="album-video-link small">Youtube</a>
-      {% endif %}
+      {# links #}
+      <div class="info-list">
+        {% if album.link %}
+          <a href="{{ album.link }}" class="album-link small">Link</a>
+        {% endif %}
+
+        {% if album.discogs_master_id %}
+          <a href="https://www.discogs.com/master/{{ album.discogs_master_id }}" class="album-link small">Discogs</a>
+        {% elif album.discogs_id %}
+          <a href="https://www.discogs.com/release/{{ album.discogs_id }}" class="album-link small">Discogs</a>
+        {% endif %}
+
+        {% if album.video %}
+          <a href="{{ album.video }}" class="album-link small">Youtube</a>
+        {% endif %}
+      </div>
 
     </div>
   </div>
