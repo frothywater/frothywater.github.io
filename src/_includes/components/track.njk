@@ -1,6 +1,6 @@
 {% set name = track.file | replace(".mp3", "") %}
 <article id="{{ name | slug }}" class="track card">
-  <audio src="/track/audio/{{ track.file }}" controls></audio>
+  <audio src="/track/audio/{{ track.file }}" controls preload="metadata"></audio>
 
   <div class="track-note text-grid-container">
     <div class="text-grid">

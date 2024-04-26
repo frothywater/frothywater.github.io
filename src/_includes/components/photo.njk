@@ -1,7 +1,7 @@
 <figure id="{{ photo.file | slug }}" class="photo">
   <a href="/photo/image/{{ photo.file }}">
     {% set path = "/photo/image/" + photo.file %}
-    <img src="/photo/image/{{ photo.file | with_ext('small.jpg') }}">
+    <img src="/photo/image/{{ photo.file | with_ext('small.jpg') }}" loading="lazy">
   </a>
   <figcaption>
     {% if photo.note %}
