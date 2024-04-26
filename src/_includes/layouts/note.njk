@@ -12,7 +12,7 @@ layout: layouts/base.njk
       </time>
 
       {% if category %}
-        <a href="/note/#{{ category | slug }}" class="category">{{ categoryName[category] }}</a>
+        <a href="/note/#{{ category | slug }}" class="category">{{ category }}</a>
       {% endif %}
 
       {% for tag in tags %}
