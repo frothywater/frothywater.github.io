@@ -11,7 +11,7 @@
   --ja-font: "Source Han Sans JP", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
   --latin-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-  --dyn-block-pad: clamp(0.5lh, 5vb, 3lh);
+  --dyn-block-pad: clamp(0.5lh, 5vb, 2lh);
   --dyn-inline-pad: max(1em, calc(10vi - 1.5em));
   --dyn-block-gap: min(0.5vb, 2lh);
   --dyn-row-gap: clamp(1lh, 2vb, 2lh);
@@ -46,8 +46,8 @@ a {
 
 blockquote {
   margin-inline: 0;
-  padding-inline-start: 1.9em;
-  border-inline-start: 0.1em solid var(--black);
+  padding-inline-start: 1.85em;
+  border-inline-start: 0.15em solid var(--black);
 }
 
 time {
@@ -500,11 +500,23 @@ article.track {
 
 [lang="zh-Hant"] {
   font-family: var(--zh-trad-font);
+
+  .cjk,
+  .cjk-punc,
+  .fullwidth-alphabet {
+    font-family: var(--zh-trad-font);
+  }
 }
 
 .kana,
 [lang|="ja"] {
   font-family: var(--ja-font);
+
+  .cjk,
+  .cjk-punc,
+  .fullwidth-alphabet {
+    font-family: var(--ja-font);
+  }
 }
 
 .latin,
@@ -516,14 +528,19 @@ article.track {
 }
 
 /* Add space between CJK and latin: a mess... */
+/* Because we have to count in elements nested such as in <a> */
 .cjk+.latin::before,
 .latin+.cjk::before,
+
 .cjk:has(+*>.latin:first-child)::after,
 .cjk:has(+*>*:first-child>.latin:first-child)::after,
+
 *:has(>.cjk:last-child)+.latin::before,
 *:has(>*:last-child>.cjk:last-child)+.latin::before,
+
 .latin:has(+*>.cjk:first-child)::after,
 .latin:has(+*>*:first-child>.cjk:first-child)::after,
+
 *:has(>.latin:last-child)+.cjk::before,
 *:has(>*:last-child>.latin:last-child)+.cjk::before {
   content: " ";
@@ -531,12 +548,16 @@ article.track {
 
 .kana+.latin::before,
 .latin+.kana::before,
+
 .kana:has(+*>.latin:first-child)::after,
 .kana:has(+*>*:first-child>.latin:first-child)::after,
+
 *:has(>.kana:last-child)+.latin::before,
 *:has(>*:last-child>.kana:last-child)+.latin::before,
+
 .latin:has(+*>.kana:first-child)::after,
 .latin:has(+*>*:first-child>.kana:first-child)::after,
+
 *:has(>.latin:last-child)+.kana::before,
 *:has(>*:last-child>.latin:last-child)+.kana::before {
   content: " ";
@@ -544,16 +565,36 @@ article.track {
 
 /* CJK punctuation squeeze */
 p>.opening-punc:first-child,
-.dot-punc+.opening-punc,
+p>*:first-child>.opening-punc:first-child,
+
 .opening-punc+.opening-punc,
-.closing-punc+.opening-punc {
+.opening-punc+*>.opening-punc:first-child,
+*:has(>.opening-punc:last-child)+.opening-punc,
+
+.dot-punc+.opening-punc,
+.dot-punc+*>.opening-punc:first-child,
+*:has(>.dot-punc:last-child)+.opening-punc,
+
+.closing-punc+.opening-punc,
+.closing-punc+*>.opening-punc:first-child,
+*:has(>.closing-punc:last-child)+.opening-punc {
   margin-inline-start: -0.5em;
 }
 
 p>.closing-punc:last-child,
+p>*:last-child>.closing-punc:last-child,
+
 .dot-punc:has(+.closing-punc),
+.dot-punc:has(+*>.closing-punc:first-child),
+*:has(+.closing-punc)>.dot-punc:last-child,
+
 .closing-punc:has(+.closing-punc),
-.closing-punc:has(+.dot-punc) {
+.closing-punc:has(+*>.closing-punc:first-child),
+*:has(+.closing-punc)>.closing-punc:last-child,
+
+.closing-punc:has(+.dot-punc),
+.closing-punc:has(+*>.dot-punc:first-child),
+*:has(+.dot-punc)>.closing-punc:last-child {
   margin-inline-end: -0.5em;
 }
 
