@@ -13,3 +13,5 @@ category: J-Rock
 ---
 
 風が吹いたら夏が始まる。风一吹夏天就开始了。
+
+[笔记：漫长的告别](/note/post/long-goodbye/)。

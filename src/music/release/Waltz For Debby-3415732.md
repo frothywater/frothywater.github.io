@@ -3,7 +3,7 @@ discogs_id: 3415732
 discogs_master_id: 104369
 title: Waltz For Debby
 artists: ['Bill Evans Trio']
-date: 1962
+date: 1962-01-01
 genre: ['Jazz']
 image: Waltz For Debby-3415732.jpg
 label: Riverside Records

@@ -3,7 +3,7 @@ discogs_id: 3287042
 discogs_master_id: 358680
 title: Silent Nights
 artists: ['Chet Baker', 'Christopher Mason']
-date: 1986
+date: 1986-01-01
 genre: ['Jazz']
 image: Silent Nights-3287042.jpg
 label: GSR

@@ -3,7 +3,7 @@ discogs_id: 687730
 discogs_master_id: 26514
 title: Nude Ants (Live At The Village Vanguard)
 artists: ['Keith Jarrett']
-date: 1980
+date: 1980-01-01
 genre: ['Jazz']
 image: Nude Ants (Live At The Village Vanguard)-687730.jpg
 label: ECM Records

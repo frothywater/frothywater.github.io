@@ -8,8 +8,8 @@ tags:
 category: Review
 ---
 
-- [Falaise](https://music.apple.com/us/album/falaise/1475361065?i=1475361066), Floating Points (or [Bandcamp](https://floatingpoints.bandcamp.com/track/falaise))
-- [Radiance, Pt. 5](https://music.apple.com/us/album/radiance-pt-5/1452849990?i=1452850014), Keith Jarrett
+- [Falaise](https://floatingpoints.bandcamp.com/track/falaise), [*Crush*](/music/#album-crush), Floating Points
+- [Pt. 5](https://music.apple.com/us/album/radiance-pt-5/1452849990?i=1452850014), [*Radiance*](/music/#album-radiance), Keith Jarrett
 
 第一首是 Floating Points 的电子音乐。几个月前在听这首的时候，就想要收集一些关于愤怒的音乐。愤怒是复杂的，当它被声音具象化之后，以一股流动的方式贯穿身体，人只能够目瞪口呆地仰望着它。有趣的是，这首曲子主要利用了管弦乐录音，在此基础上做数码处理，创造出了强力的质感。
 

@@ -3,7 +3,7 @@ discogs_id: 402073
 discogs_master_id: 347492
 title: Changeless
 artists: ['Keith Jarrett Trio']
-date: 1989
+date: 1989-01-01
 genre: ['Jazz']
 image: Changeless-402073.jpg
 label: ECM Records

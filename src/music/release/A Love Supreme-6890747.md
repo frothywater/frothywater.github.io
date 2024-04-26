@@ -12,3 +12,4 @@ styles: ['Post Bop']
 video: https://www.youtube.com/watch?v=vMCHDC2Lurk
 category: Jazz
 ---
+[笔记：无题](/note/post/untitled/)

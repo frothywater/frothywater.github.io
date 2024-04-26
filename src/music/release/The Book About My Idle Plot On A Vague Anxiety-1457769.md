@@ -3,7 +3,7 @@ discogs_id: 1457769
 discogs_master_id: 462214
 title: The Book About My Idle Plot On A Vague Anxiety
 artists: ['toe']
-date: 2005
+date: 2005-01-01
 genre: ['Rock']
 image: The Book About My Idle Plot On A Vague Anxiety-1457769.jpg
 label: Catune

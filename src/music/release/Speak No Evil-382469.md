@@ -3,7 +3,7 @@ discogs_id: 382469
 discogs_master_id: 140424
 title: Speak No Evil
 artists: ['Wayne Shorter']
-date: 1966
+date: 1966-01-01
 genre: ['Jazz']
 image: Speak No Evil-382469.jpg
 label: Blue Note
