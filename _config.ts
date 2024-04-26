@@ -1,4 +1,5 @@
 import lume from "lume/mod.ts";
+import basePath from "lume/plugins/base_path.ts";
 import date from "lume/plugins/date.ts";
 import favicon from "lume/plugins/favicon.ts";
 import feed from "lume/plugins/feed.ts";
@@ -7,11 +8,12 @@ import redirects from "lume/plugins/redirects.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import transformImages from "lume/plugins/transform_images.ts";
 
-import markdownDigest from "./_extra/digest.ts";
 import processCJK from "./_extra/cjk.ts";
+import markdownDigest from "./_extra/digest.ts";
 
 const site = lume({
   src: "./src",
+  location: new URL("https://nostalgic-future.net/blog-lume/"),
 });
 
 site
@@ -19,6 +21,7 @@ site
   .copyRemainingFiles()
   .use(nunjucks())
   .use(date())
+  .use(basePath())
   .use(redirects())
   .use(slugifyUrls())
   .use(transformImages())
