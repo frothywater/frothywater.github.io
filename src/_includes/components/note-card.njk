@@ -1,7 +1,7 @@
 <article class="note-card card" {% if note.basename in site.featuredNotes %}data-featured{% endif %}>
   <a href="{{ note.url }}" class="note-card-title bare-link">
     {% if note.title %}
-      <h1>{{ note.title }}</h1>
+      <h1>{{ note.title | cjk | safe }}</h1>
     {% else %}
       <span>💭</span>
     {% endif %}

@@ -4,7 +4,13 @@ layout: layouts/base.njk
 
 <article class="note text-grid-container">
   <header class="note-header">
-    <a href="{{ url }}" class="bare-link"><h1>{{ title }}</h1></a>
+    <a href="{{ url }}" class="bare-link">
+      {% if title %}
+        <h1>{{ title | cjk | safe }}</h1>
+      {% else %}
+        <span>💭</span>
+      {% endif %}
+    </a>
 
     <nav class="info-list">
       <time datetime="{{ date | date('DATETIME') }}">
