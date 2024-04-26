@@ -2,6 +2,9 @@
 type: quote
 ---
 
+[ChineNoire](http://www.chinenoire.com/cosmos17/ChineNoire.html)，曹志涟:
+> 我非常懷念未來；如此懷念，我已經在為它寫作。
+
 《且听风吟》（林少华译本），村上春树，一九七九：
 > 关于好的文章，哈特费尔德这样写道：
 > 
@@ -13,8 +16,8 @@ type: quote
 > 
 > ……我们要力图认识的对象和实际认识的对象之间，总是横陈着一道深渊，无论用怎样长的尺都无法完全测量其深度。我这里所能够书写出来的，不过是一览表而已。既非小说、文学，又不是艺术，只是正中画有一条直线的一本记事簿。若说教训，倒也许多少有一点。
 
-[ChineNoire](http://www.chinenoire.com/cosmos17/ChineNoire.html)，曹志涟:
-> 我非常懷念未來；如此懷念，我已經在為它寫作。
+[《一天世界》网站說明](https://blog.yitianshijie.net/about/)，李如一：
+> 《一天世界》用整体性的视角观察当代社会、技术文化以及商业风景，对抗消费主义导向的论述，强调对技术与艺术的敏锐感受力、以及精神与肉体上的强健。和《IT 公论》不同，《一天世界》在未来不会承接广告（更加不接受软文或「植入」）。我鼓励您成为会员，让《一天世界》真正做到无所畏惧，并帮助我在后稀缺时代尝试写出别处没有的文字。
 
 [*Modern boys and mobile girls*](https://www.theguardian.com/books/2001/apr/01/sciencefictionfantasyandhorror.features), William Gibson, 2001:
 > The otaku, the passionate obsessive, the information age's embodiment of the connoisseur, more concerned with the accumulation of data than of objects \[…\] Understanding otaku -hood, I think, is one of the keys to understanding the culture of the web. There is something profoundly post-national about it, extra-geographic. We are all curators, in the post-modern world, whether we want to be or not.
