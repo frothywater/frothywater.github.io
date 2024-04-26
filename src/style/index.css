@@ -11,8 +11,8 @@
   --ja-font: "Source Han Sans JP", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
   --latin-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
+  --dyn-block-pad: clamp(0.5lh, 5vb, 3lh);
   --dyn-inline-pad: max(1em, calc(10vi - 1.5em));
-  --dyn-block-pad: min(1vb, 2lh);
   --dyn-block-gap: min(0.5vb, 2lh);
   --dyn-row-gap: clamp(1lh, 2vb, 2lh);
   --dyn-col-gap: clamp(1em, 2vi, 2em);
@@ -75,9 +75,9 @@ section+section {
 body {
   display: flex;
   flex-direction: column;
-  gap: var(--dyn-block-gap);
-  padding-block: var(--dyn-block-pad);
-  padding-inline: var(--dyn-inline-pad);
+  gap: var(--dyn-block-gap, 0.25lh);
+  padding-block: var(--dyn-block-pad, 1lh);
+  padding-inline: var(--dyn-inline-pad, 1em);
 
   >header,
   >footer {
@@ -92,11 +92,12 @@ body {
 /* adjust base layout for home page */
 body:has(.home-grid) {
   block-size: 100dvb;
+  padding-block: 0.5lh;
   padding-inline: 0;
 
   >header,
   >footer {
-    padding-inline: var(--dyn-inline-pad);
+    padding-inline: var(--dyn-inline-pad, 1em);
   }
 
   >main {
@@ -106,7 +107,7 @@ body:has(.home-grid) {
   }
 
   .home-grid {
-    padding-inline: var(--dyn-inline-pad);
+    padding-inline: var(--dyn-inline-pad, 1em);
   }
 }
 
@@ -130,13 +131,13 @@ body>header {
 
   .main-description {
     display: inline-block;
-    margin-block-start: 0.25lh;
+    margin-block-start: var(--dyn-block-gap, 0.25lh);
     color: var(--gray);
   }
 
   /* navigation links */
   nav {
-    margin-block-start: 0.25lh;
+    margin-block-start: var(--dyn-block-gap, 0.25lh);
   }
 }
 
@@ -160,7 +161,7 @@ body>footer {
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.25lh 1em;
+    gap: var(--dyn-block-gap, 0.25lh) 1em;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -192,13 +193,13 @@ body>footer {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
-  gap: var(--dyn-row-gap) var(--dyn-col-gap);
+  gap: var(--dyn-row-gap, 1lh) var(--dyn-col-gap, 1em);
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: 0.25lh;
+  gap: var(--dyn-block-gap, 0.25lh);
 
   border: 1px solid var(--lightgray);
   border-radius: 1em;
@@ -231,7 +232,7 @@ body>footer {
   font-size: 0.8rem;
 
   >*:not(:last-child) {
-    margin-inline-end: 0.25em;
+    margin-inline-end: 0.5em;
   }
 }
 
@@ -249,7 +250,7 @@ details.section-detail {
   grid-template-columns: repeat(8, clamp(22em, 85%, 26em));
   grid-template-rows: 100%;
   grid-template-areas: "note recent-note photo log music music-log clip track";
-  column-gap: var(--dyn-col-gap);
+  column-gap: var(--dyn-col-gap, 1em);
   block-size: 100%;
 
   overflow-x: auto;
@@ -268,7 +269,7 @@ details.section-detail {
   .home-list {
     display: flex;
     flex-direction: column;
-    gap: var(--dyn-row-gap);
+    gap: var(--dyn-row-gap, 1lh);
     overflow-y: auto;
     overflow-x: hidden;
   }
