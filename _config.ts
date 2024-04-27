@@ -14,7 +14,7 @@ import markdownDigest from "./_extra/digest.ts";
 
 const site = lume({
   src: "./src",
-  location: new URL("https://nostalgic-future.net/blog-lume/"),
+  location: new URL("https://nostalgic-future.net/"),
 });
 
 site
