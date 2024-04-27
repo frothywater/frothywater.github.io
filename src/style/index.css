@@ -50,7 +50,7 @@ img {
 
 blockquote {
   margin-inline: 0;
-  padding-inline-start: 1.85em;
+  padding-inline-start: 0.85em;
   border-inline-start: 0.15em solid var(--black);
 }
 
@@ -331,6 +331,18 @@ details.section-detail {
   }
 }
 
+[data-tategaki] {
+  .home-grid {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .home-list {
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+  }
+}
+
 /* horizontal page view for mobile */
 @media screen and (max-width: 50em) {
   .home-grid {
@@ -339,6 +351,10 @@ details.section-detail {
     >section {
       scroll-snap-align: center;
     }
+  }
+
+  [data-tategaki] .home-grid {
+    scroll-snap-type: y mandatory;
   }
 }
 
@@ -512,6 +528,10 @@ article.track {
 }
 
 /* MARK: CJK typography */
+[data-tategaki] {
+  writing-mode: vertical-rl;
+}
+
 .cjk,
 .cjk-punc,
 .fullwidth-alphabet {
@@ -585,7 +605,9 @@ article.track {
 
 /* CJK punctuation squeeze */
 p>.opening-punc:first-child,
+h1>.opening-punc:first-child,
 p>*:first-child>.opening-punc:first-child,
+h1>*:first-child>.opening-punc:first-child,
 
 .opening-punc+.opening-punc,
 .opening-punc+*>.opening-punc:first-child,
@@ -602,7 +624,9 @@ p>*:first-child>.opening-punc:first-child,
 }
 
 p>.closing-punc:last-child,
+h1>.closing-punc:last-child,
 p>*:last-child>.closing-punc:last-child,
+h1>*:last-child>.closing-punc:last-child,
 
 .dot-punc:has(+.closing-punc),
 .dot-punc:has(+*>.closing-punc:first-child),
