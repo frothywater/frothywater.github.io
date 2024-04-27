@@ -92,11 +92,10 @@ body {
 /* adjust base layout for home page */
 body:has(.home-grid) {
   block-size: 100dvb;
-  padding-block: 0.5lh;
+  padding-block: 0.5lh 0;
   padding-inline: 0;
 
-  >header,
-  >footer {
+  >header {
     padding-inline: var(--dyn-inline-pad, 1em);
   }
 
@@ -106,8 +105,24 @@ body:has(.home-grid) {
     margin-block: 0;
   }
 
+  >footer {
+    position: fixed;
+    inset-block-end: 0;
+    inset-inline-end: 0;
+    padding-block: var(--dyn-block-gap, 0.25lh);
+    padding-inline: 1.5em 2em;
+    background-color: var(--white);
+    border: 1px solid var(--lightgray);
+    border-start-start-radius: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+  }
+
   .home-grid {
     padding-inline: var(--dyn-inline-pad, 1em);
+  }
+
+  .home-list {
+    padding-block-end: var(--dyn-block-pad, 1lh);
   }
 }
 
