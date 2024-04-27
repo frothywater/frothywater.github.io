@@ -1,7 +1,7 @@
 <article class="clip card">
   <div class="clip-title">
     {% if clip.favicon %}
-      <img src="{{ clip.favicon }}">
+      <img src="{{ clip.favicon }}" width="1.2em" height="1.2em" {% if not eagerLoadImage %}loading="lazy"{% endif %}}>
     {% endif %}
     <a href="{{ clip.url }}">{{ clip.title }}</a>
   </div>

@@ -1,6 +1,3 @@
----
----
-
 {# recent notes #}
 {% set recentNotes = search.pages("type=note", "date=desc", 10) %}
 
@@ -37,6 +34,29 @@
     </div>
   </section>
 
+  {# photos #}
+  {% set eagerLoadImage = true %}
+  <section id="photo">
+    <a href="/photo/"><h2 class="section-title">相册</h2></a>
+
+    {# featured photos #}
+    {% set featuredPhotos = [] %}
+    {% set photos = search.data("/photo/").photos %}
+    {% for name in site.featuredPhotos %}
+      {% for photo in photos %}
+        {% if photo.file == name  %}
+          {% set featuredPhotos = featuredPhotos.concat(photo) %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+
+    <div class="photo-list home-list">
+      {% asyncEach photo in featuredPhotos %}
+        {% include "components/photo.njk" %}
+      {% endeach %}
+    </div>
+  </section>
+
   {# logs #}
   <section id="log">
     <a href="/log/"><h2 class="section-title">手帐</h2></a>
@@ -50,6 +70,7 @@
   </section>
 
   {# music #}
+  {% set eagerLoadImage = false %}
   <section id="music">
     <a href="/music/"><h2 class="section-title">唱片柜</h2></a>
 
@@ -82,29 +103,8 @@
     </div>
   </section>
 
-  {# photos #}
-  <section id="photo">
-    <a href="/photo/"><h2 class="section-title">相册</h2></a>
-
-    {# featured photos #}
-    {% set featuredPhotos = [] %}
-    {% set photos = search.data("/photo/").photos %}
-    {% for name in site.featuredPhotos %}
-      {% for photo in photos %}
-        {% if photo.file == name  %}
-          {% set featuredPhotos = featuredPhotos.concat(photo) %}
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-
-    <div class="photo-list home-list">
-      {% asyncEach photo in featuredPhotos %}
-        {% include "components/photo.njk" %}
-      {% endeach %}
-    </div>
-  </section>
-
   {# clips #}
+  {% set eagerLoadImage = false %}
   <section id="clip" >
     <a href="/clip/"><h2 class="section-title">剪报</h2></a>
 

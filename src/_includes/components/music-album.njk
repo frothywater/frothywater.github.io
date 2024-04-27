@@ -7,7 +7,7 @@
     {% set size = imageSize(imagePath) %}
     <div class="album-cover">
       <a href="{{ imagePath }}">
-        <img loading="lazy" src="{{ thumbPath }}" alt="{{ album.title }}" width="{{ size.width }}" height="{{ size.height }}">
+        <img src="{{ thumbPath }}" alt="{{ album.title }}" width="{{ size.width }}" height="{{ size.height }}" {% if not eagerLoadImage %}loading="lazy"{% endif %}}>
       </a>
     </div>
 
