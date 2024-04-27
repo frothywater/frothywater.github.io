@@ -1,17 +1,17 @@
 <figure id="{{ photo.file | slug }}" class="photo">
-  <a href="/photo/image/{{ photo.file }}">
-    {% set path = "/photo/image/" + photo.file %}
-    <img src="/photo/image/{{ photo.file | with_ext('small.jpg') }}" loading="lazy">
-  </a>
-  <figcaption>
-    {% if photo.note %}
-      <div class="text-grid-container">
-        <div class="text-grid">{{ photo.note | md | cjk | safe }}</div>
-      </div>
-    {% endif %}
-
-    <time datetime="{{ photo.date | date('DATETIME') }}">
-      <a href="/photo/#{{ photo.file | slug }}" class="bare-link">{{ photo.date | date('yyyy-MM-dd') }}</a>
-    </time>
-  </figcaption>
-</figure>
+  {% set imagePath = "/photo/image/" + photo.file %}
+  {% set thumbPath = "/photo/image/" + photo.file | with_ext('small.webp') %}
+  {% set size = imageSize(imagePath) %}
+  <a href="{{ imagePath }}">
+    <img loading="lazy" src="{{ thumbPath }}" alt="{{ photo.note }}" width="{{ size.width }}" height="{{ size.height }}"></a>
+    <figcaption>
+      {% if photo.note %}
+        <div class="text-grid-container">
+          <div class="text-grid">{{ photo.note | md | cjk | safe }}</div>
+        </div>
+      {% endif %}
+      <time datetime="{{ photo.date | date('DATETIME') }}">
+        <a href="/photo/#{{ photo.file | slug }}" class="bare-link">{{ photo.date | date('yyyy-MM-dd') }}</a>
+      </time>
+    </figcaption>
+  </figure>

@@ -1,19 +1,24 @@
+transformImages:
+  - resize: [600, 600, { fit: "inside", withoutEnlargement: true }]
+    suffix: .small
+    format: webp
+  - {}
 categories:
-- Ambient Jazz
-- Nu Jazz
-- Jazz
-- ECM
-- Keith Jarrett
-- Jazz Fusion
-- Citypop
-- J-Rock
-- Post-rock
-- Electronic
-- Ambient
-- Vaporwave
-- Classical
-- Minimalism
-- Modern Classical
+  - Ambient Jazz
+  - Nu Jazz
+  - Jazz
+  - ECM
+  - Keith Jarrett
+  - Jazz Fusion
+  - Citypop
+  - J-Rock
+  - Post-rock
+  - Electronic
+  - Ambient
+  - Vaporwave
+  - Classical
+  - Minimalism
+  - Modern Classical
 categoryName:
   Ambient: Ambient 氛围
   Ambient Jazz: Ambient Jazz 氛围爵士

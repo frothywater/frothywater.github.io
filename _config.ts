@@ -12,6 +12,10 @@ import transformImages from "lume/plugins/transform_images.ts";
 import processCJK from "./_extra/cjk.ts";
 import markdownDigest from "./_extra/digest.ts";
 
+import { existsSync } from "https://deno.land/std@0.223.0/fs/mod.ts";
+import { join } from "https://deno.land/std@0.223.0/path/mod.ts";
+import { imageDimensionsFromData } from "npm:image-dimensions";
+
 const site = lume({
   src: "./src",
   location: new URL("https://nostalgic-future.net/"),
@@ -62,8 +66,22 @@ site.filter("slug", (phrase: string) =>
 site.filter(
   "with_ext",
   (path: string, ext: string) =>
-    path.includes(".") ? `${path.split(".")[0]}.${ext}` : `${path}.${ext}`,
+    path.includes(".")
+      ? `${path.slice(0, path.lastIndexOf("."))}.${ext}`
+      : `${path}.${ext}`,
 );
+
+// Helper: get image's dimension
+site.data("imageSize", (path: string) => {
+  const fullPath = join(site.src(), path);
+  if (existsSync(fullPath) === false) return "";
+  const data = Deno.readFileSync(fullPath);
+  const result = imageDimensionsFromData(data);
+  if (result === null) return null;
+  const { width, height } = result;
+  console.log(`[image-size]: ${path}: ${width}x${height}`);
+  return { width, height };
+});
 
 // Preprocess: add oldUrl to note pages
 site.preprocess([".md"], (pages) => {
