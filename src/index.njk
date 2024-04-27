@@ -2,13 +2,7 @@
 ---
 
 {# recent notes #}
-{% set allNotes = search.pages("type=note", "date=desc") %}
-{% set recentNotes = [] %}
-{% for note in allNotes %}
-  {% if recentNotes.length < 5 %}
-    {% set recentNotes = recentNotes.concat(note) %}
-  {% endif %}
-{% endfor %}
+{% set recentNotes = search.pages("type=note", "date=desc", 10) %}
 
 {# featured notes #}
 {% set featuredNotes = [] %}

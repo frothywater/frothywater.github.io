@@ -130,7 +130,7 @@ function correctAmbiguousPunc(body: Element) {
     body.getElementsByClassName(SegmentClass.ambiguous),
     (el: Element) => {
       const text = el.innerHTML;
-      if (!el.previousElementSibling || !el.nextElementSibling) {
+      if (!el.previousElementSibling && !el.nextElementSibling) {
         // Assume latin for single segment
         el.classList.add(SegmentClass.latin);
       } else if (
