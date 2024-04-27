@@ -5,7 +5,7 @@ title: The Köln Concert
 artists: ['Keith Jarrett']
 date: 1975-01-01
 genre: ['Jazz']
-image: The Köln Concert-8735978.jpg
+image: The Koln Concert-8735978.jpg
 label: ECM Records
 country: Germany
 styles: ['Free Improvisation']

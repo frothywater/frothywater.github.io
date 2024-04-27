@@ -4,7 +4,7 @@ title: ロンググッドバイ (Long Goodbye)
 artists: ['きのこ帝国']
 date: 2013-12-04
 genre: ['Rock']
-image: ロンググッドバイ-5266634.jpg
+image: Long Goodbye-5266634.jpg
 label: Daizawa Records
 country: Japan
 styles: ['Indie Rock', 'Shoegaze']

@@ -5,7 +5,7 @@ title: Sonata For Arpeggione · Fantasiestücke Op. 73
 artists: ['Martha Argerich', 'Mischa Maisky']
 date: 1985-01-01
 genre: ['Classical']
-image: Sonata For Arpeggione • Fantasiestücke Op. 73-7857687.jpg
+image: Sonata For Arpeggione-7857687.jpg
 label: Philips
 country: Europe
 category: Classical
