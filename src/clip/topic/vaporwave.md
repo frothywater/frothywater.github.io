@@ -7,7 +7,7 @@ title: vaporwave
 - [index - r/Vaporwave](https://old.reddit.com/r/Vaporwave/wiki/index)
 - [basics - r/Vaporwave](https://old.reddit.com/r/Vaporwave/wiki/basics)
 - [discography - r/Vaporwave](https://old.reddit.com/r/Vaporwave/wiki/discography)
-- [Vaporwave Guides — ImgBB](https://ibb.co/album/d0d4px)
+- [Vaporwave Guides - ImgBB](https://ibb.co/album/d0d4px)
 - [Vaporwave - A Brief History (Documentary)](https://archive.org/details/Vaporwave-ABriefHistory)
 - [Vaporwave Subgenres - Rate Your Music](https://rateyourmusic.com/list/Harley_Magoo/vaporwave-subgenres)
 
@@ -102,9 +102,9 @@ hauntology, hypnagogic pop, chillwave
 
 [MMJ](https://marcelsmusicjournal-blog.tumblr.com/post/136124700693/interview-dream-catalogue-founder-hke):
 
-> The whole idea of genre is fucking stupid, anyway, and that’s why I liked vaporwave - it always felt like it was the anti-genre.
+> The whole idea of genre is fucking stupid, anyway, and that’s why I liked vaporwave — it always felt like it was the anti-genre.
 >
-> As such, I feel like the whole “dream music” vibe is certainly fluid enough to encompass lots of different musical styles, while still retaining certain elements that make the label stand out as a whole - surreality, futurism, heavy concepts and story-driven projects, while “vaporwave” as a term and an idea has become something of a burden to everyone involved with it.
+> As such, I feel like the whole “dream music” vibe is certainly fluid enough to encompass lots of different musical styles, while still retaining certain elements that make the label stand out as a whole — surreality, futurism, heavy concepts and story-driven projects, while “vaporwave” as a term and an idea has become something of a burden to everyone involved with it.
 >
 > It’s all about taking the idea that music can be more than just music. \[…\] Of course you had past eras in music which touched on this idea of concept in music, such as progressive rock or new age music, but they never really went the full way in the way that certain portions of the vaporwave scene have done in the past number of years. Vaporwave has really been the first scene of its kind to employ this idea on a wide scale.
 
