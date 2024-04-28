@@ -6,10 +6,12 @@
   --primary: #a1c390;
   --primary-dark: #2a6c45;
 
-  --zh-simp-font: "Source Han Sans SC", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  --zh-trad-font: "Source Han Sans TC", "Noto Sans CJK TC", "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", sans-serif;
-  --ja-font: "Source Han Sans JP", "Noto Sans CJK JP", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
-  --latin-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --zh-simp-font: "Noto Sans SC", sans-serif;
+  --zh-trad-font: "Noto Sans TC", sans-serif;
+  --ja-font: "Noto Sans JP", sans-serif;
+  --latin-font: "Inter", sans-serif;
+  --default-font: "Inter", "Noto Sans SC", sans-serif;
+  --bold-weight: 550;
 
   --dyn-block-pad: clamp(0.5lh, 5vb, 2lh);
   --dyn-inline-pad: max(1em, calc(10vi - 1.5em));
@@ -31,7 +33,10 @@
 
 html,
 body {
+  font-family: var(--default-font);
   font-size: 15px;
+  font-weight: 400;
+  font-optical-sizing: auto;
   line-height: 1.35;
 
   color: var(--black);
@@ -42,6 +47,15 @@ body {
 
 a {
   color: var(--black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--bold-weight);
 }
 
 img {
@@ -144,6 +158,7 @@ body>header {
   /* home link */
   .main-title>a>h1 {
     display: inline;
+    font-weight: 650;
     margin-block: 0;
     margin-inline-end: 0.5em;
   }
@@ -191,7 +206,7 @@ body>footer {
   }
 
   [aria-current="page"] {
-    font-weight: bold;
+    font-weight: var(--bold-weight);
   }
 }
 
@@ -506,7 +521,7 @@ article.clip {
   img {
     display: inline;
     vertical-align: middle;
-    margin-inline-end: 0.2em;
+    margin-inline-end: 0.5em;
     aspect-ratio: 1 / 1;
     width: 1.2em;
     height: 1.2em;
@@ -542,7 +557,6 @@ article.track {
   font-family: var(--zh-trad-font);
 
   .cjk,
-  .cjk-punc,
   .fullwidth-alphabet {
     font-family: var(--zh-trad-font);
   }
@@ -584,6 +598,7 @@ article.track {
 *:has(>.latin:last-child)+.cjk::before,
 *:has(>*:last-child>.latin:last-child)+.cjk::before {
   content: " ";
+  font-size: 0.7rem;
 }
 
 .kana+.latin::before,
@@ -601,7 +616,9 @@ article.track {
 *:has(>.latin:last-child)+.kana::before,
 *:has(>*:last-child>.latin:last-child)+.kana::before {
   content: " ";
+  font-size: 0.7rem;
 }
+
 
 /* CJK punctuation squeeze */
 p>.opening-punc:first-child,
