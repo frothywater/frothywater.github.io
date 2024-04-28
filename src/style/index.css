@@ -9,15 +9,24 @@
   --zh-simp-font: "Noto Sans SC", sans-serif;
   --zh-trad-font: "Noto Sans TC", sans-serif;
   --ja-font: "Noto Sans JP", sans-serif;
-  --latin-font: "Inter", sans-serif;
-  --default-font: "Inter", "Noto Sans SC", sans-serif;
-  --bold-weight: 550;
+  --latin-font: Inter, sans-serif;
+  --default-font: Inter, "Noto Sans SC", sans-serif;
+  --title-weight: 550;
+  --bold-weight: 600;
+  --small-font-size: 0.85rem;
 
   --dyn-block-pad: clamp(0.5lh, 5vb, 2lh);
   --dyn-inline-pad: max(1em, calc(10vi - 1.5em));
   --dyn-block-gap: min(0.5vb, 2lh);
   --dyn-row-gap: clamp(1lh, 2vb, 2lh);
   --dyn-col-gap: clamp(1em, 2vi, 2em);
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --latin-font: InterVariable, sans-serif;
+    --default-font: InterVariable, "Noto Sans SC", sans-serif;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,6 +43,7 @@
 html,
 body {
   font-family: var(--default-font);
+  font-feature-settings: 'liga' 1, 'calt' 1, 'ss03' 1;
   font-size: 15px;
   font-weight: 400;
   font-optical-sizing: auto;
@@ -55,7 +65,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--bold-weight);
+  font-weight: var(--title-weight, 600);
+}
+
+strong {
+  font-weight: var(--bold-weight, 600);
 }
 
 img {
@@ -69,7 +83,7 @@ blockquote {
 }
 
 time {
-  font-size: 0.8rem;
+  font-size: var(--small-font-size, 0.85rem);
 
   &,
   >* {
@@ -206,7 +220,7 @@ body>footer {
   }
 
   [aria-current="page"] {
-    font-weight: var(--bold-weight);
+    font-weight: var(--bold-weight, 600);
   }
 }
 
@@ -251,19 +265,19 @@ body>footer {
 }
 
 .small {
-  font-size: 0.8rem;
+  font-size: var(--small-font-size, 0.85rem);
   color: var(--gray);
 }
 
 .tag,
 .category {
-  font-size: 0.8rem;
+  font-size: var(--small-font-size, 0.85rem);
   text-transform: lowercase;
   color: var(--gray);
 }
 
 .info-list {
-  font-size: 0.8rem;
+  font-size: var(--small-font-size, 0.85rem);
 
   >*:not(:last-child) {
     margin-inline-end: 0.5em;
@@ -297,7 +311,7 @@ details.section-detail {
   }
 
   .section-title {
-    margin-block: 0 0.8lh;
+    margin-block: 0 0.5lh;
   }
 
   .home-list {
@@ -460,7 +474,6 @@ article.music-album {
     flex-wrap: wrap;
     column-gap: 0.5rem;
 
-    font-size: 0.9rem;
     line-height: 1.15;
 
     span {
@@ -475,7 +488,7 @@ article.music-album {
     grid-auto-rows: max-content;
     gap: 0 0.4rem;
 
-    font-size: 0.8rem;
+    font-size: var(--small-font-size, 0.85rem);
 
     .info-key {
       font-weight: 600;
