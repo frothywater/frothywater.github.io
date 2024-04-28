@@ -68,7 +68,8 @@ hauntology, hypnagogic pop, chillwave
 
 [Vaporwave - Wikipedia](https://en.wikipedia.org/wiki/Vaporwave):
 
-> According to Stereogum's Miles Bowe, vaporwave was a fusion between Lopatin's “chopped and screwed plunderphonics” and the “nihilistic easy-listening of James Ferraro's Muzak-hellscapes”.
+> According to Stereogum's Miles Bowe, vaporwave was a fusion between Lopatin's “chopped and screwed plunderphonics” and the “nihilistic easy-listening of James Ferraro's Muzak-hellscapes”. 
+> 
 > Xavier's Floral Shoppe (credited to “Macintosh Plus”, December 2011) was the first album to be properly considered of the genre, containing all of the style's core elements.
 >
 > Generally, artists limit the chronology of their source material between **Japan**'s economic flourishing in the 1980s and the **September 11 attacks** or dot-com bubble burst of 2001.
@@ -87,11 +88,11 @@ hauntology, hypnagogic pop, chillwave
 
 > Abandoning the punk ethos and frequent conceptual leanings in favor of comedic “AESTHETIC” videos shared on YouTube and Facebook, vaporwave has finally reached either **its logical conclusion** (note: media, reflexivity) or full maturity by becoming exactly what it shouldn’t.
 >
-> “That's ultimately why I released *Vaporwave Is Dead*—it was to gain a sense of liberation from what I felt were becoming the tired cliches of vaporwave,” HKE says. “I felt a lot of artists in the vaporwave scene, including myself, were in danger of falling into safe and boring formulas of **repeating** (note: reflexivity) the same ideas over and over.”
+> “That's ultimately why I released *Vaporwave Is Dead* — it was to gain a sense of liberation from what I felt were becoming the tired cliches of vaporwave,” HKE says. “I felt a lot of artists in the vaporwave scene, including myself, were in danger of falling into safe and boring formulas of **repeating** (note: reflexivity) the same ideas over and over.”
 >
 > For many, vaporwave was just a **visual** set of aesthetics and a vibe. The visual aspect formed faster than the sound, resulting in releases that **look the same** but fail to form a sonically cohesive whole.
 >
-> As a funhouse mirror of pop-culture, vaporwave brought a crowd together. That same crowd eventually abandoned it, because the mirror wasn’t needed anymore—vaporwave had become a part of pop culture.
+> As a funhouse mirror of pop-culture, vaporwave brought a crowd together. That same crowd eventually abandoned it, because the mirror wasn’t needed anymore — vaporwave had become a part of pop culture.
 >
 > Nostalgia is more in demand than ever, so it makes sense that vaporwave, a net-genre employing nostalgia frequently great effect, has **become something that people are nostalgic about.**
 
