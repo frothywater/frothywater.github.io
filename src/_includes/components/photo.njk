@@ -1,7 +1,7 @@
 <figure id="{{ photo.file | slug }}" class="photo">
   {% set imagePath = "/photo/image/" + photo.file %}
   {% set thumbPath = "/photo/image/" + photo.file | with_ext('small.webp') %}
-  {% set size = imageSize(imagePath) %}
+  {% set size = imagePath | imageSize %}
   <a href="{{ imagePath }}">
     <img src="{{ thumbPath }}" alt="{{ photo.note }}" width="{{ size.width }}" height="{{ size.height }}" {% if not eagerLoadImage %}loading="lazy"{% endif %}}>
   </a>

@@ -4,7 +4,7 @@
     {# cover #}
     {% set imagePath = "/music/image/" + album.image %}
     {% set thumbPath = "/music/image/" + album.image | with_ext('small.webp') %}
-    {% set size = imageSize(imagePath) %}
+    {% set size = imagePath | imageSize %}
     <div class="album-cover">
       <a href="{{ imagePath }}">
         <img src="{{ thumbPath }}" alt="{{ album.title }}" width="{{ size.width }}" height="{{ size.height }}" {% if not eagerLoadImage %}loading="lazy"{% endif %}}>

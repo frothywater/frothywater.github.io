@@ -1,3 +1,4 @@
+import Cache from "lume/core/cache.ts";
 import lume from "lume/mod.ts";
 import basePath from "lume/plugins/base_path.ts";
 import date from "lume/plugins/date.ts";
@@ -13,7 +14,6 @@ import processCJK from "./_extra/cjk.ts";
 import markdownDigest from "./_extra/digest.ts";
 
 import { existsSync } from "https://deno.land/std@0.223.0/fs/mod.ts";
-import { join } from "https://deno.land/std@0.223.0/path/mod.ts";
 import { imageDimensionsFromData } from "npm:image-dimensions";
 
 const site = lume({
@@ -71,17 +71,25 @@ site.filter(
       : `${path}.${ext}`,
 );
 
-// Helper: get image's dimension
-site.data("imageSize", (path: string) => {
-  const fullPath = join(site.src(), path);
+// Filter: get image's dimension
+const cache = new Cache({ folder: site.src("_cache") });
+site.filter("imageSize", async (path: string) => {
+  const fullPath = site.src(path);
   if (existsSync(fullPath) === false) return "";
+
+  const cached = await cache.getText("imageSize", fullPath);
+  if (cached) return JSON.parse(cached);
+
   const data = Deno.readFileSync(fullPath);
   const result = imageDimensionsFromData(data);
-  if (result === null) return null;
+  if (!result) return null;
   const { width, height } = result;
+
   console.log(`[image-size]: ${path}: ${width}x${height}`);
+  await cache.set("imageSize", fullPath, JSON.stringify({ width, height }));
+
   return { width, height };
-});
+}, true);
 
 // Preprocess: add oldUrl to note pages
 site.preprocess([".md"], (pages) => {
