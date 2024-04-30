@@ -222,6 +222,10 @@ body>footer {
   [aria-current="page"] {
     font-weight: var(--bold-weight, 600);
   }
+
+  label {
+    color: var(--gray)
+  }
 }
 
 .section-links {
@@ -358,23 +362,9 @@ details.section-detail {
   section#track {
     grid-area: track;
   }
-}
 
-[data-tategaki] {
-  .home-grid {
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    .home-list {
-      overflow-x: auto;
-      overflow-y: hidden;
-    }
-  }
-}
-
-/* horizontal page view for mobile */
-@media screen and (max-width: 50em) {
-  .home-grid {
+  /* horizontal page view for mobile */
+  @media screen and (max-width: 50em) {
     scroll-snap-type: x mandatory;
 
     >section {
@@ -382,10 +372,21 @@ details.section-detail {
     }
   }
 
-  [data-tategaki] .home-grid {
-    scroll-snap-type: y mandatory;
+  body:has(#tategaki-toggle:checked) & {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .home-list {
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    @media screen and (max-width: 50em) {
+      scroll-snap-type: y mandatory;
+    }
   }
 }
+
 
 /* MARK: Note */
 article.note-card {
@@ -556,7 +557,7 @@ article.track {
 }
 
 /* MARK: CJK typography */
-[data-tategaki] {
+body:has(#tategaki-toggle:checked) {
   writing-mode: vertical-rl;
 }
 
@@ -678,141 +679,97 @@ h1>*:last-child>.closing-punc:last-child,
   container: text-grid / inline-size;
 }
 
-@container text-grid (min-inline-size: 18em) {
-  .text-grid {
+.text-grid {
+  @container text-grid (min-inline-size: 18em) {
     text-align: justify;
     inline-size: 18em;
   }
-}
 
-@container text-grid (min-inline-size: 19em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 19em) {
     inline-size: 19em;
   }
-}
 
-@container text-grid (min-inline-size: 20em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 20em) {
     inline-size: 20em;
   }
-}
 
-@container text-grid (min-inline-size: 21em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 21em) {
     inline-size: 21em;
   }
-}
 
-@container text-grid (min-inline-size: 22em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 22em) {
     inline-size: 22em;
   }
-}
 
-@container text-grid (min-inline-size: 23em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 23em) {
     inline-size: 23em;
   }
-}
 
-@container text-grid (min-inline-size: 24em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 24em) {
     inline-size: 24em;
   }
-}
 
-@container text-grid (min-inline-size: 25em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 25em) {
     inline-size: 25em;
   }
-}
 
-@container text-grid (min-inline-size: 26em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 26em) {
     inline-size: 26em;
   }
-}
 
-@container text-grid (min-inline-size: 27em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 27em) {
     inline-size: 27em;
   }
-}
 
-@container text-grid (min-inline-size: 28em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 28em) {
     inline-size: 28em;
   }
-}
 
-@container text-grid (min-inline-size: 29em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 29em) {
     inline-size: 29em;
   }
-}
 
-@container text-grid (min-inline-size: 30em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 30em) {
     inline-size: 30em;
   }
-}
 
-@container text-grid (min-inline-size: 31em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 31em) {
     inline-size: 31em;
   }
-}
 
-@container text-grid (min-inline-size: 32em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 32em) {
     inline-size: 32em;
   }
-}
 
-@container text-grid (min-inline-size: 33em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 33em) {
     inline-size: 33em;
   }
-}
 
-@container text-grid (min-inline-size: 34em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 34em) {
     inline-size: 34em;
   }
-}
 
-@container text-grid (min-inline-size: 35em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 35em) {
     inline-size: 35em;
   }
-}
 
-@container text-grid (min-inline-size: 36em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 36em) {
     inline-size: 36em;
   }
-}
 
-@container text-grid (min-inline-size: 37em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 37em) {
     inline-size: 37em;
   }
-}
 
-@container text-grid (min-inline-size: 38em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 38em) {
     inline-size: 38em;
   }
-}
 
-@container text-grid (min-inline-size: 39em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 39em) {
     inline-size: 39em;
   }
-}
 
-@container text-grid (min-inline-size: 40em) {
-  .text-grid {
+  @container text-grid (min-inline-size: 40em) {
     inline-size: 40em;
   }
 }
