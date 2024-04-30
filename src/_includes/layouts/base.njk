@@ -22,34 +22,36 @@
       <img src="/favicon.png" alt="logo">
       <div class="main-header">
         <div class="main-title">
-          <a class="bare-link" href="/">
-            <h1>{{ site.title }}</h1>
-          </a>
+          <a class="bare-link" href="/"><h1>{{ site.title }}</h1></a>
           <span class="main-description cjk">{{ site.description }}</span>
         </div>
         <nav class="nav-links cjk">
           <ul>
             {% for url_, name in site.navLinks %}
-              <li>
-                <a href="{{ url_ }}" class="bare-link" {% if (url == url_) or (url_ != "/" and url.startsWith(url_)) %} aria-current="page" {% endif %}>{{ name }}</a>
-              </li>
+              <li><a href="{{ url_ }}" class="bare-link"{% if (url == url_) or (url_ != "/" and url.startsWith(url_)) %} aria-current="page" {% endif %}>{{ name }}</a></li>
             {% endfor %}
           </ul>
         </nav>
       </div>
     </header>
+
     <main>
       {% ifAsync description %}
-      {% include "components/disclosure.njk" %}
-    {% endif %}
-    {{ content | safe }}</body>
-</html></main><footer class="small">
-<nav class="nav-links footer-links">
-  <ul>
-    {% for url_, name in site.footerLinks %}
-      <li>
-        <a href="{{ url_ }}" class="bare-link">{{ name }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</nav></footer><!-- Current page: {{ url }} --></body></html>
+        {% include "components/disclosure.njk" %}
+      {% endif %}
+      {{ content | safe }}
+    </main>
+    
+    <footer class="small">
+      <nav class="nav-links footer-links">
+        <ul>
+          {% for url_, name in site.footerLinks %}
+            <li><a href="{{ url_ }}" class="bare-link">{{ name }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </footer>
+    
+    <!-- Current page: {{ url }} -->
+  </body>
+</html>
