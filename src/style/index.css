@@ -556,6 +556,23 @@ article.track {
   }
 }
 
+/* MARK: Illust */
+.illust-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dyn-row-gap, 1lh) var(--dyn-col-gap, 1em);
+  justify-content: space-between;
+
+  img {
+    block-size: 16lh;
+  }
+
+  &::after {
+    content: "";
+    flex: auto;
+  }
+}
+
 /* MARK: CJK typography */
 body:has(#tategaki-toggle:checked) {
   writing-mode: vertical-rl;

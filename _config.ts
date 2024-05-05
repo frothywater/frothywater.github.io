@@ -71,6 +71,14 @@ site.filter(
       : `${path}.${ext}`,
 );
 
+// Filter: sort by length of array attribute
+site.filter(
+  "sort_by_array",
+  // deno-lint-ignore no-explicit-any
+  (data: any[], attr: string) =>
+    data.toSorted((a, b) => b[attr].length - a[attr].length),
+);
+
 // Filter: get image's dimension
 const cache = new Cache({ folder: site.src("_cache") });
 site.filter("imageSize", async (path: string) => {

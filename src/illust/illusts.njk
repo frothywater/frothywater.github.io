@@ -1,0 +1,35 @@
+---
+url: /illust/
+title: 图画集
+description: 我喜欢的图画。（几乎所有都来自Twitter。版权全部归画师本人所有，如有侵权请联系我删除。）
+---
+
+{% set artists = illusts | sort_by_array("illusts") %}
+{# artist nav #}
+<nav class="nav-links section-links">
+  <ul>
+    <span>&gt;</span>
+    {% for artist in artists %}
+      <li>
+        <a href="#{{ artist.username | slug }}">{{ artist.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% for artist in artists %}
+  <section>
+    {% set link = "https://twitter.com/" + artist.username %}
+    <h2 id="{{ artist.username | slug }}">
+      <a href="{{ link }}">{{ artist.name }}</a>
+    </h2>
+    <div class="illust-grid">
+      {% for illust in artist.illusts %}
+        {% set link = "https://twitter.com/" + artist.username + "/status/" + illust.id + "/photo/" + illust.page %}
+        {% set url = "https://pbs.twimg.com/media/" + illust.filename + "?name=small" %}
+        <a href="{{ link }}">
+          <img src="{{ url }}" alt="{{ illust.id }}" loading="lazy"/>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}
