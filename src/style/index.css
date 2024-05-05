@@ -564,7 +564,7 @@ article.track {
   justify-content: space-between;
 
   img {
-    block-size: 16lh;
+    max-block-size: 16lh;
   }
 
   &::after {
