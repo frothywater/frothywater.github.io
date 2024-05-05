@@ -30,10 +30,10 @@
             {% for url_, name in site.navLinks %}
               <li><a href="{{ url_ }}" class="bare-link"{% if (url == url_) or (url_ != "/" and url.startsWith(url_)) %} aria-current="page" {% endif %}>{{ name }}</a></li>
             {% endfor %}
-            <li>
+            {# <li>
               <input type="checkbox" id="tategaki-toggle" name="tategaki">
               <label for="tategaki-toggle">直排</label>
-            </li>
+            </li> #}
           </ul>
         </nav>
       </div>
