@@ -690,6 +690,27 @@ h1>*:last-child>.closing-punc:last-child,
   margin-inline-end: -0.5em;
 }
 
+/* Special consideration for leading punc :;?!*/
+/* squeeze them only in yokogaki */
+body:not(:has(#tategaki-toggle:checked)) {
+
+  .leading-punc+.opening-punc,
+  .leading-punc+*>.opening-punc:first-child,
+  *:has(>.leading-punc:last-child)+.opening-punc {
+    margin-inline-start: -0.5em;
+  }
+
+  .leading-punc:has(+.closing-punc),
+  .leading-punc:has(+*>.closing-punc:first-child),
+  *:has(+.closing-punc)>.leading-punc:last-child,
+
+  .closing-punc:has(+.leading-punc),
+  .closing-punc:has(+*>.leading-punc:first-child),
+  *:has(+.leading-punc)>.closing-punc:last-child {
+    margin-inline-end: -0.5em;
+  }
+}
+
 /* MARK: Text grid typography */
 /* polyfill for `round()` function... */
 .text-grid-container {

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ (title ~ " - " if title else "") ~ site.title ~ " " ~ site.description }}</title>
-    <meta name="description" content="{{ description or site.description }}">
+    <meta name="description" content="{{ description or digest or site.description }}">
     <meta name="author" content="{{ author or site.author.name }}">
     <link rel="stylesheet" href="/style/reset.css">
     <link rel="stylesheet" href="/style/index.css">
@@ -30,10 +30,12 @@
             {% for url_, name in site.navLinks %}
               <li><a href="{{ url_ }}" class="bare-link"{% if (url == url_) or (url_ != "/" and url.startsWith(url_)) %} aria-current="page" {% endif %}>{{ name }}</a></li>
             {% endfor %}
-            {# <li>
-              <input type="checkbox" id="tategaki-toggle" name="tategaki">
-              <label for="tategaki-toggle">直排</label>
-            </li> #}
+            {% if tategakiEnabled %}
+              <li>
+                <input type="checkbox" id="tategaki-toggle" name="tategaki">
+                <label for="tategaki-toggle">直排</label>
+              </li>
+            {% endif %}
           </ul>
         </nav>
       </div>
@@ -58,4 +60,17 @@
     
     <!-- Current page: {{ url }} -->
   </body>
+
+  {% if tategakiEnabled %}
+  <script>
+    // Bind the tategaki checked state to localStorage
+    const tategakiToggle = document.getElementById("tategaki-toggle");
+    tategakiToggle.checked = localStorage.getItem("tategaki") === "true";
+    tategakiToggle.addEventListener("change", () => {
+      console.log("Set 'Prefer Tategaki' to ", tategakiToggle.checked);
+      localStorage.setItem("tategaki", tategakiToggle.checked);
+    });
+  </script>
+  {% endif %}
+
 </html>
