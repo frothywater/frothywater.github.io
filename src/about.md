@@ -1,5 +1,6 @@
 ---
 title: 导览册
+date: 2024-04-26
 layout: layouts/note.njk
 tategakiEnabled: true
 ---
