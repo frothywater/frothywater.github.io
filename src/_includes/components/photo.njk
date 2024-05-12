@@ -1,8 +1,8 @@
-<figure id="{{ photo.file | slug }}" class="photo">
+<figure class="photo">
   {% set imagePath = "/photo/image/" + photo.file %}
   {% set thumbPath = "/photo/image/" + photo.file | with_ext('small.webp') %}
   {% set size = imagePath | imageSize %}
-  <a href="{{ imagePath }}">
+  <a href="/photo/{{ photo.file | slug }}/">
     <img src="{{ thumbPath }}" alt="{{ photo.note }}" width="{{ size.width }}" height="{{ size.height }}" {% if not eagerLoadImage %}loading="lazy"{% endif %}}>
   </a>
   <figcaption>
@@ -11,8 +11,6 @@
         <div class="text-grid">{{ photo.note | md | cjk | safe }}</div>
       </div>
     {% endif %}
-    <time datetime="{{ photo.date | date('DATETIME') }}">
-      <a href="/photo/#{{ photo.file | slug }}" class="bare-link">{{ photo.date | date('yyyy-MM-dd') }}</a>
-    </time>
+    <time datetime="{{ photo.date | date('DATETIME') }}">{{ photo.date | date('yyyy-MM-dd') }}</time>
   </figcaption>
 </figure>

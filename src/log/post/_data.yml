@@ -1,1 +1,4 @@
 type: log
+layout: layouts/note.njk
+title: 💭
+tategakiEnabled: true

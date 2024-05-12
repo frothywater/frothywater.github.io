@@ -1,2 +1,4 @@
 type: music-log
 layout: layouts/note.njk
+title: 🎧
+tategakiEnabled: true

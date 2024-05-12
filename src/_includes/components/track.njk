@@ -5,7 +5,7 @@
   <div class="track-note text-grid-container">
     <div class="text-grid">
       <p class="track-title">
-        <a href="/track/{{ name | slug }}"><em>{{ name }}</em></a>
+        <a href="/track/{{ name | slug }}/"><em>{{ name }}</em></a>
       </p>
       {% if track.text %}
         {{ track.text | md | cjk | safe }}

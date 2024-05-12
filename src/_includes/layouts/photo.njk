@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="text-grid-container">
+  <header class="note-header">
+    <a href="{{ url }}" class="bare-link">
+      <h1>{{ title | cjk | safe }}</h1>
+    </a>
+
+    <nav class="info-list">
+      <time datetime="{{ date | date('DATETIME') }}">
+        {{ date | date('yyyy-MM-dd') }}
+      </time>
+    </nav>
+  </header>
+
+  <main>
+    <figure style="margin-inline: 0;">
+      {% set imagePath = "/photo/image/" + file %}
+      {% set size = imagePath | imageSize %}
+      <img src="{{ imagePath }}" alt="{{ note }}" width="{{ size.width }}" height="{{ size.height }}">
+    </figure>
+
+    <div class="text-grid">{{ note | md | cjk | safe }}</div>
+  </main>
+</article>
