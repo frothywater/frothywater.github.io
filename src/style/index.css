@@ -558,18 +558,17 @@ article.track {
 
 /* MARK: Illust */
 .illust-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  place-items: center;
   gap: var(--dyn-row-gap, 1lh) var(--dyn-col-gap, 1em);
-  justify-content: space-between;
+
+  container: illust-grid / inline-size;
 
   img {
-    max-block-size: 16lh;
-  }
-
-  &::after {
-    content: "";
-    flex: auto;
+    @container illust-grid (min-inline-size: 600px) {
+      max-block-size: 300px;
+    }
   }
 }
 
