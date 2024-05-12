@@ -1,17 +1,17 @@
 {% set name = track.file | replace(".mp3", "") %}
-<article id="{{ name | slug }}" class="track card">
+<article class="track card">
   <audio src="/track/audio/{{ track.file }}" controls preload="none"></audio>
 
   <div class="track-note text-grid-container">
     <div class="text-grid">
-      <p class="track-title"><em>{{ name }}</em></p>
+      <p class="track-title">
+        <a href="/track/{{ name | slug }}"><em>{{ name }}</em></a>
+      </p>
       {% if track.text %}
         {{ track.text | md | cjk | safe }}
       {% endif %}
     </div>
   </div>
 
-  <time datetime="{{ track.date | date('DATETIME') }}">
-    <a href="/track/#{{ name | slug }}" class="bare-link">{{ track.date | date('yyyy-MM-dd') }}</a>
-  </time>
+  <time datetime="{{ track.date | date('DATETIME') }}">{{ track.date | date('yyyy-MM-dd') }}</time>
 </article>

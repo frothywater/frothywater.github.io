@@ -12,6 +12,7 @@ import transformImages from "lume/plugins/transform_images.ts";
 
 import processCJK from "./_extra/cjk.ts";
 import markdownDigest from "./_extra/digest.ts";
+import { slugify } from "./_extra/util.ts";
 
 import { existsSync } from "https://deno.land/std@0.223.0/fs/mod.ts";
 import { imageDimensionsFromData } from "npm:image-dimensions";
@@ -56,11 +57,7 @@ site.hooks.addMarkdownItPlugin(markdownDigest);
 site.filter("cjk", processCJK);
 
 // Filter: turn phrase into a slug
-site.filter("slug", (phrase: string) =>
-  phrase
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, ""));
+site.filter("slug", slugify);
 
 // Filter: filename with extension
 site.filter(
