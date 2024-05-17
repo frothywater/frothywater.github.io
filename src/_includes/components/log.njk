@@ -4,6 +4,6 @@
   </div>
 
   <time datetime="{{ log.date | date('DATETIME') }}">
-      <a href="/log/post/{{ log.basename | slug }}/" class="bare-link">{{ log.date | date('yyyy-MM-dd') }}</a>
+      <a href="/log/{{ log.basename | slug }}/" class="bare-link">{{ log.date | date('yyyy-MM-dd') }}</a>
   </time>
 </article>

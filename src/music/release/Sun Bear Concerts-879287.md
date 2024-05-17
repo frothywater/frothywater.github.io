@@ -11,4 +11,4 @@ country: Germany
 styles: ['Free Improvisation']
 category: Keith Jarrett
 ---
-[笔记：Sun Bear Concerts, Keith Jarrett, 1976](/note/post/sun-bear-concerts/)。
+[笔记：Sun Bear Concerts, Keith Jarrett, 1976](/note/sun-bear-concerts/)。

@@ -47,9 +47,9 @@ title: 唱片柜
     {% set query = "type=music-album styles*='" + tag + "'" %}
     {% set albums = search.pages(query, "date=desc") %}
     <div class="grid music-album-grid">
-      {% for album in albums %}
+      {% asyncEach album in albums %}
         {% include "components/music-album.njk" %}
-      {% endfor %}
+      {% endeach %}
     </div>
   </section>
 {% endfor %}

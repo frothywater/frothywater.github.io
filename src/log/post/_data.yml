@@ -1,4 +1,5 @@
 type: log
 layout: layouts/note.njk
 title: 💭
+basename: ""
 tategakiEnabled: true
