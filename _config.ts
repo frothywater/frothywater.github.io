@@ -8,6 +8,7 @@ import nunjucks from "lume/plugins/nunjucks.ts";
 import redirects from "lume/plugins/redirects.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import transformImages from "lume/plugins/transform_images.ts";
+import type { Page } from "lume/core/file.ts";
 
 import processCJK from "./_extra/cjk.ts";
 import markdownDigest from "./_extra/digest.ts";
@@ -76,7 +77,7 @@ site.filter(
 site.filter("imageSize", getImageSize, true);
 
 // Preprocess: add oldUrl to note pages
-site.preprocess([".md"], (pages) => {
+site.preprocess([".md"], (pages: Page[]) => {
   for (const page of pages) {
     if (page.data.type === "note") {
       const year = page.data.date.getFullYear();
