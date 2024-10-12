@@ -485,7 +485,7 @@ article.music-album {
   /* detail grid */
   .album-detail {
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: auto 1fr;
     grid-auto-rows: max-content;
     gap: 0 0.4rem;
 
