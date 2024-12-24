@@ -55,6 +55,9 @@
             <li><a href="{{ url_ }}" class="bare-link">{{ name }}</a></li>
           {% endfor %}
         </ul>
+        {% if url != "/" %}
+          <img src="{{ decorateImage or "/plant.png" }}" alt="a small pot of plant" style="block-size: 8em">
+        {% endif %}
       </nav>
     </footer>
     

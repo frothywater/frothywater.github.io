@@ -198,8 +198,15 @@ body>footer {
     color: var(--gray);
   }
 
-  .nav-links {
+  nav.nav-links {
+    display: flex;
+    align-items: end;
+    gap: 1em;
     line-height: unset;
+
+    >ul {
+      flex-wrap: nowrap;
+    }
   }
 }
 
