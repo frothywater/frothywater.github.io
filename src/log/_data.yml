@@ -1,0 +1,20 @@
+logTags:
+- life
+- art
+- world
+- scene
+- self
+- gender
+- emotion
+- dream
+- social
+tagName:
+  social: 社会化 Social
+  dream: 梦境 Dream
+  gender: 性别 Gender
+  self: 自我 Self
+  world: 世界 World
+  emotion: 情绪 Emotion
+  life: 生活 Life
+  art: 艺术 Art
+  scene: 风物 Scene

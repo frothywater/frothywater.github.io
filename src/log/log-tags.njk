@@ -1,42 +1,31 @@
 ---
-url: /log/
+url: /log/tag/
 title: 手帐
 tategakiEnabled: true
 description: 大多数是当下的碎碎念，只言片语而已。不过常常就是有想说点什么的时候！这种时候在手帐上涂涂画画就不需要深思熟虑了～我希望它取代社交网络上说这些话的地方，这里不需要依赖任何平台。想要在这里更频繁地更新我的状态。这里已有的东西大部份是之前在别的地方发出来的，现在终于可以把它们归档到这里了。
 ---
 
-{# Get all years #}
-{% set dates = search.values("date", "type=log") %}
-{% set years = [] %}
-{% for date in dates %}
-  {% set year = date.getFullYear() %}
-  {% if years.indexOf(year) == -1 %}
-    {% set years = years.concat([year]) %}
-  {% endif %}
-{% endfor %}
-{% set years = years.sort().reverse() %}
+{# tag nav #}
+<a href="/log/"><p>返回 [按时间排列]</p></a>
 
-{# year nav #}
 <nav class="nav-links section-links">
   <ul>
     <span>&gt;</span>
-    {% for year in years %}
-      <li><a href="#{{ year }}">{{ year }}</a></li>
+    {% for tag in logTags %}
+      <li><a href="#{{ tag | slug }}">{{ tagName[tag] }}</a></li>
     {% endfor %}
   </ul>
 </nav>
-<a href="/log/tag/"><p>[按标签分类]</p></a>
 
-{% set logs = search.pages("type=log", "date=desc") %}
-{% for year in years %}
+{% for tag in logTags %}
   <section>
-    <h2 id="{{ year }}">{{ year }}</h2>
+    <h2 id="{{ tag | slug }}">{{ tagName[tag] }}</h2>
 
+    {% set query = "type=log tag='" + tag + "'" %}
+    {% set logs = search.pages(query, "date=desc") %}
     <div class="grid log-grid">
       {% asyncEach log in logs %}
-        {% if log.date.getFullYear() == year %}
-          {% include "components/log.njk" %}
-        {% endif %}
+        {% include "components/log.njk" %}
       {% endeach %}
     </div>
   </section>

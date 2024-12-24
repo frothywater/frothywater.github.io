@@ -3,7 +3,13 @@
     <div class="text-grid">{{ log.content | md | cjk | safe }}</div>
   </div>
 
-  <time datetime="{{ log.date | date('DATETIME') }}">
-      <a href="/log/{{ log.basename | slug }}/" class="bare-link">{{ log.date | date('yyyy-MM-dd') }}</a>
-  </time>
+  <div class="info-list">
+    <time datetime="{{ log.date | date('DATETIME') }}">
+        <a href="/log/{{ log.basename | slug }}/" class="bare-link">{{ log.date | date('yyyy-MM-dd') }}</a>
+    </time>
+
+    {% if log.tag %}
+      <a href="/log/tag/#{{ log.tag | slug }}" class="tag">{{ log.tag }}</a>
+    {% endif %}
+  </div>
 </article>
