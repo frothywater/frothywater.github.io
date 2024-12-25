@@ -1,13 +1,13 @@
 logTags:
 - life
-- art
-- world
-- scene
 - self
+- dream
+- art
+- scene
+- world
+- social
 - gender
 - emotion
-- dream
-- social
 tagName:
   social: 社会化 Social
   dream: 梦境 Dream
