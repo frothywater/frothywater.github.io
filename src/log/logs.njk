@@ -34,11 +34,11 @@ renderOrder: 1
     <h2 id="{{ year }}">{{ year }}</h2>
 
     <div class="grid log-grid">
-      {% asyncEach log in logs %}
+      {% for log in logs %}
         {% if log.date.getFullYear() == year %}
           {% include "components/log.njk" %}
         {% endif %}
-      {% endeach %}
+      {% endfor %}
     </div>
   </section>
 {% endfor %}
